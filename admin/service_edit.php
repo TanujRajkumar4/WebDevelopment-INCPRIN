@@ -13,7 +13,8 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
     $sql = mysqli_query($dbConn, $qry);
     $ServiceDetails = $sql->fetch_assoc();
     if (isset($_POST['edit_service'])) {
-        $desc = htmlspecialchars($_POST['summernote']);
+        // $desc = htmlspecialchars($_POST['summernote']);
+        $desc = $_POST['summernote'];
         $msg = addslashes($_POST['service_title']);
         $logo = "";
         if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
