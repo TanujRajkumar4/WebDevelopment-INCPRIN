@@ -73,7 +73,8 @@
                         <?php } ?>
                     </div>
                     <div class="col" data-bss-disabled-mobile="true" data-aos="slide-left" data-aos-once="true">
-                        <p style="margin-bottom: 0px;"><br><?php echo $p['product_desc']; ?></p><a href="market-i2.php">Read More</a>
+                        <p style="margin-bottom: 0px;"><br><?php echo $p['product_desc']; ?></p>
+                        <a href="market-i2.php?p_id=<?php echo $p['product_id']; ?>">Read More</a>
                     </div>
                 </div>
             </div><!-- End: ContentDiv1 -->
@@ -98,7 +99,8 @@
 
                     </div>
                     <div class="col" data-bss-disabled-mobile="true" data-aos="slide-left" data-aos-once="true">
-                        <p style="color: rgb(255,255,255);"><br><?php echo $p['product_desc']; ?><br><br></p><a href="market-i2.php" style="color: rgb(255,255,255);">Read More</a>
+                        <p style="color: rgb(255,255,255);"><br><?php echo $p['product_desc']; ?><br><br></p>
+                        <a href="market-i2.php" style="color: rgb(255,255,255);">Read More</a>
                     </div>
                 </div>
             </div><!-- End: ContentDiv2 -->
