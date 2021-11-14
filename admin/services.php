@@ -3,55 +3,58 @@ session_start();
 include('header.php');
 include('sidebar.php');
 include('database.php');
+
+//ADD New Service Block :START
 if (isset($_GET['typ']) && $_GET['typ'] == "add") {
-    if (isset($_POST['add_features'])) {
+    if (isset($_POST['add_service'])) {
         $desc = htmlspecialchars($_POST['summernote']);
-        if ($_GET['p_ty'] == "tech") {
-            $p_ty = 1;
-        } else {
-            $p_ty = 0;
-        }
-        $msg = addslashes($_POST['fea_tit']);
+        $msg = addslashes($_POST['service_title']);
         $logo = "";
         if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
-
             $i = "logo";
             $i = preg_replace('/[^A-Za-z0-9\-]/', '', $i);
             $ext = explode('.', $_FILES['file_upl']['name']);
             $ext = end($ext);
             $check = strtolower($ext);
-            $logo = "assets/img/products/" . uniqid("") . '.' . $ext;
+            $logo = "assets/img/services/" . uniqid("") . '.' . $ext;
             if ($check == "png" || $check == "jpeg" || $check == "jpg" || $check == "png") {
-                if (!move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
+                if (! move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
                     echo "<script>alert('File upload error');</script>";
-                    echo "<script>window.location.href ='features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
+                    echo "<script>window.location.href ='services.php';</script>";
                 } else {
-                    $qry = "INSERT INTO `inc_features`(`features_id`, `product_id`, `pg_typ`, `features_title`, `feature_desc`, `file_url`, `feature_status`) VALUES (NULL,'" . $_GET['p_id'] . "','" . $p_ty . "','" . $msg . "','" . $desc . "','" . $logo . "','A')";
+                    // $qry = "INSERT INTO `inc_features`(`features_id`, `product_id`, `pg_typ`, `features_title`, `feature_desc`, `file_url`, `feature_status`) VALUES (NULL,'" . $_GET['p_id'] . "','" . $p_ty . "','" . $msg . "','" . $desc . "','" . $logo . "','A')";
+                    $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','A')";
                     $sql = mysqli_query($dbConn, $qry);
                     // echo $qry;
                     if ($sql) {
-                        echo "<script>alert('Inserted Successfully.'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
+                        echo "<script>alert('Inserted Successfully.'); window.location.href = 'services.php';</script>";
                     } else {
-                        echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
+                        echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'services.php';</script>";
                     }
                 }
             } else {
                 echo "<script>alert('Upload only mp4,jpeg,jpg and png files');</script>";
-                echo "<script>window.location.href ='features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
-                exit;
+                echo "<script>window.location.href ='services.php';</script>";
+                exit();
             }
-        } else {
-            $qry = "INSERT INTO `inc_features`(`features_id`, `product_id`, `pg_typ`, `features_title`, `feature_desc`, `file_url`, `feature_status`) VALUES (NULL,'" . $_GET['p_id'] . "','" . $p_ty . "','" . $msg . "','" . $desc . "','" . $logo . "','A')";
+        } 
+        else {
+            $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','A')";
+            // $qry = "INSERT INTO `inc_features`(`features_id`, `product_id`, `pg_typ`, `features_title`, `feature_desc`, `file_url`, `feature_status`) VALUES (NULL,'" . $_GET['p_id'] . "','" . $p_ty . "','" . $msg . "','" . $desc . "','" . $logo . "','A')";
             $sql = mysqli_query($dbConn, $qry);
             // echo $qry;
             if ($sql) {
-                echo "<script>alert('Inserted Successfully.'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
+                echo "<script>alert('Inserted Successfully. NO IMAGE'); window.location.href = 'services.php';</script>";
             } else {
-                echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
+                echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'services.php';</script>";
             }
         }
     }
-} elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
+}
+//ADD New Service Block :END
+
+//DELETE Service Block :START
+elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
     if ($_GET['p_ty'] == "tech") {
         $qry = mysqli_query($dbConn, "select cl_logo from inc_client where cli_id=" . $_GET['cli_id']);
         $sql = mysqli_fetch_array($qry);
@@ -65,16 +68,18 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
                 echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
             }
         }
-    } else {
-        $qry = "delete from `inc_client` where `cli_id`=" . $_GET['cli_id'];
-        $sql = mysqli_query($dbConn, $qry);
-        if ($sql) {
-            echo "<script>alert('Deleted Successfully.'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
-        } else {
-            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
-        }
     }
+    // else {
+    //     $qry = "delete from `inc_client` where `cli_id`=" . $_GET['cli_id'];
+    //     $sql = mysqli_query($dbConn, $qry);
+    //     if ($sql) {
+    //         echo "<script>alert('Deleted Successfully.'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
+    //     } else {
+    //         echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
+    //     }
+    // }
 }
+//DELETE Service Block :END
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -84,7 +89,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Features Page</h1>
+                    <h1>Services Page</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -104,35 +109,33 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Add Features</h3>
+                            <h3 class="card-title">Add Services</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form method="POST" action="?typ=add">
+                        <form method="POST" action="?typ=add" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Feature Title</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="fea_tit" placeholder="Feature Heading">
+                                    <label for="exampleInputEmail1">Service Title</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="service_title" placeholder="Feature Heading">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputDescription">Description</label>
                                     <textarea id="summernote" name="summernote" class="form-control"> </textarea>
                                 </div>
-                                <?php if ($_GET['p_ty'] == "tech") { ?>
-                                    <div class="form-group">
-                                        <label for="file_upl">File input: <ex>Upload jpeg,jpg,png format files only</ex></label>
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" class="form-control" id="file_upl" name="file_upl">
-                                            </div>
+                                <div class="form-group">
+                                    <label for="file_upl">File input: <ex>Upload jpeg,jpg,png format files only</ex></label>
+                                    <div class="input-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="form-control" id="file_upl" name="file_upl">
                                         </div>
                                     </div>
-                                <?php } ?>
+                                </div>
                             </div>
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <input type="submit" class="btn btn-primary" name="add_features" Value="Submit">
+                                <input type="submit" class="btn btn-primary" name="add_service" Value="Submit">
                                 <input type="reset" class="btn btn-warning" name="clr_features" Value="Reset">
                             </div>
                         </form>
@@ -147,11 +150,9 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
                                 <thead>
                                     <tr>
                                         <th style="width: 10px">#</th>
-                                        <th>Feature Title</th>
+                                        <th>Service Title</th>
                                         <th>Description</th>
-                                        <?php if ($_GET['p_ty'] == "tech") { ?>
-                                            <th>Logo</th>
-                                        <?php } ?>
+                                        <th>Image</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -162,15 +163,15 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
                                     } else {
                                         $page = $_GET['page'];
                                     }
-                                    if ($_GET['p_ty'] == "tech") {
-                                        $typ = 1;
-                                    } else {
-                                        $typ = 0;
-                                    }
+                                    // if ($_GET['p_ty'] == "tech") {
+                                    //     $typ = 1;
+                                    // } else {
+                                    //     $typ = 0;
+                                    // }
                                     $res_per_pg = 5;
                                     $pge_first_res = ($page - 1) * $res_per_pg;
                                     $i = 1;
-                                    $sql_sel = "SELECT * from inc_features where feature_status='A' and pg_typ=" . $typ . " and product_id=" . $_GET['p_id'];
+                                    $sql_sel = "SELECT * FROM inc_service WHERE service_status ='A'";
                                     $qry = (mysqli_query($dbConn, $sql_sel));
                                     $nu_res = mysqli_num_rows($qry);
                                     $num_pg = ceil($nu_res / $res_per_pg);
@@ -178,14 +179,13 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
                                     while ($sql = mysqli_fetch_array($qry)) {
                                     ?>
                                         <tr>
-                                            <td>#</td>
-                                            <td><?php echo $sql['feature_title']; ?></td>
-                                            <td><?php echo substr($sql['feature_desc'], 0, 100); ?></td>
-                                            <?php if ($_GET['p_ty'] == "tech") { ?><td><img src="../<?php echo $sql['file_url']; ?>">
-                                                </td><?php } ?>
+                                            <td><?php echo $i; ?></td>
+                                            <td><?php echo $sql['service_name']; ?></td>
+                                            <td><?php echo substr($sql['service_desc'], 0, 100); ?>.....</td>
+                                            <td><img src="../<?php echo $sql['service_img']; ?>" height="100px" width="200px"></td>
                                             <td>
-                                                <a class="btn btn-info btn-sm" href="features_edit.php?p_ty=<?php echo $_GET['p_ty']; ?>&typ=edit&p_id=<?php echo $sql['features_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="features.php?p_ty=<?php echo $_GET['p_ty']; ?>&typ=del&p_id=<?php echo $sql['features_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
+                                                <a class="btn btn-info btn-sm" href="service_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                                <a class="btn btn-danger btn-sm" href="service_del.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
                                             </td>
                                         </tr>
                                     <?php $i = $i + 1;
@@ -199,7 +199,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
                                 <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
                                 <?php
                                 for ($page = 1; $page <= $num_pg; $page++) {
-                                    echo '<li class="page-item"><a class="page-link" href = "features.php?p_id=' . $_GET['p_id'] . '&p_ty=' . $_GET['p_ty'] . '&page=' . $page . '">' . $page . ' </a>';
+                                    echo '<li class="page-item"><a class="page-link" href = "services.php?page=' . $page . '">' . $page . ' </a>';
                                 }
                                 ?>
                                 <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>

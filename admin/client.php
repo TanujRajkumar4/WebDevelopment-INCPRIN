@@ -104,7 +104,7 @@ if(isset($_GET['typ']))
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="?typ=add">
+              <form method="POST" action="?typ=add" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Client Name</label>
@@ -163,7 +163,7 @@ if(isset($_GET['typ']))
 				  {
 				  ?>
                     <tr>
-                      <td>#</td>
+                      <td><?php echo $i;?></td>
                       <td><?php echo $sql['cli_name'];?></td>
                       <td><img src="../<?php echo $sql['cl_logo'];?>" >
                       </td>
