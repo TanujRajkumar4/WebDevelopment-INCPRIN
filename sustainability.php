@@ -51,7 +51,7 @@
 					{
 					?>
                         <div class="card" style="padding-top: 5px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;"><a href="<?php echo $sql['file_url']; ?>" target="_blank"><img class="card-img-top w-100 d-block" src="assets/img/reports/rp.jpg"></a>
-                            <div class="card-body"><button class="btn btn-primary" type="button"><?php echo $sql['poto_desc']; ?></button></div>
+                            <div class="card-body"><a href="<?php echo $sql['file_url']; ?>" target="_blank" class="btn btn-primary"><?php echo $sql['poto_desc']; ?></a></div>
                         </div>
 					<?php }?>
                     </div>
