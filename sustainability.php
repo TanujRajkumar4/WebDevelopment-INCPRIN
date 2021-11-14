@@ -19,10 +19,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
-
+<?php 
+ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 3');
+?>
 <body>
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(https://unsplash.it/1800/900?image=1051);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
+    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $pg_qry['pg_banner']; ?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
     <hr><!-- Start: Article Dual Column -->
     <section class="article-dual-column">
         <div class="container">
@@ -30,7 +32,7 @@
                 <div class="col-md-10 offset-md-1">
                     <!-- Start: Intro -->
                     <div class="intro">
-                        <h1 class="text-uppercase text-center" style="padding: 0px;color: rgb(86, 88, 91);">Sustainability REPORTS</h1>
+                        <h1 class="text-uppercase text-center" style="padding: 0px;color: rgb(86, 88, 91);"><?php echo $pg_qry['pg_title']; ?></h1>
                     </div><!-- End: Intro -->
                 </div>
             </div>
@@ -38,23 +40,20 @@
                 <div class="col-md-10 col-lg-7 offset-md-1 offset-lg-0">
                     <!-- Start: Text -->
                     <div class="text">
-                        <p>Sed lobortis mi. Suspendisse vel placerat ligula. <span style="text-decoration: underline;">Vivamus</span> ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac lacus. <strong>Ut vehicula rhoncus</strong> elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit <em>pulvinar dict</em> vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-                        <h2>Aliquam In Arcu </h2>
-                        <p>Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                        <?php echo $pg_qry['pg_desc']; ?>
                     </div><!-- End: Text -->
                 </div>
                 <div class="col text-center">
                     <div class="card-group">
-                        <div class="card" style="padding-top: 5px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;"><img class="card-img-top w-100 d-block" src="https://www.cclind.com/wp-content/uploads/2021/10/planning_for_a_sustainable_future.jpg">
-                            <div class="card-body"><button class="btn btn-primary" type="button">2021</button></div>
+					<?php 
+					$qry = getAllDataC1('inc_gallery', 'photo_status', 'AND product_id =4 and pg_typ=1');
+					foreach($qry as $sql)
+					{
+					?>
+                        <div class="card" style="padding-top: 5px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;"><a href="<?php echo $sql['file_url']; ?>" target="_blank"><img class="card-img-top w-100 d-block" src="assets/img/reports/rp.jpg"></a>
+                            <div class="card-body"><button class="btn btn-primary" type="button"><?php echo $sql['poto_desc']; ?></button></div>
                         </div>
-                        <div class="card" style="padding-top: 5px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;"><img class="card-img-top w-100 d-block" src="https://www.cclind.com/wp-content/uploads/2021/10/planning_for_a_sustainable_future.jpg">
-                            <div class="card-body"><button class="btn btn-primary" type="button">2020</button></div>
-                        </div>
-                        <div class="card" style="padding-top: 5px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;"><img class="card-img-top w-100 d-block" src="https://www.cclind.com/wp-content/uploads/2021/10/planning_for_a_sustainable_future.jpg">
-                            <div class="card-body"><button class="btn btn-primary" type="button">2019</button></div>
-                        </div>
+					<?php }?>
                     </div>
                 </div>
             </div>

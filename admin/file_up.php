@@ -190,7 +190,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 											if ($_GET['p_ty'] == "sus") {
 											?>
 												<td><?php echo $sql['poto_desc']; ?></td>
-											<td><a href="../<?php echo $sql['file_url']; ?>" target="_blank"><img src="../assets/img/reports/rp.jpg" style="width:25%;height=25%;">
+											<td><a href="../<?php echo $sql['file_url']; ?>" target="_blank"><img src="../assets/img/reports/rp.jpg" style="width:25%;height=25%;"></a>
 											</td><?php }if($_GET['p_ty'] == "produ") {?>
 									<td><img src="../<?php echo $sql['file_url']; ?>" style="width:50%;height=50%;"></td><?php }?><td>
 												<a class="btn btn-danger btn-sm" href="file_up.php?p_ty=<?php echo $_GET['p_ty']; ?>&typ=del&p_id=<?php echo $_GET['p_id']; ?>&f_id=<?php echo $sql['photo_id']; ?>"><i class="fas fa-trash"></i>Delete</a>

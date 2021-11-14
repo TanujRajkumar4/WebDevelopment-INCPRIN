@@ -18,44 +18,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
-
+<?php 
+ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 3');
+?>
 <body>
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(https://unsplash.it/1800/900?image=1051);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
+    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $pg_qry['pg_banner']; ?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
     <hr><!-- Start: Article List -->
     <section class="article-list">
         <div class="container">
             <!-- Start: Intro -->
             <div class="intro">
-                <h1 class="text-center" style="font-family: Lora, serif;color: #56585b;">TECHNOLOGY</h1>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula.&nbsp;</p>
+                <h1 class="text-center" style="font-family: Lora, serif;color: #56585b;"> <?php echo $pg_qry['pg_title']; ?></h1>
+                <p class="text-center"> <?php echo $pg_qry['pg_desc']; ?></p>
             </div><!-- End: Intro -->
             <!-- Start: Articles -->
             <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg?h=db2d4d3b8aa1199f8c4a81a194003f1c"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
+			<?php 
+			$qry = getAllDataC1('inc_features', 'feature_status', 'AND product_id =3 and pg_typ=1');
+			foreach($qry as $sql)
+			{
+			?>
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="<?php echo $sql['file_url']; ?>"></a>
+                    <h3 class="name"><?php echo $sql['features_title'];?></h3>
+                    <p class="description"><?php echo $sql['feature_desc'];?></p>
                 </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/building.jpg?h=6ef5437d90194906d185e64880c032d8"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg?h=57df6bb27a728060276c7c2ad7fd004c"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg?h=57df6bb27a728060276c7c2ad7fd004c"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg?h=57df6bb27a728060276c7c2ad7fd004c"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg?h=57df6bb27a728060276c7c2ad7fd004c"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                </div>
+			<?php }?>
             </div><!-- End: Articles -->
         </div>
     </section><!-- End: Article List -->
