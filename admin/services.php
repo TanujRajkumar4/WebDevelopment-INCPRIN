@@ -176,7 +176,11 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                         <tr>
                                             <td><?php echo $i; ?></td>
                                             <td><?php echo $sql['service_name']; ?></td>
-                                            <td><?php echo substr($sql['service_desc'], 0, 100); ?>.....</td>
+                                            <?php
+                                            $desc_text = substr($sql['service_desc'], 0, 100);
+                                            $desc_text = strip_tags($desc_text, null);
+                                            ?>
+                                            <td><?php echo $desc_text; ?>.....</td>
                                             <td><img src="../<?php echo $sql['service_img']; ?>" height="100px" width="200px"></td>
                                             <td>
                                                 <a class="btn btn-info btn-sm" href="service_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>

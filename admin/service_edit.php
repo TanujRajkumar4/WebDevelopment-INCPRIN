@@ -101,7 +101,7 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
                                 </div>
                                 <div class="form-group">
                                     <label for="inputDescription">Description</label>
-                                    <textarea id="summernote" name="summernote" class="form-control"><?php echo $ServiceDetails['service_name']; ?></textarea>
+                                    <textarea id="summernote" name="summernote" class="form-control"><?php echo $ServiceDetails['service_desc'];?></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="serviceImage">Current Service Image</label><br>

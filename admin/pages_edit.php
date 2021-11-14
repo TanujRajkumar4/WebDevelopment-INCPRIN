@@ -72,7 +72,7 @@ if (isset($_POST['Submit'])) {
               </button>
             </div>
           </div>
-          <form action="?page_id=<?php echo $sql['pg_id']; ?>" method="POST" enctype="multipart/form-data">
+          <form action="" method="POST" enctype="multipart/form-data">
             <div class="card-body">
 
               <div class="form-group">
@@ -82,7 +82,7 @@ if (isset($_POST['Submit'])) {
               <div class="form-group">
                 <label for="inputStatus">Upload Type</label>
                 <select id="inputStatus" class="form-control custom-select" name="up_typ">
-                  <option disabled>Select one</option>
+                  <option >Select one</option>
                   <option value="0">Image</option>
                   <option value="1">Video</option>
                 </select>
