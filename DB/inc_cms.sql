@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 14, 2021 at 03:24 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Host: localhost:3306
+-- Generation Time: Nov 14, 2021 at 10:45 PM
+-- Server version: 10.3.32-MariaDB
+-- PHP Version: 7.3.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cms_inc`
+-- Database: `inc_cms`
 --
 
 -- --------------------------------------------------------
@@ -81,7 +82,7 @@ CREATE TABLE `inc_features` (
   `product_id` int(11) NOT NULL,
   `pg_typ` varchar(100) NOT NULL COMMENT 'product=0 page=1',
   `features_title` varchar(200) NOT NULL,
-  `feature_desc` varchar(500) NOT NULL,
+  `feature_desc` varchar(3000) NOT NULL,
   `file_url` varchar(250) NOT NULL,
   `feature_status` varchar(50) NOT NULL DEFAULT 'A'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -98,7 +99,10 @@ INSERT INTO `inc_features` (`features_id`, `product_id`, `pg_typ`, `features_tit
 (5, 0, '0', 'TEST', 'TEST', '', 'A'),
 (6, 0, '0', 'TEST', 'TEST', '', 'A'),
 (7, 0, '0', 'nlnkl', 'nklnkl', '', 'A'),
-(8, 0, '0', '', ' ', '', 'A');
+(8, 0, '0', '', ' ', '', 'A'),
+(9, 2, '0', 'Works everywhere', '&lt;p class=&quot;description&quot; style=&quot;margin-bottom: 0px; color: rgb(125, 130, 133); font-size: 15px; font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Noto Sans&amp;quot;, &amp;quot;Liberation Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.&lt;/p&gt;&lt;p class=&quot;description&quot; style=&quot;margin-bottom: 0px; color: rgb(125, 130, 133); font-size: 15px; font-family: system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Noto Sans&amp;quot;, &amp;quot;Liberation Sans&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;;&quot;&gt;Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.&lt;/p&gt; ', '', 'A'),
+(13, 2, '0', 'Works everywhere324234', '<p class=\"description\" style=\"margin-bottom: 0px; color: rgb(125, 130, 133); font-size: 15px; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;\">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p><p class=\"description\" style=\"margin-bottom: 0px; color: rgb(125, 130, 133); font-size: 15px; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;\">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p> ', '', 'A'),
+(12, 3, '1', 'Works everywhere', '<p class=\"description\" style=\"margin-bottom: 0px; color: rgb(125, 130, 133); font-size: 15px; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;\">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p><p class=\"description\" style=\"margin-bottom: 0px; color: rgb(125, 130, 133); font-size: 15px; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;\">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p> ', 'assets/img/products/61913988a04ad.jpg', 'A');
 
 -- --------------------------------------------------------
 
@@ -168,8 +172,11 @@ CREATE TABLE `inc_product` (
 --
 
 INSERT INTO `inc_product` (`product_id`, `service_id`, `product_title`, `product_desc`, `product_img`, `pr_ban_typ`, `product_status`) VALUES
-(2, 11, 'Product 1', 'Product 1 - Description', 'assets/img/products/6190f785643d0.jpg', 0, 'A'),
-(3, 11, 'Product 2 ', ' Product 2 Description', 'assets/img/products/6190ebf52f282.mp4', 1, 'A');
+(2, 11, 'Product 1', 'INCPRIN automotive products offer lasting resistance against mechanical abrasion, acids and aggressive chemicals. \r\nAutomotive labels withstand solvents, oils, water, extreme temperatures and mechanical abrasion.The adhesives used in automotive applications are suited to rough, textured and low-energy surfaces.\r\n', 'assets/img/products/61914000b8dd3.jpg', 0, 'A'),
+(3, 11, 'Product 2 ', 'INCPRIN automotive products offer lasting resistance against mechanical abrasion, acids and aggressive chemicals. \r\nAutomotive labels withstand solvents, oils, water, extreme temperatures and mechanical abrasion.\r\nThe adhesives used in automotive applications are suited to rough, textured and low-energy surfaces.\r\n', 'assets/img/products/6190ebf52f282.mp4', 1, 'A'),
+(4, 11, 'Product 3', 'INCPRIN automotive products offer lasting resistance against mechanical abrasion, acids and aggressive chemicals. \r\nAutomotive labels withstand solvents, oils, water, extreme temperatures and mechanical abrasion.The adhesives used in automotive applications are suited to rough, textured and low-energy surfaces.', 'assets/img/products/61914000b8dd3.jpg', 0, 'A'),
+(5, 14, 'Prod3', 'hfhfhfgfh', 'assets/img/products/6191400456b2f.jpg', 0, 'A'),
+(6, 14, 'Prod5', '<div>INCPRIN automotive products offer lasting resistance against mechanical abrasion, acids and aggressive chemicals.</div><div>Automotive labels withstand solvents, oils, water, extreme temperatures and mechanical abrasion.</div><div>The adhesives used in automotive applications are suited to rough, textured and low-energy surfaces.</div> ', 'assets/img/products/619140a88f1f9.jpg', 0, 'A');
 
 -- --------------------------------------------------------
 
@@ -190,10 +197,10 @@ CREATE TABLE `inc_service` (
 --
 
 INSERT INTO `inc_service` (`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES
-(13, 'Apparels Labeling1', 'assets/img/services/619114bc44d80.jpg', '&lt;p&gt;Sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;/p&gt;&lt;p&gt;Sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;br&gt;&lt;/p&gt;', 'A'),
-(12, 'Apparels Labeling2', 'assets/img/services/6191148e80671.jpg', '&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;/p&gt;&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A'),
-(14, 'Apparels Labeling3', 'assets/img/services/6191149a84299.jpg', '&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;/p&gt;&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A'),
-(15, 'Apparels Labeling4', 'assets/img/services/619114a727b54.jpg', '&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;/p&gt;&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A');
+(11, 'Apparels Labeling1', 'assets/img/services/619114bc44d80.jpg', '<p>Sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><p>Sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.<br></p>', 'A'),
+(12, 'Apparels Labeling2', 'assets/img/services/6191148e80671.jpg', '<p class=\"text-start\" style=\"margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;\">Sed lobortis mi. Suspendisse vel placerat ligula.&nbsp;<span style=\"text-decoration-line: underline;\">Vivamus</span>&nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><p class=\"text-start\" style=\"margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;\">Sed lobortis mi. Suspendisse vel placerat ligula.&nbsp;<span style=\"text-decoration-line: underline;\">Vivamus</span>&nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A'),
+(14, 'Apparels Labeling3', 'assets/img/services/6191149a84299.jpg', '<p class=\"text-start\" style=\"margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;\">Sed lobortis mi. Suspendisse vel placerat ligula.&nbsp;<span style=\"text-decoration-line: underline;\">Vivamus</span>&nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><p class=\"text-start\" style=\"margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;\">Sed lobortis mi. Suspendisse vel placerat ligula.&nbsp;<span style=\"text-decoration-line: underline;\">Vivamus</span>&nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A'),
+(15, 'Apparels Labeling4', 'assets/img/services/619114a727b54.jpg', '<p class=\"text-start\" style=\"margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;\">Sed lobortis mi. Suspendisse vel placerat ligula.&nbsp;<span style=\"text-decoration-line: underline;\">Vivamus</span>&nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p><p class=\"text-start\" style=\"margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;\">Sed lobortis mi. Suspendisse vel placerat ligula.&nbsp;<span style=\"text-decoration-line: underline;\">Vivamus</span>&nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A');
 
 -- --------------------------------------------------------
 
@@ -281,7 +288,7 @@ ALTER TABLE `inc_client`
 -- AUTO_INCREMENT for table `inc_features`
 --
 ALTER TABLE `inc_features`
-  MODIFY `features_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `features_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `inc_gallery`
@@ -299,7 +306,7 @@ ALTER TABLE `inc_page`
 -- AUTO_INCREMENT for table `inc_product`
 --
 ALTER TABLE `inc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `inc_service`
