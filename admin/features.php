@@ -148,7 +148,7 @@ if(isset($_GET['typ']) && $_GET['typ'] =="add")
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="?typ=add">
+              <form method="POST" action="?typ=add&p_ty=<?php echo$_GET['p_ty'];?>&p_id=<?php echo$_GET['p_id'];?>">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Feature Title</label>
