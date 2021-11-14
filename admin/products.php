@@ -215,6 +215,8 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del" && $_GET['id'] != "") {
                                             </td>
                                             <td>
                                                 <a class="btn btn-info btn-sm" href="product_edit.php?id=<?php echo $sql['product_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                                <a class="btn btn-info btn-sm" href="features.php?p_ty=produ&p_id=<?php echo $sql['product_id']; ?>"><i class="fas fa-pencil-alt"></i>Add Features</a>
+                                                <a class="btn btn-info btn-sm" href="file_up.php?p_ty=produ&p_id=<?php echo $sql['product_id']; ?>"><i class="fas fa-pencil-alt"></i>Add Gallery</a>
                                                 <a class="btn btn-danger btn-sm" href="product.php?typ=del&id=<?php echo $sql['product_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
                                             </td>
                                         </tr>

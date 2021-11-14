@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
 <body style="width: 100%;">
-    <?php include('header.php');?>
+    <?php include('header.php');
 
+    $homeDetails=getAllDataC('inc_page','pg_status','AND ');
+    ?>
     
     <div id="container">
         <div id="video-top" style="width: 100%;"><video width="100%" height="315" autoplay="" loop="" muted="" style="width: 100%;height: 100%;">

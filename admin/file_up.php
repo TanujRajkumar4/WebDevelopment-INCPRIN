@@ -3,13 +3,20 @@ session_start();
 include('header.php');
 include('sidebar.php');
 include('database.php');
-if (isset($_GET['typ']) && $_GET['typ'] == "add") {
-	if (isset($_POST['add_files'])) {
-		if ($_GET['p_ty'] == "sus") {
+$P_title="";
+if ($_GET['p_ty'] == "sus") {
 			$p_ty = 1;
+			$P_title="Sustainability";
 		} else {
 			$p_ty = 0;
+			$qry="SELECT * FROM `inc_product` where product_id=".$_GET['p_id']." and product_status='A'";
+			$qry=mysqli_query($dbConn,$qry);
+			$sql=mysqli_fetch_array($qry);
+			$P_title=$sql['product_title'];
 		}
+if (isset($_GET['typ']) && $_GET['typ'] == "add") {
+	if (isset($_POST['add_files'])) {
+		
 		$msg = addslashes($_POST['poto_tit']);
 		$logo = "";
 		if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
@@ -104,7 +111,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 					<!-- general form elements -->
 					<div class="card card-primary">
 						<div class="card-header">
-							<h3 class="card-title">Add Features</h3>
+							<h3 class="card-title">Add Features || <?php echo $P_title;?></h3>
 						</div>
 						<!-- /.card-header -->
 						<!-- form start -->
