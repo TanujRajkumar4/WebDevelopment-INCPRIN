@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2021 at 06:20 AM
+-- Generation Time: Nov 14, 2021 at 03:24 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -159,8 +159,17 @@ CREATE TABLE `inc_product` (
   `product_title` varchar(250) NOT NULL,
   `product_desc` varchar(500) NOT NULL,
   `product_img` varchar(255) NOT NULL,
+  `pr_ban_typ` int(11) NOT NULL COMMENT '0-Image 1-Video',
   `product_status` varchar(50) NOT NULL DEFAULT 'A'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `inc_product`
+--
+
+INSERT INTO `inc_product` (`product_id`, `service_id`, `product_title`, `product_desc`, `product_img`, `pr_ban_typ`, `product_status`) VALUES
+(2, 11, 'Product 1', 'Product 1 - Description', 'assets/img/products/6190f785643d0.jpg', 0, 'A'),
+(3, 11, 'Product 2 ', ' Product 2 Description', 'assets/img/products/6190ebf52f282.mp4', 1, 'A');
 
 -- --------------------------------------------------------
 
@@ -181,9 +190,10 @@ CREATE TABLE `inc_service` (
 --
 
 INSERT INTO `inc_service` (`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES
-(1, 'TEST SERVICE', 'assets\\img\\Service1.jpg', 'Sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.\r\n\r\nSed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.\r\n\r\n', 'A'),
-(2, 'TEST SERVICE 1', 'assets\\img\\Service2.jpg', 'Sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.\r\n\r\nSed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.\r\n\r\n', 'A'),
-(7, 'dfgdfg', 'assets/img/services/6190985c0a3d1.jpg', 'fghfgh', 'A');
+(13, 'Apparels Labeling1', 'assets/img/services/619114bc44d80.jpg', '&lt;p&gt;Sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;/p&gt;&lt;p&gt;Sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;br&gt;&lt;/p&gt;', 'A'),
+(12, 'Apparels Labeling2', 'assets/img/services/6191148e80671.jpg', '&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;/p&gt;&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A'),
+(14, 'Apparels Labeling3', 'assets/img/services/6191149a84299.jpg', '&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;/p&gt;&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A'),
+(15, 'Apparels Labeling4', 'assets/img/services/619114a727b54.jpg', '&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.&lt;/p&gt;&lt;p class=&quot;text-start&quot; style=&quot;margin-bottom: 20px; line-height: 1.45; color: rgb(86, 88, 91); font-family: Lora, serif;&quot;&gt;Sed lobortis mi. Suspendisse vel placerat ligula.&amp;nbsp;&lt;span style=&quot;text-decoration-line: underline;&quot;&gt;Vivamus&lt;/span&gt;&amp;nbsp;ac sem lac. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo. Vestibulum ante ipsum primis in faucibus orci luc', 'A');
 
 -- --------------------------------------------------------
 
@@ -289,13 +299,13 @@ ALTER TABLE `inc_page`
 -- AUTO_INCREMENT for table `inc_product`
 --
 ALTER TABLE `inc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `inc_service`
 --
 ALTER TABLE `inc_service`
-  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `inc_ser_category`
