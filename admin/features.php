@@ -21,8 +21,7 @@ if(isset($_GET['typ']) && $_GET['typ'] =="add")
 	{
 		if(isset($_POST['add_features']))
 		{
-			$desc=htmlspecialchars($_POST['summernote']);
-		
+			$desc=$_POST['summernote'];		
 			$msg=addslashes($_POST['fea_tit']);
 			$logo="";
 			if(isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != ""))
@@ -66,7 +65,7 @@ if(isset($_GET['typ']) && $_GET['typ'] =="add")
 			else{
 				$qry="INSERT INTO `inc_features`(`features_id`, `product_id`, `pg_typ`, `features_title`, `feature_desc`, `file_url`, `feature_status`) VALUES (NULL,'".$_GET['p_id']."','".$p_ty."','".$msg."','".$desc."','".$logo."','A')";
 				$sql=mysqli_query($dbConn,$qry);
-				// echo $qry;
+				//echo $qry;
 				if($sql)
 				{
 				echo "<script>alert('Inserted Successfully.'); window.location.href = 'features.php?p_ty='".$_GET['p_ty']."'&p_id='".$_GET['p_id']."';</script>";
@@ -148,7 +147,7 @@ if(isset($_GET['typ']) && $_GET['typ'] =="add")
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="?typ=add&p_ty=<?php echo$_GET['p_ty'];?>&p_id=<?php echo$_GET['p_id'];?>">
+              <form method="POST" action="?typ=add&p_ty=<?php echo$_GET['p_ty'];?>&p_id=<?php echo$_GET['p_id'];?>" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Feature Title</label>
@@ -208,7 +207,7 @@ if(isset($_GET['typ']) && $_GET['typ'] =="add")
 					{
 						$typ=1;
 					}
-					else
+					elseif($_GET['p_ty']=="produ")
 					{
 						$typ=0;
 					}
@@ -225,8 +224,8 @@ if(isset($_GET['typ']) && $_GET['typ'] =="add")
 				  ?>
                     <tr>
                       <td>#</td>
-                      <td><?php echo $sql['feature_title'];?></td>
-                      <td><?php echo substr($sql['feature_desc'],0,100);?></td>
+                      <td><?php echo $sql['features_title'];?></td>
+                      <td><?php echo substr($sql['feature_desc'],0,300);?></td>
                         <?php if($_GET['p_ty']=="tech")
 					  {?><td><img src="../<?php echo $sql['file_url'];?>" >
                       </td><?php }?>

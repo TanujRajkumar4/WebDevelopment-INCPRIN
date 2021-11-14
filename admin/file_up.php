@@ -115,7 +115,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 						</div>
 						<!-- /.card-header -->
 						<!-- form start -->
-						<form method="POST" action="?typ=add">
+						<form method="POST" action="?typ=add&p_ty=<?php echo$_GET['p_ty'];?>&p_id=<?php echo$_GET['p_id'];?>" enctype="multipart/form-data">
 							<div class="card-body">
 								<?php if ($_GET['p_ty'] == "sus") {
 								?>
