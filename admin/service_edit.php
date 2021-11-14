@@ -4,7 +4,7 @@ include('header.php');
 include('sidebar.php');
 include('database.php');
 
-$ServiceDetails="";
+$ServiceDetails = "";
 //ADD New Service Block :START
 if (isset($_GET['id']) && $_GET['id'] != "") {
     global $ServiceDetails;
@@ -39,7 +39,14 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
                             echo "<script>alert('Not Edited. Retry!'); window.location.href = 'service_edit.php?id=" . $s_id . "';</script>";
                         }
                     } else {
-                        echo "<script>alert('Error Deleting OLD Video/Image. Retry!'); window.location.href = 'service_edit.php?id=" . $s_id . "';</script>";
+                        $qry = "UPDATE `inc_service` SET `service_name`='$msg',`service_img`='$logo',`service_desc`='$desc' WHERE service_id = '$s_id'";
+                        $sql = mysqli_query($dbConn, $qry);
+                        // echo $qry;
+                        if ($sql) {
+                            echo "<script>alert('Edit Successful. Error Deleting OLD Video/Image. Delete Manually from the Server'); window.location.href = 'services.php';</script>";
+                        } else {
+                            echo "<script>alert('Not Edited. Retry!'); window.location.href = 'service_edit.php?id=" . $s_id . "';</script>";
+                        }
                     }
                 }
             } else {
@@ -101,11 +108,11 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
                                 </div>
                                 <div class="form-group">
                                     <label for="inputDescription">Description</label>
-                                    <textarea id="summernote" name="summernote" class="form-control"><?php echo $ServiceDetails['service_desc'];?></textarea>
+                                    <textarea id="summernote" name="summernote" class="form-control"><?php echo $ServiceDetails['service_desc']; ?></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="serviceImage">Current Service Image</label><br>
-                                    <img src="<?php echo "../" .$ServiceDetails['service_img'];?>" height="100px" width="180px">
+                                    <img src="<?php echo "../" . $ServiceDetails['service_img']; ?>" height="100px" width="180px">
 
                                 </div>
                                 <div class="form-group">
