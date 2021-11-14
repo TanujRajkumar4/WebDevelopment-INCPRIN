@@ -7,8 +7,10 @@ include('database.php');
 //ADD New Service Block :START
 if (isset($_GET['typ']) && $_GET['typ'] == "add") {
     if (isset($_POST['add_product'])) {
+        $msg = addslashes($_POST['product_title']);
+        $service_ID = $_POST['service_ID_pr'];
         $desc = htmlspecialchars($_POST['summernote']);
-        $msg = addslashes($_POST['service_title']);
+        $upload_Type = $_POST['up_typ'];
         $logo = "";
         if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
             $i = "logo";
@@ -16,61 +18,63 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
             $ext = explode('.', $_FILES['file_upl']['name']);
             $ext = end($ext);
             $check = strtolower($ext);
-            $logo = "assets/img/services/" . uniqid("") . '.' . $ext;
-            if ($check == "png" || $check == "jpeg" || $check == "jpg" || $check == "png" || $check == "mp4") {
+            $logo = "assets/img/products/" . uniqid("") . '.' . $ext;
+            if (($upload_Type==0 && ($check == "png" || $check == "jpeg" || $check == "jpg" || $check == "png")) || ($upload_Type == 1 && $check == "mp4")) {
                 if (!move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
                     echo "<script>alert('File upload error');</script>";
-                    echo "<script>window.location.href ='services.php';</script>";
+                    echo "<script>window.location.href ='products.php';</script>";
                 } else {
-                    $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','A')";
+                    $qry = "INSERT INTO `inc_product`(`product_id`, `service_id`, `product_title`, `product_desc`, `product_img`, `pr_ban_typ`, `product_status`)
+                                              VALUES (NULL,'$service_ID','$msg','$desc','$logo','$upload_Type','A')";
                     $sql = mysqli_query($dbConn, $qry);
                     // echo $qry;
                     if ($sql) {
-                        echo "<script>alert('Inserted Successfully.'); window.location.href = 'services.php';</script>";
+                        echo "<script>alert('Inserted Successfully.'); window.location.href = 'products.php';</script>";
                     } else {
-                        echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'services.php';</script>";
+                        echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'products.php';</script>";
                     }
                 }
             } else {
-                echo "<script>alert('Upload only mp4,jpeg,jpg and png files');</script>";
-                echo "<script>window.location.href ='services.php';</script>";
+                echo "<script>alert('Upload only mp4,jpeg,jpg and png files. Select Correct Upload Type Also.');</script>";
+                echo "<script>window.location.href ='products.php';</script>";
                 exit();
             }
-        } else {
-            $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','A')";
-            $sql = mysqli_query($dbConn, $qry);
-            // echo $qry;
-            if ($sql) {
-                echo "<script>alert('Inserted Successfully. NO IMAGE'); window.location.href = 'services.php';</script>";
-            } else {
-                echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'services.php';</script>";
-            }
         }
+        //  else {
+        //     $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','A')";
+        //     $sql = mysqli_query($dbConn, $qry);
+        //     // echo $qry;
+        //     if ($sql) {
+        //         echo "<script>alert('Inserted Successfully. NO IMAGE'); window.location.href = 'services.php';</script>";
+        //     } else {
+        //         echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'services.php';</script>";
+        //     }
+        // }
     }
 }
 //ADD New Service Block :END
 
 //DELETE Service Block :START
-elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
+elseif (isset($_GET['typ']) && $_GET['typ'] == "del" && $_GET['id'] != "") {
 
-    $qry = mysqli_query($dbConn, "SELECT service_img from inc_service where service_id = " . $_GET['id']);
+    $qry = mysqli_query($dbConn, "SELECT product_img from inc_product where product_id = " . $_GET['id']);
     $sql = mysqli_fetch_array($qry);
-    $logo = $sql['service_img'];
+    $logo = $sql['product_img'];
     if (unlink("../" . $logo)) {
-        $qry = "DELETE FROM `inc_service` where `service_id`=" . $_GET['id'];
+        $qry = "DELETE FROM `inc_product` where `product_id`=" . $_GET['id'];
         $sql = mysqli_query($dbConn, $qry);
         if ($sql) {
-            echo "<script>alert('Deleted Successfully.'); window.location.href = 'services.php';</script>";
+            echo "<script>alert('Deleted Successfully.'); window.location.href = 'products.php';</script>";
         } else {
-            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'services.php';</script>";
+            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'products.php';</script>";
         }
     } else {
         $qry = "DELETE FROM `inc_service` where `service_id`=" . $_GET['id'];
         $sql = mysqli_query($dbConn, $qry);
         if ($sql) {
-            echo "<script>alert('Deleted Successfully.'); window.location.href = 'services.php';</script>";
+            echo "<script>alert('Product Deleted Successfully. Image/Video Not Deleted.'); window.location.href = 'products.php';</script>";
         } else {
-            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'services.php';</script>";
+            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'products.php';</script>";
         }
     }
 }
@@ -112,7 +116,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Product Title</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="service_title" placeholder="Product Name">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="product_title" placeholder="Product Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="service_ID_pr">Service</label>
@@ -158,7 +162,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Product List</h3>
+                            <h3 class="card-title" id="PL">Product List</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -188,7 +192,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                     $res_per_pg = 5;
                                     $pge_first_res = ($page - 1) * $res_per_pg;
                                     $i = 1;
-                                    $sql_sel = "SELECT * FROM inc_product WHERE product_status ='A'";
+                                    $sql_sel = "SELECT A.* , B.* FROM inc_product A,inc_service B WHERE A.product_status ='A' AND A.service_id=B.service_id";
                                     $qry = (mysqli_query($dbConn, $sql_sel));
                                     $nu_res = mysqli_num_rows($qry);
                                     $num_pg = ceil($nu_res / $res_per_pg);
@@ -197,7 +201,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                     ?>
                                         <tr>
                                             <td><?php echo $i; ?></td>
-                                            <td><?php echo $sql['service_id']; ?></td>
+                                            <td><?php echo $sql['service_name']; ?></td>
                                             <td><?php echo $sql['product_title']; ?></td>
                                             <td><?php echo substr($sql['product_desc'], 0, 100); ?>.....</td>
                                             <td><?php if ($sql['pr_ban_typ'] == '0') { ?>

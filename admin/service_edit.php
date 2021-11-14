@@ -39,6 +39,7 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
                             echo "<script>alert('Not Edited. Retry!'); window.location.href = 'service_edit.php?id=" . $s_id . "';</script>";
                         }
                     } else {
+                        echo "<script>alert('Error Deleting OLD Video/Image. Retry!'); window.location.href = 'service_edit.php?id=" . $s_id . "';</script>";
                     }
                 }
             } else {
@@ -121,6 +122,7 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
                             <div class="card-footer">
                                 <input type="submit" class="btn btn-primary" name="edit_service" Value="Submit">
                                 <input type="reset" class="btn btn-warning" name="clr_features" Value="Reset">
+                                <input type="button" class="btn btn-success" name="clr_features" Value="Back" onclick="window.location.assign('services.php#SL')">
                             </div>
                         </form>
                     </div>

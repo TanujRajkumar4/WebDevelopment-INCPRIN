@@ -137,7 +137,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Service List</h3>
+                            <h3 class="card-title" id="SL">Service List</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
