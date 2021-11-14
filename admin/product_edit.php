@@ -42,7 +42,13 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
                             echo "<script>alert('Not Edited. Retry!'); window.location.href = 'product_edit.php?id=" . $pr_id . "';</script>";
                         }
                     } else {
-                        echo "<script>alert('Error Deleting OLD Video/Image. Retry!'); window.location.href = 'product_edit.php?id=" . $pr_id . "';</script>";
+                        $qry = "UPDATE `inc_product` SET `service_id`='$service_ID',`product_title`='$msg',`product_desc`='$desc',`product_img`='$logo',`pr_ban_typ`='$upload_Type' WHERE product_id = '$pr_id' ";
+                        $sql = mysqli_query($dbConn, $qry);
+                        if ($sql) {
+                            echo "<script>alert('Edited Successfully. Error Deleting OLD Video/Image.'); window.location.href = 'products.php';</script>";
+                        } else {
+                            echo "<script>alert('Not Edited. Retry!'); window.location.href = 'product_edit.php?id=" . $pr_id . "';</script>";
+                        }
                     }
                 }
             } else {
