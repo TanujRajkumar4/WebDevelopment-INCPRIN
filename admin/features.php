@@ -225,7 +225,7 @@ if(isset($_GET['typ']) && $_GET['typ'] =="add")
                     <tr>
                       <td>#</td>
                       <td><?php echo $sql['features_title'];?></td>
-                      <td><?php echo substr($sql['feature_desc'],0,300);?></td>
+                      <td><?php echo $sql['feature_desc'];?></td>
                         <?php if($_GET['p_ty']=="tech")
 					  {?><td><img src="../<?php echo $sql['file_url'];?>" >
                       </td><?php }?>
