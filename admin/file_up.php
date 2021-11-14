@@ -7,17 +7,19 @@ $P_title="";
 if ($_GET['p_ty'] == "sus") {
 			$p_ty = 1;
 			$P_title="Sustainability";
+			$fil_txt="pdf,doc,docx";
 		} else {
 			$p_ty = 0;
 			$qry="SELECT * FROM `inc_product` where product_id=".$_GET['p_id']." and product_status='A'";
 			$qry=mysqli_query($dbConn,$qry);
 			$sql=mysqli_fetch_array($qry);
 			$P_title=$sql['product_title'];
+				$fil_txt="jpeg,jpg,png";
 		}
 if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 	if (isset($_POST['add_files'])) {
 		
-		$msg = addslashes($_POST['poto_tit']);
+		$msg = "";
 		$logo = "";
 		if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
 
@@ -27,7 +29,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 			$ext = end($ext);
 			$check = strtolower($ext);
 			$logo = "assets/img/reports/" . uniqid("") . '.' . $ext;
-			if ($check == "pdf" || $check == "doc" || $check == "docx") {
+			if ($check == "pdf" || $check == "doc" || $check == "docx" || $check == "png" || $check == "jpeg" || $check == "jpg") {
 				if (!move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
 					echo "<script>alert('File upload error');</script>";
 					echo "<script>window.location.href ='file_up.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
@@ -47,6 +49,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 				exit;
 			}
 		} else {
+			$msg = addslashes($_POST['poto_tit']);
 			$qry = "INSERT INTO `inc_gallery`(`photo_id`,`product_id`,`pg_typ`,`poto_desc`,`file_url`, `photo_status`) VALUES (NULL,'" . $_GET['p_id'] . "','" . $p_ty . "','" . $msg . "','" . $logo . "','A')";
 			$sql = mysqli_query($dbConn, $qry);
 			// echo $qry;
@@ -126,7 +129,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 								<?php
 								} ?>
 								<div class="form-group">
-									<label for="file_upl">File input: <ex>Upload jpeg,jpg,png format files only</ex></label>
+									<label for="file_upl">File input: <ex>Upload <?php echo $fil_txt;?> format files only</ex></label>
 									<div class="input-group">
 										<div class="custom-file">
 											<input type="file" class="form-control" id="file_upl" name="file_upl">
@@ -168,7 +171,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 									}
 									if ($_GET['p_ty'] == "sus") {
 										$typ = 1;
-									} else {
+									} elseif($_GET['p_ty']=="produ") {
 										$typ = 0;
 									}
 									$res_per_pg = 5;
@@ -186,10 +189,10 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 											<?php
 											if ($_GET['p_ty'] == "sus") {
 											?>
-												<td><?php echo $sql['poto_desc']; ?></td><?php } ?>
-											<td><img src="../<?php echo $sql['file_url']; ?>">
-											</td>
-											<td>
+												<td><?php echo $sql['poto_desc']; ?></td>
+											<td><a href="../<?php echo $sql['file_url']; ?>" target="_blank"><img src="../assets/img/reports/rp.jpg" style="width:25%;height=25%;">
+											</td><?php }if($_GET['p_ty'] == "produ") {?>
+									<td><img src="../<?php echo $sql['file_url']; ?>" style="width:50%;height=50%;"></td><?php }?><td>
 												<a class="btn btn-danger btn-sm" href="file_up.php?p_ty=<?php echo $_GET['p_ty']; ?>&typ=del&p_id=<?php echo $_GET['p_id']; ?>&f_id=<?php echo $sql['photo_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
 											</td>
 										</tr>
