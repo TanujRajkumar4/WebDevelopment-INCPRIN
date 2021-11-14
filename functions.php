@@ -12,6 +12,14 @@ function getAllDataC($tableName,$status,$condition){
     global $dbConn;
     $Query = "SELECT * FROM $tableName WHERE $status = 'A' ".$condition;
     $results =$dbConn->query($Query);
+    $results=$results->fetch_assoc();
+    return $results;
+}
+
+function getAllDataC1($tableName,$status,$condition){
+    global $dbConn;
+    $Query = "SELECT * FROM $tableName WHERE $status = 'A' ".$condition;
+    $results =$dbConn->query($Query);
     // $results=$results->fetch_assoc();
     return $results;
 }

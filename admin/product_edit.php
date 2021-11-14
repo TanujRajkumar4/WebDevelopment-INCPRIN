@@ -15,7 +15,8 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
     if (isset($_POST['edit_product'])) {
         $msg = addslashes($_POST['product_title']);
         $service_ID = $_POST['service_ID_pr'];
-        $desc = htmlspecialchars($_POST['summernote']);
+        $desc = $_POST['summernote'];
+        // $desc = htmlspecialchars($_POST['summernote']);
         $upload_Type = $_POST['up_typ'];
         $logo = "";
         if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {

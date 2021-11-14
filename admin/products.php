@@ -9,7 +9,8 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
     if (isset($_POST['add_product'])) {
         $msg = addslashes($_POST['product_title']);
         $service_ID = $_POST['service_ID_pr'];
-        $desc = htmlspecialchars($_POST['summernote']);
+        $desc = $_POST['summernote'];
+        // $desc = htmlspecialchars($_POST['summernote']);
         $upload_Type = $_POST['up_typ'];
         $logo = "";
         if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
@@ -19,7 +20,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
             $ext = end($ext);
             $check = strtolower($ext);
             $logo = "assets/img/products/" . uniqid("") . '.' . $ext;
-            if (($upload_Type==0 && ($check == "png" || $check == "jpeg" || $check == "jpg" || $check == "png")) || ($upload_Type == 1 && $check == "mp4")) {
+            if (($upload_Type == 0 && ($check == "png" || $check == "jpeg" || $check == "jpg" || $check == "png")) || ($upload_Type == 1 && $check == "mp4")) {
                 if (!move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
                     echo "<script>alert('File upload error');</script>";
                     echo "<script>window.location.href ='products.php';</script>";
@@ -203,7 +204,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del" && $_GET['id'] != "") {
                                             <td><?php echo $i; ?></td>
                                             <td><?php echo $sql['service_name']; ?></td>
                                             <td><?php echo $sql['product_title']; ?></td>
-                                            <td><?php echo substr($sql['product_desc'], 0, 100); ?>.....</td>
+                                            <td><?php echo $sql['product_desc']; ?>.....</td>
                                             <td><?php if ($sql['pr_ban_typ'] == '0') { ?>
                                                     <img src="../<?php echo $sql['product_img']; ?>" style="width: 100%;height: 100%;">
                                                 <?php } else {
@@ -217,7 +218,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del" && $_GET['id'] != "") {
                                                 <a class="btn btn-info btn-sm" href="product_edit.php?id=<?php echo $sql['product_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
                                                 <a class="btn btn-info btn-sm" href="features.php?p_ty=produ&p_id=<?php echo $sql['product_id']; ?>"><i class="fas fa-pencil-alt"></i>Add Features</a>
                                                 <a class="btn btn-info btn-sm" href="file_up.php?p_ty=produ&p_id=<?php echo $sql['product_id']; ?>"><i class="fas fa-pencil-alt"></i>Add Gallery</a>
-                                                <a class="btn btn-danger btn-sm" href="product.php?typ=del&id=<?php echo $sql['product_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
+                                                <a class="btn btn-danger btn-sm" href="products.php?typ=del&id=<?php echo $sql['product_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
                                             </td>
                                         </tr>
                                     <?php $i = $i + 1;
