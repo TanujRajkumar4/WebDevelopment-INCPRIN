@@ -22,7 +22,6 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
                     echo "<script>alert('File upload error');</script>";
                     echo "<script>window.location.href ='services.php';</script>";
                 } else {
-                    // $qry = "INSERT INTO `inc_features`(`features_id`, `product_id`, `pg_typ`, `features_title`, `feature_desc`, `file_url`, `feature_status`) VALUES (NULL,'" . $_GET['p_id'] . "','" . $p_ty . "','" . $msg . "','" . $desc . "','" . $logo . "','A')";
                     $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','A')";
                     $sql = mysqli_query($dbConn, $qry);
                     // echo $qry;
@@ -40,7 +39,6 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
         } 
         else {
             $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','A')";
-            // $qry = "INSERT INTO `inc_features`(`features_id`, `product_id`, `pg_typ`, `features_title`, `feature_desc`, `file_url`, `feature_status`) VALUES (NULL,'" . $_GET['p_id'] . "','" . $p_ty . "','" . $msg . "','" . $desc . "','" . $logo . "','A')";
             $sql = mysqli_query($dbConn, $qry);
             // echo $qry;
             if ($sql) {
