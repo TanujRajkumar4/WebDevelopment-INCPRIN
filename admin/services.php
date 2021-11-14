@@ -18,7 +18,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
             $check = strtolower($ext);
             $logo = "assets/img/services/" . uniqid("") . '.' . $ext;
             if ($check == "png" || $check == "jpeg" || $check == "jpg" || $check == "png") {
-                if (! move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
+                if (!move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
                     echo "<script>alert('File upload error');</script>";
                     echo "<script>window.location.href ='services.php';</script>";
                 } else {
@@ -36,8 +36,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
                 echo "<script>window.location.href ='services.php';</script>";
                 exit();
             }
-        } 
-        else {
+        } else {
             $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','A')";
             $sql = mysqli_query($dbConn, $qry);
             // echo $qry;
@@ -53,29 +52,27 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 
 //DELETE Service Block :START
 elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
-    if ($_GET['p_ty'] == "tech") {
-        $qry = mysqli_query($dbConn, "select cl_logo from inc_client where cli_id=" . $_GET['cli_id']);
-        $sql = mysqli_fetch_array($qry);
-        $logo = $sql['cl_logo'];
-        if (unlink("../" . $logo)) {
-            $qry = "delete from `inc_client` where `cli_id`=" . $_GET['cli_id'];
-            $sql = mysqli_query($dbConn, $qry);
-            if ($sql) {
-                echo "<script>alert('Deleted Successfully.'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
-            } else {
-                echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
-            }
+
+    $qry = mysqli_query($dbConn, "SELECT service_img from inc_service where service_id = " . $_GET['id']);
+    $sql = mysqli_fetch_array($qry);
+    $logo = $sql['service_img'];
+    if (unlink("../" . $logo)) {
+        $qry = "DELETE FROM `inc_service` where `service_id`=" . $_GET['id'];
+        $sql = mysqli_query($dbConn, $qry);
+        if ($sql) {
+            echo "<script>alert('Deleted Successfully.'); window.location.href = 'services.php';</script>";
+        } else {
+            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'services.php';</script>";
+        }
+    } else {
+        $qry = "DELETE FROM `inc_service` where `service_id`=" . $_GET['id'];
+        $sql = mysqli_query($dbConn, $qry);
+        if ($sql) {
+            echo "<script>alert('Deleted Successfully.'); window.location.href = 'services.php';</script>";
+        } else {
+            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'services.php';</script>";
         }
     }
-    // else {
-    //     $qry = "delete from `inc_client` where `cli_id`=" . $_GET['cli_id'];
-    //     $sql = mysqli_query($dbConn, $qry);
-    //     if ($sql) {
-    //         echo "<script>alert('Deleted Successfully.'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
-    //     } else {
-    //         echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
-    //     }
-    // }
 }
 //DELETE Service Block :END
 ?>
@@ -183,7 +180,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                             <td><img src="../<?php echo $sql['service_img']; ?>" height="100px" width="200px"></td>
                                             <td>
                                                 <a class="btn btn-info btn-sm" href="service_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="service_del.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
+                                                <a class="btn btn-danger btn-sm" href="services.php?typ=del&id=<?php echo $sql['service_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
                                             </td>
                                         </tr>
                                     <?php $i = $i + 1;
