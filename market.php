@@ -24,9 +24,11 @@
 <body>
     <?php
     $markets = getAllData('inc_service', 'service_status');
+    $page = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 2 ');
+
     ?>
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background: url(&quot;https://unsplash.it/1800/900?image=1051&quot;) center / cover, url(&quot;https://images.unsplash.com/photo-1624265853364-d56ee2b0171a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80&quot;) center / cover repeat;"></div><!-- End: Parallax Background -->
+    <div data-bss-parallax-bg="true" style="height: 300px;background: url(<?php echo $page['pg_banner'];?>) center / cover;"></div><!-- End: Parallax Background -->
     <hr>
     <h1 class="text-center" style="font-family: Lora, serif;color: #56585b;">MARKETS</h1>
     <hr><!-- Start: Market1 -->
