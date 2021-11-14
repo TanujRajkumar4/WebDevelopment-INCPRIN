@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
 <?php 
- $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 3');
+ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 4');
 ?>
 <body>
     <!-- Start: Parallax Background -->
