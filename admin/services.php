@@ -7,7 +7,8 @@ include('database.php');
 //ADD New Service Block :START
 if (isset($_GET['typ']) && $_GET['typ'] == "add") {
     if (isset($_POST['add_service'])) {
-        $desc = htmlspecialchars($_POST['summernote']);
+        $desc = $_POST['summernote'];
+        // $desc = htmlspecialchars($_POST['summernote']);
         $msg = addslashes($_POST['service_title']);
         $logo = "";
         if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {

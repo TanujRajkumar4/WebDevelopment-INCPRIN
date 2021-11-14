@@ -1,9 +1,17 @@
 <?php
 
 function getAllData($tableName,$status){
-    global $conn;
+    global $dbConn;
     $Query = "SELECT * FROM $tableName WHERE $status = 'A'";
-    $results =$conn->query($Query);
+    $results =$dbConn->query($Query);
+    // $results=$results->fetch_assoc();
+    return $results;
+}
+
+function getAllDataC($tableName,$status,$condition){
+    global $dbConn;
+    $Query = "SELECT * FROM $tableName WHERE $status = 'A' ".$condition;
+    $results =$dbConn->query($Query);
     // $results=$results->fetch_assoc();
     return $results;
 }

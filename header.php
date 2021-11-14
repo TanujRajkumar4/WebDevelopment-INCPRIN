@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>INCPRIN</title>    
+    <title>INCPRIN</title>
 </head>
+
 <body>
     <div class="row text-nowrap d-none d-md-flex align-items-start" style="text-align: left;width: 100%;margin: 0px;height: 50px;">
         <div class="col-6" style="background: #0c1127;padding-left: 30px;">
@@ -39,7 +41,10 @@
                 </ul>
             </div>
         </div>
-    </nav><!-- End: Nav Bar -->   
+    </nav><!-- End: Nav Bar -->
 </body>
+
 </html>
-<?php require('config.php');?>
+<?php require('./admin/database.php');
+require('functions.php');
+?>
