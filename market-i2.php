@@ -44,8 +44,9 @@ if (!isset($_GET['p_id'])) {
                 <h5 style="text-align: center;font-weight: bold;">Other Products</h5>
                 <ul>
                     <?php foreach ($p_service as $p_s) :
-                        if($p_id==$p_s['product_id']){continue;}?>
-                        
+                        if ($p_id == $p_s['product_id']) {
+                            continue;
+                        } ?>
                         <li style="color: #2d2d2d;padding-top: 10px;"><a href="market-i2.php?p_id=<?php echo $p_s['product_id']; ?>" style="color: #2d2d2d;"><?php echo $p_s['product_title']; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
