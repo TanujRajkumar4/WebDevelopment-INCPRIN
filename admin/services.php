@@ -112,7 +112,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Service Title</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="service_title" placeholder="Feature Heading">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="service_title" placeholder="Service Heading">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputDescription">Description</label>
@@ -137,7 +137,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Feature List</h3>
+                            <h3 class="card-title">Service List</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
