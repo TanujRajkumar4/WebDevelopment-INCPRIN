@@ -26,6 +26,7 @@ if (!isset($_GET['p_id'])) {
         </script>";
 } else {
     $p_id = $_GET['p_id'];
+    $page = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 2 ');
     $p_Details = getAllDataC('inc_product', 'product_status', 'AND product_id =' . $p_id);
     $p_gallery = getAllDataC1('inc_gallery', 'photo_status', 'AND product_id =' . $p_id . ' AND pg_typ=0');
     $p_feature = getAllDataC1('inc_features', 'feature_status', 'AND product_id =' . $p_id . ' AND pg_typ=0');
@@ -35,7 +36,7 @@ if (!isset($_GET['p_id'])) {
 
 <body>
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(https://unsplash.it/1800/900?image=1051);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
+    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $page['pg_banner'];?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
     <hr><!-- Start: Entire Page -->
     <div class="container">
         <div class="row">
