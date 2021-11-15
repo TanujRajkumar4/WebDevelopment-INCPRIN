@@ -136,6 +136,8 @@
     </div><!-- End: 1 Row 2 Columns -->
     <!-- Start: Our Services Heading -->
     <h1 style="text-align: center;font-size: 22.520000000000003px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">OUR SERVICES</h1><!-- End: Our Services Heading -->
+   
+   
     <!-- Start: OurServicesSlider -->
     <div class="row" data-aos="fade" style="width: 100%;background: url(&quot;assets/img/ServicesBG1.png?h=697b83e2397adfbffe603d41056c6de7&quot;) center / cover;margin: 0px;">
         <div class="col" style="background: rgba(255,255,255,0);width: 100%;padding-right: 0;padding-left: 0;">
@@ -144,48 +146,45 @@
                 <div class="row mx-auto my-auto justify-content-center" style="background: rgba(255,255,255,0);width: 100%;">
                     <div id="recipeCarousel-1" class="carousel slide carousel2" data-bs-ride="carousel" style="background: rgba(255,255,255,0);width: 100%;">
                         <div class="carousel-inner" role="listbox" style="background: rgba(255,255,255,0);width: 100%;">
-                            <!-- Start: Carousel-Item_active -->
+                        <?php
+                        $services = getAllData('inc_service', 'service_status');
+                        $active1 = true;
+                        foreach ($services as $service) :
+                        ?>
+                        <?php if ($active1) { ?>
+                           
+                        <!-- Start: Carousel-Item_active -->
                             <div class="justify-content-center carousel-item active carousel-item2" style="background: rgba(255,255,255,0);">
                                 <div class="col-md-3" style="background: rgba(255,255,255,0);">
                                     <div class="card" style="background: rgba(255,255,255,0);">
                                         <div class="card-img" style="background: rgba(255,255,255,0);">
-                                            <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="assets/img/Service1.jpg?h=3d3a6b991715f8ec1000505655a78eed">
+                                            <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
                                                 <div class="card-body" style="background: #0c1127;">
-                                                    <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;">AUTOMOBILE TECHNIQUES</h4>
+                                                    <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div><!-- End: Carousel-Item_active -->
+                            <?php $active1 = false;
+                                continue;
+                            } ?>
                             <!-- Start: carousel-item -->
                             <div class="justify-content-center carousel-item carousel-item2" style="background: rgba(255,255,255,0);">
                                 <div class="col-md-3" style="background: rgba(255,255,255,0);">
                                     <div class="card" style="background: rgba(255,255,255,0);">
                                         <div class="card-img" style="background: rgba(255,255,255,0);">
-                                            <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="assets/img/Service2.jpg?h=9e3b6f58876e5ed51f1180c4e7908736">
+                                            <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
                                                 <div class="card-body" style="background: #0c1127;">
-                                                    <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;">PACKAGING TECHNIQUES</h4>
+                                                    <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div><!-- End: carousel-item -->
-                            <!-- Start: carousel-item -->
-                            <div class="justify-content-center carousel-item carousel-item2" style="background: rgba(255,255,255,0);">
-                                <div class="col-md-3" style="background: rgba(255,255,255,0);">
-                                    <div class="card" style="background: rgba(255,255,255,0);">
-                                        <div class="card-img" style="background: rgba(255,255,255,0);">
-                                            <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="assets/img/Service3.jpg?h=0fa6404c370dc6ffe06d9c48bf36db7d">
-                                                <div class="card-body" style="background: #0c1127;">
-                                                    <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;">ELECTRONIC TECHNIQUES</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- End: carousel-item -->
+                            <?php endforeach; ?>                            
                         </div><a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a><a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
