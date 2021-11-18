@@ -3,7 +3,6 @@ session_start();
 include('header.php');
 include('sidebar.php');
 include('database.php');
-
 //ADD New Service Block :START
 if (isset($_GET['typ']) && $_GET['typ'] == "add") {
     if (isset($_POST['add_product'])) {
@@ -165,8 +164,29 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del" && $_GET['id'] != "") {
                         <div class="card-header">
                             <h3 class="card-title" id="PL">Product List</h3>
                         </div>
-                        <!-- /.card-header -->
                         <div class="card-body">
+                            <form id="ServiceFilter" name="ServiceFilter" method="POST" action="products.php#PL">
+                                <div class="form-group">
+                                    <label for="service_ID_pr1">Service</label>
+                                    <?php
+                                    $sql1 = "SELECT * FROM inc_service WHERE service_status = 'A'";
+                                    $Services = $dbConn->query($sql1);
+
+                                    ?>
+                                    <select name="service_ID_pr1" class="form-control" onchange='document.getElementById("ServiceFilter").submit();'>
+                                        <option value=0>ALL</option>
+                                        <?php foreach ($Services as $Service) : ?>
+                                            <option value="<?php echo $Service['service_id']; ?>" <?php if (isset($_POST['service_ID_pr1'])) {
+                                                                                                        if ($_POST['service_ID_pr1'] == $Service['service_id']) {
+                                                                                                            echo "Selected";
+                                                                                                        }
+                                                                                                    } ?>><?php echo $Service['service_name']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            </form>
+
+                            <!-- /.card-header -->
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -194,6 +214,14 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del" && $_GET['id'] != "") {
                                     $pge_first_res = ($page - 1) * $res_per_pg;
                                     $i = 1;
                                     $sql_sel = "SELECT A.* , B.* FROM inc_product A,inc_service B WHERE A.product_status ='A' AND A.service_id=B.service_id";
+                                    if (isset($_POST['service_ID_pr1'])) {
+                                        global $sql_sel;
+                                        $SelectedService = $_POST['service_ID_pr1'];
+                                        if ($SelectedService != 0) {
+                                            global $sql_sel;
+                                            $sql_sel = $sql_sel . " AND A.service_id='$SelectedService'";
+                                        }
+                                    }
                                     $qry = (mysqli_query($dbConn, $sql_sel));
                                     $nu_res = mysqli_num_rows($qry);
                                     $num_pg = ceil($nu_res / $res_per_pg);
