@@ -31,17 +31,18 @@ if (!isset($_GET['p_id'])) {
     $p_gallery = getAllDataC1('inc_gallery', 'photo_status', 'AND product_id =' . $p_id . ' AND pg_typ=0');
     $p_feature = getAllDataC1('inc_features', 'feature_status', 'AND product_id =' . $p_id . ' AND pg_typ=0');
     $p_service = getAllDataC1('inc_product', 'product_status', 'AND service_id =' . $p_Details['service_id']);
+    $p_serviceName = getAllDataC('inc_service', 'service_status', 'AND service_id =' . $p_Details['service_id']);
 }
 ?>
 
 <body>
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $page['pg_banner'];?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
+    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $page['pg_banner']; ?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
     <hr><!-- Start: Entire Page -->
     <div class="container">
         <div class="row">
             <!-- Start: SideBar -->
-            <div class="col-2 d-none d-md-inline" style="padding-top: 8px;">
+            <div class="col-2 d-none d-md-inline">
                 <h5 style="text-align: center;font-weight: bold;">Other Products</h5>
                 <ul>
                     <?php foreach ($p_service as $p_s) :
@@ -57,6 +58,14 @@ if (!isset($_GET['p_id'])) {
                 <div class="row">
                     <!-- Start: Content -->
                     <div class="col">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="market.php">Market</a></li>
+                                <li class="breadcrumb-item"><a href="market-i1.php?s_id=<?php echo $p_Details['service_id']; ?>"><?php echo $p_serviceName['service_name']; ?></a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><?php echo $p_Details['product_title']; ?></li>
+                            </ol>
+                        </nav>
                         <h1 style="font-family: Lora, serif;"><?php echo $p_Details['product_title']; ?></h1>
                         <p><br><?php echo $p_Details['product_desc']; ?><br><br></p>
 
