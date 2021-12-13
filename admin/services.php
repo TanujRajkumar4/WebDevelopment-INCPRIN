@@ -181,7 +181,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                             $desc_text = substr($sql['service_desc'], 0, 100);
                                             $desc_text = strip_tags($desc_text, null);
                                             ?>
-                                            <td><?php echo $desc_text; ?>.....</td>
+                                            <td><?php echo $desc_text; ?>H.....</td>
                                             <td><img src="../<?php echo $sql['service_img']; ?>" height="100px" width="200px"></td>
                                             <td>
                                                 <a class="btn btn-info btn-sm" href="service_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
