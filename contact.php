@@ -7,7 +7,7 @@
     <title>INCPRIN</title>
     <?php include('header.php');?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -28,7 +28,7 @@
         <div class="container justify-content-xxl-end align-items-xxl-center">
             <!-- Start: Intro -->
             <div class="intro">
-                <h1 class="text-center" style="font-family: sans-serif, serif;color: #212529;">Location </h1>
+                <h1 class="text-center" style="font-family: Lora, serif;color: #212529;">Location </h1>
                 <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula.. </p>
             </div><!-- End: Intro -->
         </div><iframe allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAMSyH4OlqXfJXCiOcd25Vg86ViyvnM3BU&amp;q=Coimbatore&amp;zoom=15" width="80%" height="450"></iframe>
@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col">
-                <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;font-weight: bold;font-family: sans-serif, serif;color: #212529;">Contact Us</h1>
+                <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;font-weight: bold;font-family: Lora, serif;color: #212529;">Contact Us</h1>
                 <div class="row" style="padding-top: 10px;">
                     <div class="col-auto text-start" style="padding-right: 5px;"><i class="fa fa-map-marker" style="color: #60a042;font-size: 30px;padding-right: 26px;"></i></div>
                     <div class="col-auto text-start" style="padding-left: 0px;">

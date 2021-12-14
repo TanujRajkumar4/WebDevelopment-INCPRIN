@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>INCPRIN</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -70,7 +70,7 @@
             </div>
         </div>
         <div class="col align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-            <div class="card" data-aos="fade" style="background: #0074bd;color: rgb(255,255,255);text-align: center;">
+            <div class="card" data-aos="fade" style="background: #0c1127;color: rgb(255,255,255);text-align: center;">
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-tags" style="font-size: 45.3753px;"></i></h4>
                     <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Packaging</h4>
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="col align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-            <div class="card" data-aos="fade" style="background: #0074bd;color: rgb(255,255,255);text-align: center;">
+            <div class="card" data-aos="fade" style="background: #0c1127;color: rgb(255,255,255);text-align: center;">
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-medkit" style="font-size: 45px;"></i></h4>
                     <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Pharma</h4>
@@ -159,7 +159,7 @@
                                     <div class="card" style="background: rgba(255,255,255,0);">
                                         <div class="card-img" style="background: rgba(255,255,255,0);">
                                             <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
-                                                <div class="card-body" style="background: #0074bd;">
+                                                <div class="card-body" style="background: #0c1127;">
                                                     <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
                                                 </div>
                                             </div>
@@ -176,7 +176,7 @@
                                     <div class="card" style="background: rgba(255,255,255,0);">
                                         <div class="card-img" style="background: rgba(255,255,255,0);">
                                             <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
-                                                <div class="card-body" style="background: #0074bd;">
+                                                <div class="card-body" style="background: #0c1127;">
                                                     <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
                                                 </div>
                                             </div>
