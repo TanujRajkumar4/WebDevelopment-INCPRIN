@@ -83,12 +83,6 @@
             <p>Sustainability Report</p>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="media.php" class="nav-link">
-            <i class="nav-icon fas fa-bookmark"></i>
-            <p>Social Media</p>
-          </a>
-        </li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
