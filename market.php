@@ -8,7 +8,7 @@
     <?php include('header.php');
     ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
 </head>
 
 <body>
@@ -28,9 +29,9 @@
 
     ?>
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background: url(<?php echo $page['pg_banner'];?>) center / cover;"></div><!-- End: Parallax Background -->
+    <div data-bss-parallax-bg="true" style="height: 300px;background: url(<?php echo $page['pg_banner']; ?>) center / cover;"></div><!-- End: Parallax Background -->
     <hr>
-    <h1 class="text-center" style="font-family: Lora, serif;color: #56585b;">MARKETS</h1>
+    <h1 class="text-center" style="font-family:sans-serif;color: #56585b;">MARKETS</h1>
     <hr><!-- Start: Market1 -->
     <section class="article-dual-column">
         <div class="container-md">
@@ -63,7 +64,7 @@
                 <?php } else { ?>
 
                     <!-- MARKET ROW2 - START -->
-                    <div class="row row-cols-1 row-cols-md-2 flex-row-reverse justify-content-center align-items-center justify-content-sm-center flex-md-row justify-content-md-start" style="width: 100%;padding: 15px;">
+                    <div class="row row-cols-1 row-cols-md-2 flex-row-reverse justify-content-center align-items-center justify-content-sm-center flex-md-row justify-content-md-start" style="width: 100%;padding: 15px;font-family:sans-serif;">
                         <!-- Start: Text -->
                         <div class="col">
                             <!-- Start: Text -->

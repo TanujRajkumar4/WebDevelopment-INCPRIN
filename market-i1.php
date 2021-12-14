@@ -80,7 +80,7 @@
             </div><!-- End: ContentDiv1 -->
         <?php } else { ?>
             <!-- Start: ContentDiv2 -->
-            <div class="container" id="content-div-2" style="background: #0c1127;border-radius: 50px;margin-bottom: 20px;padding-bottom: 20px;padding-top: 20px;padding-right: 20px;padding-left: 20px;">
+            <div class="container" id="content-div-2" style="background: #0074bd;border-radius: 50px;margin-bottom: 20px;padding-bottom: 20px;padding-top: 20px;padding-right: 20px;padding-left: 20px;">
                 <div class="row" data-bss-disabled-mobile="true" data-aos="fade" data-aos-once="true">
                     <div class="col-md-12">
                         <h1 class="text-center" style="color: rgb(255,255,255)!important;"><br><strong><?php echo $p['product_title']; ?></strong><br><br></h1>

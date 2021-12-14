@@ -5,13 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>INCPRIN</title>
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <?php
+    require('./admin/database.php');
+    require('functions.php');
+    $data = getAllData('inc_media', 'status');
+    $media_urls = [];
+    $i = 0;
+    foreach ($data as $media) {
+        $media_urls[$i] = $media['url'];
+        $i++;
+    }
+    ?>
 </head>
 
 <body>
     <div class="row text-nowrap d-none d-md-flex align-items-start" style="text-align: left;width: 100%;margin: 0px;height: 50px;">
-        <div class="col-6" style="background: #0c1127;padding-left: 30px;">
+        <div class="col-6" style="background: #0074bd;padding-left: 30px;">
             <div class="row">
-                <div class="col"><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);border-radius: 50%;font-size: 20px;padding-left: 9px;padding-right: 9px;padding-bottom: 3px;border-width: 2.5px;border-color: #60a042;margin: 5px;padding-top: 3px;"><i class="fa fa-facebook" style="color: #7ee050;"></i></button><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);border-radius: 50%;font-size: 20px;padding-left: 9px;padding-right: 9px;padding-top: 3px;padding-bottom: 3px;border-width: 2.5px;border-color: #60a042;margin: 5px;"><i class="fa fa-twitter" style="color: #7ee050;"></i></button><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);border-radius: 50%;font-size: 20px;padding-left: 9px;padding-right: 9px;padding-top: 3px;padding-bottom: 3px;border-width: 2.5px;border-color: #60a042;margin: 5px;"><i class="fa fa-instagram" style="color: #7ee050;"></i></button><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);border-radius: 50%;font-size: 20px;padding-left: 9px;padding-right: 9px;padding-top: 3px;padding-bottom: 3px;border-width: 2.5px;border-color: #60a042;margin: 5px;"><i class="fa fa-linkedin" style="color: #7ee050;"></i></button><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);border-radius: 50%;font-size: 20px;padding-left: 9px;padding-right: 9px;padding-top: 3px;padding-bottom: 3px;border-width: 2.5px;border-color: #60a042;margin: 5px;"><i class="fa fa-youtube-play" style="color: #7ee050;"></i></button></div>
+                <div class="col">
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[0]; ?>')">
+                        <i class="fa fa-facebook" style="color: #7ee050;"></i>
+                    </button>
+
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[1]; ?>')">
+                        <i class="fa fa-twitter" style="color: #7ee050;"></i>
+                    </button>
+
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[2]; ?>')">
+                        <i class="fa fa-instagram" style="color: #7ee050;"></i>
+                    </button>
+
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[3]; ?>')">
+                        <i class="fa fa-linkedin" style="color: #7ee050;"></i>
+                    </button>
+
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[4]; ?>')">
+                        <i class="fa fa-youtube-play" style="color: #7ee050;"></i>
+                    </button>
+
+                </div>
             </div>
         </div>
         <div class="col-6 d-sm-flex d-md-flex justify-content-end" style="background: #60a042;padding-top: 12px;">
@@ -45,6 +78,3 @@
 </body>
 
 </html>
-<?php require('./admin/database.php');
-require('functions.php');
-?>

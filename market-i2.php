@@ -66,7 +66,7 @@ if (!isset($_GET['p_id'])) {
                                 <li class="breadcrumb-item active" aria-current="page"><?php echo $p_Details['product_title']; ?></li>
                             </ol>
                         </nav>
-                        <h1 style="font-family: Lora, serif;"><?php echo $p_Details['product_title']; ?></h1>
+                        <h1 style="font-family: sans-serif, serif;"><?php echo $p_Details['product_title']; ?></h1>
                         <p><br><?php echo $p_Details['product_desc']; ?><br><br></p>
 
                     </div><!-- End: Content -->
