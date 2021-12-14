@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -18,7 +17,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
-
 <body>
     <!-- Start: Footer Section -->
     <footer class="footer-dark" style="background: rgb(12,17,39);color: rgb(193,191,191);width: 100%;padding-top: 30px;">
@@ -51,11 +49,11 @@
                 <div class="col text-start item">
                     <h3 class="text-nowrap text-uppercase" style="color: rgb(224,223,223);">Quick Links</h3>
                     <ul class="text-start">
-                        <li style="padding-top: 5px;"><a href="index.php" style="padding-top: 5px;">Home</a></li>
-                        <li style="padding-top: 5px;"><a href="market.php">Market</a></li>
-                        <li style="padding-top: 5px;"><a href="technology.php">Technology</a></li>
-                        <li style="padding-top: 5px;"><a href="sustainability.php">Sustainability</a></li>
-                        <li style="padding-top: 5px;"><a href="contact.php">Contact US</a></li>
+                        <li style="padding-top: 5px;"><a href="#" style="padding-top: 5px;">Home</a></li>
+                        <li style="padding-top: 5px;"><a href="#">Market</a></li>
+                        <li style="padding-top: 5px;"><a href="#">Technology</a></li>
+                        <li style="padding-top: 5px;"><a href="#">Sustainability</a></li>
+                        <li style="padding-top: 5px;"><a href="#">Contact US</a></li>
                     </ul>
                 </div><!-- End: QuickLinks -->
                 <!-- Start: Location -->
@@ -78,5 +76,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
     <script src="assets/js/script.min.js?h=2bf886d83119376f4bad144253b6de8f"></script>
 </body>
-
 </html>
