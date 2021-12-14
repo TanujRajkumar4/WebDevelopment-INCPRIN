@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION["member_id"])){
+    header("Location: index.php");
+}
+
 include('header.php');
 include('sidebar.php');
 include('database.php');
