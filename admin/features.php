@@ -233,7 +233,6 @@ if(isset($_GET['typ']) && $_GET['typ'] =="add")
 					  {?><td><img src="../<?php echo $sql['file_url'];?>" >
                       </td><?php }?>
                       <td> 
-					  <a class="btn btn-info btn-sm" href="features_edit.php?p_ty=<?php echo $_GET['p_ty'];?>&typ=edit&p_id=<?php echo $sql['features_id'];?>"><i class="fas fa-pencil-alt"></i>Edit</a>
 					  <a class="btn btn-danger btn-sm" href="features.php?p_ty=<?php echo $_GET['p_ty'];?>&typ=del&p_id=<?php echo $sql['features_id'];?>"><i class="fas fa-trash"></i>Delete</a></td>
                     </tr>
 			  <?php $i=$i+1;}?>					

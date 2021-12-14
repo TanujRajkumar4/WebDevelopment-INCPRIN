@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION["member_id"])){
+if (!isset($_SESSION["member_id"])) {
   header("Location: index.php");
 }
 include('header.php');
@@ -9,7 +9,7 @@ include('database.php');
 $qry = mysqli_query($dbConn, "select * from inc_page where pg_status='A' and pg_id=" . $_GET['page_id']);
 $sql = mysqli_fetch_array($qry);
 if (isset($_POST['Submit'])) {
-  $desc = htmlspecialchars($_POST['summernote']);
+  $desc = $_POST['summernote'];
   $up_ty = $_POST['up_typ'];
   $msg = addslashes($_POST['pg_title']);
   $logo = $_POST['file_upl_url'];
@@ -41,6 +41,15 @@ if (isset($_POST['Submit'])) {
       echo "<script>alert('Upload only mp4,jpeg,jpg and png files');</script>";
       echo "<script>window.location.href ='pages_edit.php?page_id='" . $_GET['page_id'] . "';</script>";
       exit;
+    }
+  } else {
+    $qry = "UPDATE `inc_page` SET `pg_title`='" . $msg . "',`pg_ban_typ`= '$up_ty',`pg_desc`='" . $desc . "' WHERE `pg_id`=" . $_GET['page_id'] . " and `pg_status`='A'";
+    $sql = mysqli_query($dbConn, $qry);
+    // echo $qry;
+    if ($sql) {
+      echo "<script>alert('Updated Successfully.');window.location.href ='pages.php';</script>";
+    } else {
+      echo "<script>alert('Not Updated. Retry!');window.location.href = 'pages_edit.php?page_id='" . $_GET['page_id'] . "';</script>";
     }
   }
 }
@@ -85,9 +94,13 @@ if (isset($_POST['Submit'])) {
               <div class="form-group">
                 <label for="inputStatus">Upload Type</label>
                 <select id="inputStatus" class="form-control custom-select" name="up_typ">
-                  <option >Select one</option>
-                  <option value="0">Image</option>
-                  <option value="1">Video</option>
+                  <option>Select one</option>
+                  <option value="0" <?php if ($sql['pg_ban_typ'] == 0) {
+                                      echo "Selected";
+                                    } ?>>Image</option>
+                  <option value="1" <?php if ($sql['pg_ban_typ'] == 1) {
+                                      echo "Selected";
+                                    } ?>>Video</option>
                 </select>
               </div>
               <div class="form-group">
@@ -122,7 +135,7 @@ if (isset($_POST['Submit'])) {
             <!-- /.card-body -->
             <div class="card-footer">
               <input type="submit" class="btn btn-info" name="Submit" value="Update" />
-              <input type="reset" class="btn btn-default" name="Cancel" value="Cancel" />
+              <input type="reset" class="btn btn-default" name="Reset" value="Reset" onclick="window.location.reload()"/>
             </div>
           </form>
         </div>
