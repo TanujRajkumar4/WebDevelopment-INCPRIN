@@ -492,3 +492,16 @@
 #text-start {
   font-family: sans-serif;
 }
+
+#media-icon{
+  background: rgba(13, 110, 253, 0) !important;
+  border-radius: 50% !important;
+  font-size: 20px !important;
+  padding-left: 9px !important;
+  padding-right: 9px !important;
+  padding-bottom: 3px !important;
+  border-width: 2.5px !important;
+  border-color: #60a042 !important;
+  margin: 5px !important;
+  padding-top: 3px !important;
+}
