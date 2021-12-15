@@ -103,6 +103,32 @@ if (isset($_POST['Submit'])) {
                                     } ?>>Video</option>
                 </select>
               </div>
+              <div class="col-6" style="float:left;">
+                <div class="info-box">
+                  <!-- Apply any bg-* class to to the icon to color it -->
+                  <span class="info-box-icon bg-blue"><i class="fas fa-images"></i></span>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Image Upload Size Specifications</span>
+                    <span class="info-box-number">Dimensions: 1024px * 400px & Higher</span>
+                    <span class="info-box-number">Size: Less than 2 MB</span>
+                  </div>
+                  <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+              </div>
+              <div class="col-6" style="float:right;">
+                <div class="info-box">
+                  <!-- Apply any bg-* class to to the icon to color it -->
+                  <span class="info-box-icon bg-blue"><i class="fas fa-video"></i></span>
+                  <div class="info-box-content">
+                    <span class="info-box-text">Video Upload Size Specifications</span>
+                    <span class="info-box-number">Dimensions: 1280*720 (recommended)</span>
+                    <span class="info-box-number">Size: Less than 25 MB</span>
+                  </div>
+                  <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+              </div>
               <div class="form-group">
                 <label for="file_upl">File input: <ex>Upload jpeg,jpg,png,mp4 format files only</ex></label>
                 <div class="input-group">
@@ -135,7 +161,7 @@ if (isset($_POST['Submit'])) {
             <!-- /.card-body -->
             <div class="card-footer">
               <input type="submit" class="btn btn-info" name="Submit" value="Update" />
-              <input type="reset" class="btn btn-default" name="Reset" value="Reset" onclick="window.location.reload()"/>
+              <input type="reset" class="btn btn-default" name="Reset" value="Reset" onclick="window.location.reload()" />
             </div>
           </form>
         </div>

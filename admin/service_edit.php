@@ -119,6 +119,19 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
                                     <img src="<?php echo "../" . $ServiceDetails['service_img']; ?>" height="100px" width="180px">
 
                                 </div>
+                                <div class="col-12">
+                                    <div class="info-box">
+                                        <!-- Apply any bg-* class to to the icon to color it -->
+                                        <span class="info-box-icon bg-blue"><i class="fas fa-video"></i></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-text">Image Upload Size Specifications</span>
+                                            <span class="info-box-number">Dimensions: Height: 200px * Width: 400px (recommended)</span>
+                                            <span class="info-box-number">Size: Less than 3 MB</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                    <!-- /.info-box -->
+                                </div>
                                 <div class="form-group">
                                     <label for="file_upl">File input: <ex>Upload jpeg,jpg,png format files only</ex></label>
                                     <div class="input-group">
