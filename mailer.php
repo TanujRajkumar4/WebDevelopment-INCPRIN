@@ -14,7 +14,7 @@ if (isset($_POST['sendmail'])) {
 		$phn = $_POST['phone'];
 		$cmmts = $_POST['message'];
 
-		$to = "induvips@gmail.com, tanujrajkumar1@gmail.com";
+		$to = "cs01@incprin.com, cs02@incprin.com";
 		$subject = "INCPRIN - Site - Contact Form Response";
 		$message = "<style type='text/css'>
 			p,td{font-family:Verdana;font-size:12px;font-color:black;}
@@ -31,7 +31,7 @@ if (isset($_POST['sendmail'])) {
 		$message .= "<p><i>This email is  system generated; please do not reply to this email.</i></p>";
 		$headers = 'From: www.incprin.com' . "\r\n" .
 			'Content-type: text/html; charset=iso-8859-1\r\n' .
-			'Reply-To: info@incprin.com' . "\r\n" .
+			'Reply-To: cs01@incprin.com' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 		if (mail($to, $subject, $message, $headers)) {
 			echo "<script> alert('Thanks for your response.');</script>";

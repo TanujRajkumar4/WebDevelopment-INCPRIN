@@ -29,9 +29,8 @@
             <!-- Start: Intro -->
             <div class="intro">
                 <h1 class="text-center" style="font-family: sans-serif, serif;color: #212529;">Location </h1>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula.. </p>
             </div><!-- End: Intro -->
-        </div><iframe allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAMSyH4OlqXfJXCiOcd25Vg86ViyvnM3BU&amp;q=Coimbatore&amp;zoom=15" width="80%" height="450"></iframe>
+        </div><iframe allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8341074864657!2d80.15331041473628!3d13.046229316766413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261eed68c5a7b%3A0xac789ce8625b534a!2s133%2F2%2F95%2C%20Krishna%20Ind.%20Estate%2C%20Sunaresan%20Nagar%2C%20Porur%20Gardens%20Phase%20II%2C%20Mettukuppam%2C%20Vanagaram%2C%20Chennai%2C%20Tamil%20Nadu%20600095!5e0!3m2!1sen!2sin!4v1639815874682!5m2!1sen!2sin" width="80%" height="450"></iframe>
     </section><!-- End: Map Clean -->
     <hr><!-- Start: 1 Row 2 Columns -->
     <div class="container">
@@ -39,21 +38,26 @@
             <div class="col">
                 <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;font-weight: bold;font-family: sans-serif, serif;color: #212529;">Contact Us</h1>
                 <div class="row" style="padding-top: 10px;">
+                    <p class="text-start" style="font-size: 20px;"><strong>INCPRIN LABELS AND PACKAGING SOLUTIONS PRIVATE LIMITED</strong></p>
                     <div class="col-auto text-start" style="padding-right: 5px;"><i class="fa fa-map-marker" style="color: #60a042;font-size: 30px;padding-right: 26px;"></i></div>
                     <div class="col-auto text-start" style="padding-left: 0px;">
-                        <p class="text-start" style="font-size: 18px;">A198 West 21st Street, Suite 721 New<br>Lorem Ipsum, India - 602 002.</p>
+                        <p class="text-start" style="font-size: 18px;">133/2, Krishna Industrial Estate,<br>
+                                Mettukuppam,
+                                Vanagaram,<br>
+                                Chennai - 600095.<br>
+                                Tamil Nadu, India..</p>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px;">
                     <div class="col-auto" style="padding-right: 5px;"><i class="fa fa-phone" style="color: #60a042;font-size: 30px;padding-right: 26px;"></i></div>
                     <div class="col-auto" style="padding-left: 0px;">
-                        <p class="text-start" style="font-size: 18px;">+91 98765 43210</p>
+                        <p class="text-start" style="font-size: 18px;">+91 91500 72140, +91 91500 72135 </p>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px;">
                     <div class="col-auto" style="padding-right: 5px;"><i class="fa fa-envelope" style="color: #60a042;font-size: 30px;padding-right: 26px;"></i></div>
                     <div class="col-auto" style="padding-left: 0px;">
-                        <p class="text-start" style="font-size: 18px;">info@incprin.com</p>
+                        <p class="text-start" style="font-size: 18px;">cs01@incprin.com, cs02@incprin.com</p>
                     </div>
                 </div>
             </div>

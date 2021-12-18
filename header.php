@@ -52,13 +52,13 @@
             <div class="row align-items-center">
                 <div class="col align-self-baseline">
                     <!-- Start: Nav1ContactInfo -->
-                    <p class="text-end justify-content-center" id="Nav1ContactInfoPara" style="padding: 0;color: rgb(255,255,255);font-weight: bold;margin: 0;padding-right: 20px;"><i class="far fa-envelope"></i><span style="padding-left: 6px;"></span>info@incprin.com</p><!-- End: Nav1ContactInfo -->
+                    <p class="text-end justify-content-center" id="Nav1ContactInfoPara" style="padding: 0;color: rgb(255,255,255);font-weight: bold;margin: 0;padding-right: 20px;"><i class="far fa-envelope"></i><span style="padding-left: 6px;"></span>cs01@incprin.com</p><!-- End: Nav1ContactInfo -->
                 </div>
             </div>
             <div class="row text-end justify-content-center align-items-center">
                 <div class="col align-self-baseline">
                     <!-- Start: Nav1ContactInfo -->
-                    <p class="text-break text-end justify-content-center" id="Nav1ContactInfoPara" style="color: rgb(255,255,255);font-weight: bold;padding-right: 5px;"><i class="fas fa-phone-alt"></i>&nbsp;+91 98765 43210</p><!-- End: Nav1ContactInfo -->
+                    <p class="text-break text-end justify-content-center" id="Nav1ContactInfoPara" style="color: rgb(255,255,255);font-weight: bold;padding-right: 5px;"><i class="fas fa-phone-alt"></i>&nbsp;+91 91500 72140</p><!-- End: Nav1ContactInfo -->
                 </div>
             </div>
         </div>
