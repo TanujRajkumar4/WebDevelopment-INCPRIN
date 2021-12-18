@@ -5,6 +5,28 @@ if (!isset($_SESSION["member_id"])) {
 }
 include('header.php');
 include('sidebar.php');
+include('database.php');
+
+$sql = "SELECT COUNT(*) AS 'Services_Count' FROM `inc_service` WHERE `service_status` = 'A'";
+$qry = mysqli_query($dbConn, $sql);
+$Services_Count = mysqli_fetch_array($qry);
+$Services_Count = $Services_Count['Services_Count'];
+
+$sql = "SELECT COUNT(*) AS 'Products_Count' FROM `inc_product` WHERE `product_status` = 'A'";
+$qry = mysqli_query($dbConn, $sql);
+$Products_Count = mysqli_fetch_array($qry);
+$Products_Count = $Products_Count['Products_Count'];
+
+$sql = "SELECT COUNT(*) AS 'Clients_Count' FROM `inc_client` WHERE `cl_status` = 'A'";
+$qry = mysqli_query($dbConn, $sql);
+$Clients_Count = mysqli_fetch_array($qry);
+$Clients_Count = $Clients_Count['Clients_Count'];
+
+$sql = "SELECT COUNT(*) AS 'Media_Count' FROM `inc_media` WHERE `status` = 'A'";
+$qry = mysqli_query($dbConn, $sql);
+$Media_Count = mysqli_fetch_array($qry);
+$Media_Count = $Media_Count['Media_Count'];
+
 ?>
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -34,13 +56,13 @@ include('sidebar.php');
           <!-- small box -->
           <div class="small-box bg-info">
             <div class="inner">
-              <h3>150</h3>
-              <p>New Orders</p>
+              <h3><?php echo $Services_Count; ?></h3>
+              <p>Services</p>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="fas fa-cogs"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="services.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -48,13 +70,13 @@ include('sidebar.php');
           <!-- small box -->
           <div class="small-box bg-success">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
-              <p>Bounce Rate</p>
+              <h3><?php echo $Products_Count; ?></h3>
+              <p>Products</p>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="ion ion-bag"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="products.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -62,13 +84,13 @@ include('sidebar.php');
           <!-- small box -->
           <div class="small-box bg-warning">
             <div class="inner">
-              <h3>44</h3>
-              <p>User Registrations</p>
+              <h3><?php echo $Clients_Count; ?></h3>
+              <p>Clients On-Board</p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="client.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -76,13 +98,13 @@ include('sidebar.php');
           <!-- small box -->
           <div class="small-box bg-danger">
             <div class="inner">
-              <h3>65</h3>
-              <p>Unique Visitors</p>
+              <h3><?php echo $Media_Count; ?></h3>
+              <p>Social Media</p>
             </div>
             <div class="icon">
-              <i class="ion ion-pie-graph"></i>
+              <i class="fas fa-users"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="media.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

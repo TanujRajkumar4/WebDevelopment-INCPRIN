@@ -55,7 +55,7 @@
                         <li style="padding-top: 5px;"><a href="market.php">Market</a></li>
                         <li style="padding-top: 5px;"><a href="technology.php">Technology</a></li>
                         <li style="padding-top: 5px;"><a href="sustainability.php">Sustainability</a></li>
-                        <li style="padding-top: 5px;"><a href="about.php">About Us</a></li>
+                        <li style="padding-top: 5px;"><a href="about.php">Who we are?</a></li>
                         <li style="padding-top: 5px;"><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div><!-- End: QuickLinks -->
@@ -70,7 +70,7 @@
     <div class="row g-0 row-cols-1 text-center" style="background: #0074bd;height: 50px;width: 100%;margin-right: 0px;margin-left: 0px;">
         <div class="col" style="text-align: center;">
             <!-- Start: Copyright -->
-            <p class="text-center copyright" style="color: rgb(255,255,255);padding-top: 10px;margin-bottom: 0;">Copyright © 2021 INCPRIN, All Rights Reserved.</p><!-- End: Copyright -->
+            <p class="text-center copyright" style="color: rgb(255,255,255);padding-top: 10px;margin-bottom: 0;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. Designed & Developed by <a style="color:white;" href="https://vedhan.com">Vedhan Technologies</a></p><!-- End: Copyright -->
         </div>
     </div><!-- End: Copyrights -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

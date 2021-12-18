@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>INCPRIN</title>
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <?php
     require('./admin/database.php');
     require('functions.php');
