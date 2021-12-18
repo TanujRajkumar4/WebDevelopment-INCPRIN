@@ -25,23 +25,23 @@
         <div class="col-6" style="background: #0074bd;padding-left: 30px;">
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[0]; ?>')">
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[0]; ?>')">
                         <i class="fa fa-facebook" style="color: #7ee050;"></i>
                     </button>
 
-                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[1]; ?>')">
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[1]; ?>')">
                         <i class="fa fa-twitter" style="color: #7ee050;"></i>
                     </button>
 
-                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[2]; ?>')">
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[2]; ?>')">
                         <i class="fa fa-instagram" style="color: #7ee050;"></i>
                     </button>
 
-                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[3]; ?>')">
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[3]; ?>')">
                         <i class="fa fa-linkedin" style="color: #7ee050;"></i>
                     </button>
 
-                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.location.assign('<?php echo $media_urls[4]; ?>')">
+                    <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[4]; ?>')">
                         <i class="fa fa-youtube-play" style="color: #7ee050;"></i>
                     </button>
 
@@ -64,7 +64,7 @@
         </div>
     </div><!-- Start: Nav Bar -->
     <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean" style="width: 100%;">
-        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand"><img class="img-fluid" id="Logo" src="assets/img/Logo.jpg?h=3c2207f664b0bcc0ace0c4b27272697d" loading="lazy"></a>
+        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="index.php"><img class="img-fluid" id="Logo" src="assets/img/Logo.jpg?h=3c2207f664b0bcc0ace0c4b27272697d" loading="lazy"></a>
             <div class="collapse navbar-collapse" id="navcol-1" style="font-weight: bold;">
                 <ul class="navbar-nav ms-auto pulse animated">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
