@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>INCPRIN</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&amp;display=swap">
@@ -105,29 +107,29 @@
                 <div class="row" style="padding-bottom: 15px;">
                     <div class="col-auto text-center align-self-center"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Expert in Garments</h1>
-                        <p>Our people look at tomorrow with confidence. We believe in innovations that help enable the future of building technology.</p>
+                        <h1 style="font-size: 18px;font-weight: bold;">Robust Printing</h1>
+                        <p>Robust Printing and Finishing Infrastructure with ample capacity for mass production.</p>
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
                     <div class="col-auto text-center align-self-center"><i class="fa fa-chevron-circle-down" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Packaging</h1>
-                        <p>Our people look at tomorrow with confidence. We believe in innovations that help enable the future of building technology.</p>
+                        <p>Capability to produce all kinds of labels and packaging items catering to Apparel, FMCG, Electronics, Automotive, Pharma and Education industry.</p>
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
                     <div class="col-auto text-center align-self-center"><i class="fas fa-microchip" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Leading in Electronics</h1>
-                        <p>Our people look at tomorrow with confidence. We believe in innovations that help enable the future of building technology.</p>
+                        <h1 style="font-size: 18px;font-weight: bold;">Industry Standard</h1>
+                        <p>Industry Standards Workflows & Automation Softwares in the entire production process.</p>
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fa fa-automobile" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
+                    <div class="col-auto text-center align-self-center"><i class="fas fa-globe-americas" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Automobiles</h1>
-                        <p>Our people look at tomorrow with confidence. We believe in innovations that help enable the future of building technology.</p>
+                        <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
+                        <p>Pan India service and Global service through our Global partner G-Locs.</p>
                     </div>
                 </div>
             </div>
@@ -136,8 +138,8 @@
     </div><!-- End: 1 Row 2 Columns -->
     <!-- Start: Our Services Heading -->
     <h1 style="text-align: center;font-size: 22.520000000000003px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">OUR SERVICES</h1><!-- End: Our Services Heading -->
-   
-   
+
+
     <!-- Start: OurServicesSlider -->
     <div class="row" data-aos="fade" style="width: 100%;background: url(&quot;assets/img/ServicesBG1.png?h=697b83e2397adfbffe603d41056c6de7&quot;) center / cover;margin: 0px;">
         <div class="col" style="background: rgba(255,255,255,0);width: 100%;padding-right: 0;padding-left: 0;">
@@ -146,45 +148,45 @@
                 <div class="row mx-auto my-auto justify-content-center" style="background: rgba(255,255,255,0);width: 100%;">
                     <div id="recipeCarousel-1" class="carousel slide carousel2" data-bs-ride="carousel" style="background: rgba(255,255,255,0);width: 100%;">
                         <div class="carousel-inner" role="listbox" style="background: rgba(255,255,255,0);width: 100%;">
-                        <?php
-                        $services = getAllData('inc_service', 'service_status');
-                        $active1 = true;
-                        foreach ($services as $service) :
-                        ?>
-                        <?php if ($active1) { ?>
-                           
-                        <!-- Start: Carousel-Item_active -->
-                            <div class="justify-content-center carousel-item active carousel-item2" style="background: rgba(255,255,255,0);">
-                                <div class="col-md-3" style="background: rgba(255,255,255,0);">
-                                    <div class="card" style="background: rgba(255,255,255,0);">
-                                        <div class="card-img" style="background: rgba(255,255,255,0);">
-                                            <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
-                                                <div class="card-body" style="background: #0074bd;">
-                                                    <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
+                            <?php
+                            $services = getAllData('inc_service', 'service_status');
+                            $active1 = true;
+                            foreach ($services as $service) :
+                            ?>
+                                <?php if ($active1) { ?>
+
+                                    <!-- Start: Carousel-Item_active -->
+                                    <div class="justify-content-center carousel-item active carousel-item2" style="background: rgba(255,255,255,0);">
+                                        <div class="col-md-3" style="background: rgba(255,255,255,0);">
+                                            <div class="card" style="background: rgba(255,255,255,0);">
+                                                <div class="card-img" style="background: rgba(255,255,255,0);">
+                                                    <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
+                                                        <div class="card-body" style="background: #0074bd;">
+                                                            <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End: Carousel-Item_active -->
+                                <?php $active1 = false;
+                                    continue;
+                                } ?>
+                                <!-- Start: carousel-item -->
+                                <div class="justify-content-center carousel-item carousel-item2" style="background: rgba(255,255,255,0);">
+                                    <div class="col-md-3" style="background: rgba(255,255,255,0);">
+                                        <div class="card" style="background: rgba(255,255,255,0);">
+                                            <div class="card-img" style="background: rgba(255,255,255,0);">
+                                                <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
+                                                    <div class="card-body" style="background: #0074bd;">
+                                                        <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div><!-- End: Carousel-Item_active -->
-                            <?php $active1 = false;
-                                continue;
-                            } ?>
-                            <!-- Start: carousel-item -->
-                            <div class="justify-content-center carousel-item carousel-item2" style="background: rgba(255,255,255,0);">
-                                <div class="col-md-3" style="background: rgba(255,255,255,0);">
-                                    <div class="card" style="background: rgba(255,255,255,0);">
-                                        <div class="card-img" style="background: rgba(255,255,255,0);">
-                                            <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
-                                                <div class="card-body" style="background: #0074bd;">
-                                                    <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!-- End: carousel-item -->
-                            <?php endforeach; ?>                            
+                                </div><!-- End: carousel-item -->
+                            <?php endforeach; ?>
                         </div><a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a><a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
                     </div>
                 </div>

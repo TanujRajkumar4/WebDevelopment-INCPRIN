@@ -42,10 +42,10 @@
                     <div class="col-auto text-start" style="padding-right: 5px;"><i class="fa fa-map-marker" style="color: #60a042;font-size: 30px;padding-right: 26px;"></i></div>
                     <div class="col-auto text-start" style="padding-left: 0px;">
                         <p class="text-start" style="font-size: 18px;">133/2, Krishna Industrial Estate,<br>
-                                Mettukuppam,
-                                Vanagaram,<br>
-                                Chennai - 600095.<br>
-                                Tamil Nadu, India..</p>
+                            Mettukuppam,
+                            Vanagaram,<br>
+                            Chennai - 600095.<br>
+                            Tamil Nadu, India..</p>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px;">
