@@ -130,7 +130,8 @@
                     <div class="col-auto text-center align-self-center"><i class="fas fa-globe-americas" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
-                        <p>Pan India service and Global service through our Global partner G-Locs.</p>
+                        <p>Pan India service and Global service<br>
+                        Through our Global partner G-Locs.</p>
                     </div>
                 </div>
             </div>
@@ -138,7 +139,7 @@
         </div>
     </div><!-- End: 1 Row 2 Columns -->
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
