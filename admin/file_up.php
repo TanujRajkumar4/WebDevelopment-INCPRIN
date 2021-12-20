@@ -25,7 +25,9 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 		$msg = "";
 		$logo = "";
 		if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
-			$msg = $_POST['poto_tit'];
+			if ($_GET['p_ty'] == "sus") {
+				$msg = $_POST['poto_tit'];
+			}
 			$i = "logo";
 			$i = preg_replace('/[^A-Za-z0-9\-]/', '', $i);
 			$ext = explode('.', $_FILES['file_upl']['name']);

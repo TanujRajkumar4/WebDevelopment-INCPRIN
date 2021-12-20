@@ -25,7 +25,6 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 		$msg = addslashes($_POST['fea_tit']);
 		$logo = "";
 		if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
-
 			$i = "logo";
 			$i = preg_replace('/[^A-Za-z0-9\-]/', '', $i);
 			$ext = explode('.', $_FILES['file_upl']['name']);
@@ -64,11 +63,13 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 	}
 } elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
 	if ($_GET['p_ty'] == "tech") {
-		$qry = mysqli_query($dbConn, "select cl_logo from inc_client where cli_id=" . $_GET['cli_id']);
-		$sql = mysqli_fetch_array($qry);
-		$logo = $sql['cl_logo'];
+		$qry = mysqli_query($dbConn, "SELECT file_url from inc_features where features_id=" . $_GET['p_id']);
+		if (mysqli_num_rows($qry) > 0) {
+			$sql = mysqli_fetch_array($qry);
+			$logo = $sql['file_url'];
+		}
 		if (unlink("../" . $logo)) {
-			$qry = "delete from `inc_client` where `cli_id`=" . $_GET['cli_id'];
+			$qry = "delete from `inc_features` where `features_id`=" . $_GET['p_id'];
 			$sql = mysqli_query($dbConn, $qry);
 			if ($sql) {
 				echo "<script>alert('Deleted Successfully.'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";
