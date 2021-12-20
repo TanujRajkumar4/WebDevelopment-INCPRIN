@@ -56,7 +56,7 @@
                         <li style="padding-top: 5px;"><a href="market.php">Market</a></li>
                         <li style="padding-top: 5px;"><a href="technology.php">Technology</a></li>
                         <li style="padding-top: 5px;"><a href="sustainability.php">Sustainability</a></li>
-                        <li style="padding-top: 5px;"><a href="about.php">Who we are?</a></li>
+                        <li style="padding-top: 5px;"><a href="about.php">About Us</a></li>
                         <li style="padding-top: 5px;"><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div><!-- End: QuickLinks -->

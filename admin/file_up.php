@@ -78,7 +78,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 			}
 		}
 	} else {
-		$qry = "delete from `inc_client` where `cli_id`=" . $_GET['cli_id'];
+		$qry = "delete from `inc_gallery` where `photo_id`=" . $_GET['cli_id'];
 		$sql = mysqli_query($dbConn, $qry);
 		if ($sql) {
 			echo "<script>alert('Deleted Successfully.'); window.location.href = 'file_up.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";

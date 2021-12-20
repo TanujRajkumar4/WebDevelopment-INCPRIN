@@ -103,7 +103,7 @@
     <div class="container text-center" data-aos="fade" style="padding-top: 50px;padding-bottom: 50px;width: 100%;">
         <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
             <div class="col">
-                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">WHO WE ARE</h1>
+                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">ABOUT US</h1>
                 <p class="text-start" style="font-size: 16px;"><?php echo $homeDetails['pg_desc']; ?></p>
                 <div class="row" style="padding-bottom: 15px;">
                     <div class="col-auto text-center align-self-center"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
@@ -138,45 +138,7 @@
         </div>
     </div><!-- End: 1 Row 2 Columns -->
 
-    <!-- Start: 1 Row 2 Columns -->
-    <div class="container text-center" data-aos="fade" style="padding-top: 50px;padding-bottom: 50px;width: 100%;">
-        <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
-            <div class="col-auto d-none d-lg-inline"><img style="height: 100%;width: 80%;" src="assets/img/SideImage1.jpg"></div>
-
-            <div class="col">
-                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">WHO WE ARE</h1>
-                <p class="text-start" style="font-size: 16px;"><?php echo $homeDetails['pg_desc']; ?></p>
-                <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
-                    <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Robust Printing</h1>
-                        <p>Robust Printing and Finishing Infrastructure with ample capacity for mass production.</p>
-                    </div>
-                </div>
-                <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-box-open" style="font-size: 50px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
-                    <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Packaging</h1>
-                        <p>Capability to produce all kinds of labels and packaging items catering to Apparel, FMCG, Electronics, Automotive, Pharma and Education industry.</p>
-                    </div>
-                </div>
-                <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-microchip" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
-                    <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Industry Standard</h1>
-                        <p>Industry Standards Workflows & Automation Softwares in the entire production process.</p>
-                    </div>
-                </div>
-                <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-globe-americas" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
-                    <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
-                        <p>Pan India service and Global service through our Global partner G-Locs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- End: 1 Row 2 Columns -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
