@@ -14,8 +14,10 @@ if ($_GET['p_ty'] == "tech") {
 	$p_ty = 0;
 	$qry = "SELECT * FROM `inc_product` where product_id=" . $_GET['p_id'] . " and product_status='A'";
 	$qry = mysqli_query($dbConn, $qry);
-	$sql = mysqli_fetch_array($qry);
-	$P_title = $sql['product_title'];
+	if (mysqli_num_rows($qry) > 0) {
+		$sql = mysqli_fetch_array($qry);
+		$P_title = $sql['product_title'];
+	}
 }
 if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 	if (isset($_POST['add_features'])) {
@@ -75,7 +77,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 			}
 		}
 	} else {
-		$qry = "delete from `inc_client` where `cli_id`=" . $_GET['cli_id'];
+		$qry = "delete from `inc_features` where `features_id`=" . $_GET['p_id'];
 		$sql = mysqli_query($dbConn, $qry);
 		if ($sql) {
 			echo "<script>alert('Deleted Successfully.'); window.location.href = 'features.php?p_ty='" . $_GET['p_ty'] . "'&p_id='" . $_GET['p_id'] . "';</script>";

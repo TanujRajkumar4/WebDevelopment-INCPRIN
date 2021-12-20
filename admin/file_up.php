@@ -1,31 +1,31 @@
 <?php
 session_start();
-if(!isset($_SESSION["member_id"])){
-    header("Location: index.php");
+if (!isset($_SESSION["member_id"])) {
+	header("Location: index.php");
 }
 include('header.php');
 include('sidebar.php');
 include('database.php');
-$P_title="";
+$P_title = "";
 if ($_GET['p_ty'] == "sus") {
-			$p_ty = 1;
-			$P_title="Sustainability";
-			$fil_txt="pdf,doc,docx";
-		} else {
-			$p_ty = 0;
-			$qry="SELECT * FROM `inc_product` where product_id=".$_GET['p_id']." and product_status='A'";
-			$qry=mysqli_query($dbConn,$qry);
-			$sql=mysqli_fetch_array($qry);
-			$P_title=$sql['product_title'];
-				$fil_txt="jpeg,jpg,png";
-		}
+	$p_ty = 1;
+	$P_title = "Sustainability";
+	$fil_txt = "pdf,doc,docx";
+} else {
+	$p_ty = 0;
+	$qry = "SELECT * FROM `inc_product` where product_id=" . $_GET['p_id'] . " and product_status='A'";
+	$qry = mysqli_query($dbConn, $qry);
+	$sql = mysqli_fetch_array($qry);
+	$P_title = $sql['product_title'];
+	$fil_txt = "jpeg,jpg,png";
+}
 if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 	if (isset($_POST['add_files'])) {
-		
+
 		$msg = "";
 		$logo = "";
 		if (isset($_FILES['file_upl']['name']) and ($_FILES['file_upl']['name'] != "")) {
-
+			$msg = $_POST['poto_tit'];
 			$i = "logo";
 			$i = preg_replace('/[^A-Za-z0-9\-]/', '', $i);
 			$ext = explode('.', $_FILES['file_upl']['name']);
@@ -117,11 +117,11 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 					<!-- general form elements -->
 					<div class="card card-primary">
 						<div class="card-header">
-							<h3 class="card-title">Add Features || <?php echo $P_title;?></h3>
+							<h3 class="card-title">Add Features || <?php echo $P_title; ?></h3>
 						</div>
 						<!-- /.card-header -->
 						<!-- form start -->
-						<form method="POST" action="?typ=add&p_ty=<?php echo$_GET['p_ty'];?>&p_id=<?php echo$_GET['p_id'];?>" enctype="multipart/form-data">
+						<form method="POST" action="?typ=add&p_ty=<?php echo $_GET['p_ty']; ?>&p_id=<?php echo $_GET['p_id']; ?>" enctype="multipart/form-data">
 							<div class="card-body">
 								<?php if ($_GET['p_ty'] == "sus") {
 								?>
@@ -132,7 +132,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 								<?php
 								} ?>
 								<div class="form-group">
-									<label for="file_upl">File input: <ex>Upload <?php echo $fil_txt;?> format files only</ex></label>
+									<label for="file_upl">File input: <ex>Upload <?php echo $fil_txt; ?> format files only</ex></label>
 									<div class="input-group">
 										<div class="custom-file">
 											<input type="file" class="form-control" id="file_upl" name="file_upl">
@@ -174,7 +174,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 									}
 									if ($_GET['p_ty'] == "sus") {
 										$typ = 1;
-									} elseif($_GET['p_ty']=="produ") {
+									} elseif ($_GET['p_ty'] == "produ") {
 										$typ = 0;
 									}
 									$res_per_pg = 5;
@@ -193,9 +193,10 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
 											if ($_GET['p_ty'] == "sus") {
 											?>
 												<td><?php echo $sql['poto_desc']; ?></td>
-											<td><a href="../<?php echo $sql['file_url']; ?>" target="_blank"><img src="../assets/img/reports/rp.jpg" style="width:25%;height=25%;"></a>
-											</td><?php }if($_GET['p_ty'] == "produ") {?>
-									<td><img src="../<?php echo $sql['file_url']; ?>" style="width:50%;height=50%;"></td><?php }?><td>
+												<td><a href="../<?php echo $sql['file_url']; ?>" target="_blank"><img src="../assets/img/reports/rp.jpg" style="width:25%;height=25%;"></a>
+												</td><?php }
+													if ($_GET['p_ty'] == "produ") { ?>
+												<td><img src="../<?php echo $sql['file_url']; ?>" style="width:50%;height=50%;"></td><?php } ?><td>
 												<a class="btn btn-danger btn-sm" href="file_up.php?p_ty=<?php echo $_GET['p_ty']; ?>&typ=del&p_id=<?php echo $_GET['p_id']; ?>&f_id=<?php echo $sql['photo_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
 											</td>
 										</tr>
