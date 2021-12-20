@@ -7,8 +7,28 @@
 
 </html>
 <?php
+include("admin/database.php");
 if (isset($_POST['sendmail'])) {
 	if ($_POST['name'] != "" && $_POST['email'] != "" && $_POST['phone'] != "") {
+		// // && $_POST['g-recaptcha-response'] == ""
+		// $response = $_POST['g-recaptcha-response'];
+		// $curl = curl_init();
+		// curl_setopt_array($curl, array(
+		// 	CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
+		// 	CURLOPT_RETURNTRANSFER => true,
+		// 	CURLOPT_ENCODING => '',
+		// 	CURLOPT_MAXREDIRS => 10,
+		// 	CURLOPT_TIMEOUT => 0,
+		// 	CURLOPT_FOLLOWLOCATION => true,
+		// 	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		// 	CURLOPT_CUSTOMREQUEST => 'POST',
+		// 	CURLOPT_POSTFIELDS => array('secret' => $secret, 'response' => $response),
+		// ));
+		// $response = curl_exec($curl);
+		// curl_close($curl);
+		// $response = json_decode($response, true);
+
+		// if ($response['success']) {
 		$name = $_POST['name'];
 		$email_id = $_POST['email'];
 		$phn = $_POST['phone'];
@@ -40,6 +60,10 @@ if (isset($_POST['sendmail'])) {
 			echo "<script> alert('Retry Again. Server is unavailable right now!');</script>";
 			echo "<script>window.location.href='contact.php#c';</script>";
 		}
+		// } else {
+		// 	echo "<script> alert('Captcha Error... Please try again!');</script>";
+		// 	echo "<script>window.location.href='contact.php#c';</script>";
+		// }
 	} else {
 		echo "<script> alert('Please fill out all data and try again!');</script>";
 		echo "<script>window.location.href='contact.php#c';</script>";

@@ -48,19 +48,19 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 d-sm-flex d-md-flex justify-content-end" style="background: #60a042;padding-top: 12px;">
+        <div class="col-6 d-sm-flex d-md-flex justify-content-end" style="background: #60a042;padding-top: 12px; height:100%">
             <div class="row align-items-center">
                 <div class="col align-self-baseline">
                     <!-- Start: Nav1ContactInfo -->
-                    <p class="text-end justify-content-center" id="Nav1ContactInfoPara" style="padding: 0;color: rgb(255,255,255);font-weight: bold;margin: 0;padding-right: 20px;"><i class="far fa-envelope"></i><span style="padding-left: 6px;"></span>cs01@incprin.com</p><!-- End: Nav1ContactInfo -->
+                    <p class="text-end justify-content-center" id="Nav1ContactInfoPara" style="padding: 0;color: white;font-weight: bold;margin: 0;padding-right: 20px;">
+                        <a href="contact.php" style="text-decoration: none; color: white">
+                            <i class="fas fa-phone-volume"></i><span style="padding-left: 6px;"></span>Contact Us Now !!!
+                        </a>
+                    </p>
+                    <!-- End: Nav1ContactInfo -->
                 </div>
             </div>
-            <div class="row text-end justify-content-center align-items-center">
-                <div class="col align-self-baseline">
-                    <!-- Start: Nav1ContactInfo -->
-                    <p class="text-break text-end justify-content-center" id="Nav1ContactInfoPara" style="color: rgb(255,255,255);font-weight: bold;padding-right: 5px;"><i class="fas fa-phone-alt"></i>&nbsp;+91 91500 72140</p><!-- End: Nav1ContactInfo -->
-                </div>
-            </div>
+
         </div>
     </div><!-- Start: Nav Bar -->
     <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean" style="width: 100%;">
@@ -77,5 +77,3 @@
         </div>
     </nav><!-- End: Nav Bar -->
 </body>
-
-</html>

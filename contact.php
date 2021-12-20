@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -70,6 +71,7 @@
                         <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" style="background: rgb(255,255,255);" required></div>
                         <div class="mb-3"><input class="form-control" type="tel" name="phone" placeholder="Phone" style="background: rgb(255,255,255);" required></div>
                         <div class="mb-3"><textarea class="form-control" name="message" placeholder="Message" rows="14" required></textarea></div>
+                        <!-- <div class="g-recaptcha" data-sitekey="6Lefda8dAAAAAOqnFeEH_Mfchnc1P6_5XQAqaDg2"></div> -->
                         <div class="mb-3"><button class="btn" type="submit" name="sendmail" style="background: rgb(12,17,39);color: rgb(255,255,255);">send </button></div>
                     </form>
                 </section><!-- End: Contact Form -->

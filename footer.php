@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -19,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
 
-<body>
+<body >
     <!-- Start: Footer Section -->
     <footer class="footer-dark" style="background: rgb(12,17,39);color: rgb(193,191,191);width: 100%;padding-top: 30px;">
         <div class="container">
@@ -74,7 +71,7 @@
     <div class="row g-0 row-cols-1 text-center" style="background: #0074bd;height: 50px;width: 100%;margin-right: 0px;margin-left: 0px;">
         <div class="col" style="text-align: center;">
             <!-- Start: Copyright -->
-            <p class="text-center copyright" style="color: white;padding-top: 10px;margin-bottom: 0;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. Designed & Developed by <a style="color:yellow; text-decoration: none;" href="https://vedhan.com">Vedhan Technologies</a></p><!-- End: Copyright -->
+            <p class="text-center copyright" style="color: white;padding-top: 10px;margin-bottom: 0;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. Designed & Developed by <a style="color:yellow; text-decoration: none;" href="https://vedhan.com">Vedhan</a></p><!-- End: Copyright -->
         </div>
     </div><!-- End: Copyrights -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

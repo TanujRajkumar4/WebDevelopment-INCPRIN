@@ -9,7 +9,7 @@ include('database.php');
 $qry = mysqli_query($dbConn, "select * from inc_page where pg_status='A' and pg_id=" . $_GET['page_id']);
 $sql = mysqli_fetch_array($qry);
 if (isset($_POST['Submit'])) {
-  $desc = $_POST['summernote'];
+  $desc =$_POST['summernote'];
   $up_ty = $_POST['up_typ'];
   $msg = addslashes($_POST['pg_title']);
   $logo = $_POST['file_upl_url'];

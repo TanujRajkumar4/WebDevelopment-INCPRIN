@@ -28,9 +28,9 @@
     ?>
 
     <div id="container">
-        <div id="video-top" style="width: 100%; overflow:hidden; height:400px ">
+        <div id="video-top" style="width: 100%;">
             <?php if ($homeDetails['pg_ban_typ'] == 1) { ?>
-                <video width="100%" autoplay="" loop="" muted="">
+                <video width="100%" height="315" autoplay="" loop="" muted="" style="width: 100%;height: 100%;">
                     <source src="<?php echo $homeDetails['pg_banner']; ?>" type="video/mp4">
                 </video>
             <?php } else {
@@ -98,8 +98,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Start: 1 Row 2 Columns -->
+    </div><!-- Start: 1 Row 2 Columns -->
     <div class="container text-center" data-aos="fade" style="padding-top: 50px;padding-bottom: 50px;width: 100%;">
         <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
             <div class="col">
@@ -134,49 +133,113 @@
                     </div>
                 </div>
             </div>
-            <div class="col-auto d-none d-lg-inline"><img style="height: 100%;width: 80%;" src="assets/img/SideImage1.jpg"></div>
+            <div class="col-auto d-none d-lg-inline"><img style="height: 100%;width: 80%;" src="assets/img/SideImage1.jpg?h=c187750b0cd25ebf221d8cea6105d2da"></div>
         </div>
     </div><!-- End: 1 Row 2 Columns -->
+    <!-- Start: Our Services Heading -->
+    <h1 style="text-align: center;font-size: 22.520000000000003px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">OUR SERVICES</h1><!-- End: Our Services Heading -->
 
-    <!-- Start: 1 Row 2 Columns -->
-    <div class="container text-center" data-aos="fade" style="padding-top: 50px;padding-bottom: 50px;width: 100%;">
-        <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
-            <div class="col-auto d-none d-lg-inline"><img style="height: 100%;width: 80%;" src="assets/img/SideImage1.jpg"></div>
 
-            <div class="col">
-                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">WHO WE ARE</h1>
-                <p class="text-start" style="font-size: 16px;"><?php echo $homeDetails['pg_desc']; ?></p>
-                <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
-                    <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Robust Printing</h1>
-                        <p>Robust Printing and Finishing Infrastructure with ample capacity for mass production.</p>
+    <!-- Start: OurServicesSlider -->
+    <div class="row" data-aos="fade" style="width: 100%;background: url(&quot;assets/img/ServicesBG1.png?h=697b83e2397adfbffe603d41056c6de7&quot;) center / cover;margin: 0px;">
+        <div class="col" style="background: rgba(255,255,255,0);width: 100%;padding-right: 0;padding-left: 0;">
+            <!-- Start: ClientsSlider -->
+            <div class="container text-center my-3" style="background: rgba(255,255,255,0);width: 100%;padding-right: 0;padding-left: 0;">
+                <div class="row mx-auto my-auto justify-content-center" style="background: rgba(255,255,255,0);width: 100%;">
+                    <div id="recipeCarousel-1" class="carousel slide carousel2" data-bs-ride="carousel" style="background: rgba(255,255,255,0);width: 100%;">
+                        <div class="carousel-inner" role="listbox" style="background: rgba(255,255,255,0);width: 100%;">
+                            <?php
+                            $services = getAllData('inc_service', 'service_status');
+                            $active1 = true;
+                            foreach ($services as $service) :
+                            ?>
+                                <?php if ($active1) { ?>
+
+                                    <!-- Start: Carousel-Item_active -->
+                                    <div class="justify-content-center carousel-item active carousel-item2" style="background: rgba(255,255,255,0);">
+                                        <div class="col-md-3" style="background: rgba(255,255,255,0);">
+                                            <div class="card" style="background: rgba(255,255,255,0);">
+                                                <div class="card-img" style="background: rgba(255,255,255,0);">
+                                                    <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
+                                                        <div class="card-body" style="background: #0074bd;">
+                                                            <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- End: Carousel-Item_active -->
+                                <?php $active1 = false;
+                                    continue;
+                                } ?>
+                                <!-- Start: carousel-item -->
+                                <div class="justify-content-center carousel-item carousel-item2" style="background: rgba(255,255,255,0);">
+                                    <div class="col-md-3" style="background: rgba(255,255,255,0);">
+                                        <div class="card" style="background: rgba(255,255,255,0);">
+                                            <div class="card-img" style="background: rgba(255,255,255,0);">
+                                                <div class="card" style="border-style: none;padding: 16px;background: rgba(255,255,255,0);"><img class="card-img-top w-100 d-block" src="<?php echo $service['service_img']; ?>">
+                                                    <div class="card-body" style="background: #0074bd;">
+                                                        <h4 class="card-title" style="color: rgb(255,255,255);text-align: center;font-size: 18.704px;"><?php echo $service['service_name']; ?></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- End: carousel-item -->
+                            <?php endforeach; ?>
+                        </div><a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a><a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
                     </div>
                 </div>
-                <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-box-open" style="font-size: 50px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
-                    <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Packaging</h1>
-                        <p>Capability to produce all kinds of labels and packaging items catering to Apparel, FMCG, Electronics, Automotive, Pharma and Education industry.</p>
+            </div><!-- End: ClientsSlider -->
+        </div>
+    </div><!-- End: OurServicesSlider -->
+    <!-- Start: Our Clients -->
+    <h1 style="text-align: center;font-size: 22.520000000000003px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">OUR CLIENTS</h1><!-- End: Our Clients -->
+    <!-- Start: Our Clients -->
+    <div class="row justify-content-center align-items-center" style="text-align: center;background: #e5e5e5;width: 100%;margin: 0px;">
+        <!-- Start: ClientsSlider -->
+        <div class="container text-center my-3" style="background: #e5e5e5;">
+            <div class="row mx-auto my-auto justify-content-center" style="background: #e5e5e5;">
+                <div id="recipeCarousel" class="carousel slide carousel1" data-bs-ride="carousel" style="background: #e5e5e5;">
+                    <div class="carousel-inner" role="listbox" style="background: #e5e5e5;">
+                        <?php
+                        $clients = getAllData('inc_client', 'cl_status');
+                        $active = true;
+                        foreach ($clients as $client) :
+                        ?>
+                            <?php if ($active) { ?>
+                                <!-- Start: Carousel-Item_active -->
+                                <div class="justify-content-center carousel-item active carousel-item1" style="background: #e5e5e5;">
+                                    <div class="col-md-3" style="background: #e5e5e5;">
+                                        <div class="card" style="background: #e5e5e5;">
+                                            <div class="card-img" style="background: #e5e5e5;"><img class="img-fluid" src="<?php echo $client['cl_logo']; ?>"></div>
+                                        </div>
+                                    </div>
+                                </div><!-- End: Carousel-Item_active -->
+                            <?php $active = false;
+                                continue;
+                            }
+                            ?>
+                            <!-- Start: carousel-item -->
+                            <div class="justify-content-center carousel-item carousel-item1" style="background: #e5e5e5;">
+                                <div class="col-md-3" style="background: #e5e5e5;">
+                                    <div class="card" style="background: #e5e5e5;">
+                                        <div class="card-img" style="background: #e5e5e5;"><img class="img-fluid" src="<?php echo $client['cl_logo']; ?>"></div>
+                                    </div>
+                                </div>
+                            </div><!-- End: carousel-item -->
+                        <?php endforeach; ?>
+                        ClientSliderActivate();
                     </div>
-                </div>
-                <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-microchip" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
-                    <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Industry Standard</h1>
-                        <p>Industry Standards Workflows & Automation Softwares in the entire production process.</p>
-                    </div>
-                </div>
-                <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-globe-americas" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
-                    <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
-                        <p>Pan India service and Global service through our Global partner G-Locs.</p>
-                    </div>
+                    <a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+                    <a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
                 </div>
             </div>
-        </div>
-    </div><!-- End: 1 Row 2 Columns -->
+        </div><!-- End: ClientsSlider -->
+    </div><!-- End: Our Clients -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
