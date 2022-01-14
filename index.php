@@ -130,8 +130,8 @@
                     <div class="col-auto text-center align-self-center"><i class="fas fa-globe-americas" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
-                        <p>Pan India service and Global service<br>
-                            Through our Global partner G-Locs.</p>
+                        <p>We are providing Pan India service<br>
+                        Global service through our Global partner G-Locs.</p>
                     </div>
                 </div>
             </div>
