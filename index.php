@@ -67,7 +67,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-shopping-bag" style="font-size: 45.3753px;"></i></h4>
                     <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Garments</h4>
-                    <p class="card-text" style="padding-bottom: 20px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac&nbsp;</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
+                    <p class="card-text" style="padding-bottom: 20px;"><br>Apparel Branding and Labelling Solutions</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-tags" style="font-size: 45.3753px;"></i></h4>
                     <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Packaging</h4>
-                    <p class="card-text" style="padding-bottom: 20px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac&nbsp;</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
+                    <p class="card-text" style="padding-bottom: 20px;"><br>Consumer Packaged Labelling Solutions</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-microchip" style="font-size: 45.3753px;"></i></h4>
                     <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Electronics</h4>
-                    <p class="card-text" style="padding-bottom: 20px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac&nbsp;</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
+                    <p class="card-text" style="padding-bottom: 20px;">Electronics,Electricals,<br> Durable Goods & Equipments</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
                 <div class="card-body">
                     <h4 class="card-title"><i class="fa fa-medkit" style="font-size: 45px;"></i></h4>
                     <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Pharma</h4>
-                    <p class="card-text" style="padding-bottom: 20px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac&nbsp;</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
+                    <p class="card-text" style="padding-bottom: 20px;"><br>Health Care</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
                 </div>
             </div>
         </div>
