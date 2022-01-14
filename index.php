@@ -139,8 +139,28 @@
         </div>
     </div><!-- End: 1 Row 2 Columns -->
 
+    <!-- Start: 1 Row 2 Columns -->
+    <div class="container text-center" data-aos="fade" style="padding-top: 50px;padding-bottom: 50px;width: 100%;">
+        <div class="d-flex align-items-center justify-content-center row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
+            <div class="col">
+                <img style="height: 100%;width: 80%;" src="assets/img/SideImage1.jpg">
+            </div>
+
+            <div class="col-auto d-none d-lg-inline">
+                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">TECHNOLOGY</h1>
+                <p class="text-center" style="font-size: 16px;">We are using cutting edge technology and robust production process in manufacturing in wash care labels, heat transfer, self-adhesive labels, RF, RFID, mono cartons, rigid boxes, etc.</p>
+                <br>
+                <hr>
+                <br>
+                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">SUSTAINABILITY</h1>
+                <p class="text-center" style="font-size: 16px;">Our main strategy is the usage of sustainability based raw materials & base material in labels and packaging production which will help us to align to India / Global carbon reduction program and green earth policies.</p>
+
+            </div>
+        </div>
+    </div><!-- End: 1 Row 2 Columns -->
+
     <!-- Start: Our Clients -->
-    <h1 style="text-align: center;font-size: 22.520000000000003px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">OUR CLIENTS</h1><!-- End: Our Clients -->
+    <h1 style="text-align: center;font-size: 22.5px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">OUR CLIENTS</h1><!-- End: Our Clients -->
     <!-- Start: Our Clients -->
     <div class="row justify-content-center align-items-center" style="text-align: center;background: #e5e5e5;width: 100%;margin: 0px;">
         <!-- Start: ClientsSlider -->
