@@ -131,7 +131,7 @@
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
                         <p>We are providing Pan India service<br>
-                        Global service through our Global partner G-Locs.</p>
+                            Global service through our Global partner G-Locs.</p>
                     </div>
                 </div>
             </div>
@@ -155,10 +155,10 @@
                         ?>
                             <?php if ($active) { ?>
                                 <!-- Start: Carousel-Item_active -->
-                                <div class="justify-content-center carousel-item active carousel-item1" style="background: #e5e5e5;">
+                                <div class="align-items-center justify-content-center carousel-item active carousel-item1" style="background: #e5e5e5;">
                                     <div class="col-md-3" style="background: #e5e5e5;">
                                         <div class="card" style="background: #e5e5e5;">
-                                            <div class="card-img" style="background: #e5e5e5;"><img class="img-fluid" src="<?php echo $client['cl_logo']; ?>"></div>
+                                            <div class="card-img" style="background: #e5e5e5;"><img height="100px" class="img-fluid" src="<?php echo $client['cl_logo']; ?>"></div>
                                         </div>
                                     </div>
                                 </div><!-- End: Carousel-Item_active -->
@@ -167,10 +167,10 @@
                             }
                             ?>
                             <!-- Start: carousel-item -->
-                            <div class="justify-content-center carousel-item carousel-item1" style="background: #e5e5e5;">
+                            <div class="align-items-center justify-content-center carousel-item carousel-item1" style="background: #e5e5e5;">
                                 <div class="col-md-3" style="background: #e5e5e5;">
                                     <div class="card" style="background: #e5e5e5;">
-                                        <div class="card-img" style="background: #e5e5e5;"><img class="img-fluid" src="<?php echo $client['cl_logo']; ?>"></div>
+                                        <div class="card-img" style="background: #e5e5e5;"><img height="100px" class="img-fluid" src="<?php echo $client['cl_logo']; ?>"></div>
                                     </div>
                                 </div>
                             </div><!-- End: carousel-item -->
