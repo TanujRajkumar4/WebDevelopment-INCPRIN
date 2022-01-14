@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css?h=ef9efa29ed5490562c2ff272112d2e97">
-    <link rel="stylesheet" href="assets/css/styles.min.css?h=74455aae2904cb41e263ed78a2efed83">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
@@ -49,8 +49,10 @@
                         <!-- Start: Text -->
                         <div class="col">
                             <!-- Start: Text -->
-                            <div class="text">
-                                <h3><?php echo $market['service_name']; ?></h3>
+                            <div class="text-justify">
+                                <center>
+                                    <h3><?php echo $market['service_name']; ?></h3>
+                                </center>
                                 <p class="text-start">
                                     <?php echo strip_tags($market['service_desc']); ?>
                                 </p>
@@ -68,8 +70,10 @@
                         <!-- Start: Text -->
                         <div class="col">
                             <!-- Start: Text -->
-                            <div class="text">
-                                <h3><?php echo $market['service_name']; ?></h3>
+                            <div class="text-justify">
+                                <center>
+                                    <h3><?php echo $market['service_name']; ?></h3>
+                                </center>
                                 <p class="text-start">
                                     <?php echo $market['service_desc']; ?>
                                 </p>
