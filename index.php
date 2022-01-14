@@ -28,7 +28,7 @@
     ?>
 
     <div id="container">
-        <div id="video-top" style="width: 100%; overflow:hidden; height:400px ">
+        <div id="video-top" style="width: 100%; overflow:hidden; height:530px ">
             <?php if ($homeDetails['pg_ban_typ'] == 1) { ?>
                 <video width="100%" autoplay="" loop="" muted="">
                     <source src="<?php echo $homeDetails['pg_banner']; ?>" type="video/mp4">
@@ -131,7 +131,7 @@
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
                         <p>Pan India service and Global service<br>
-                        Through our Global partner G-Locs.</p>
+                            Through our Global partner G-Locs.</p>
                     </div>
                 </div>
             </div>
@@ -139,6 +139,52 @@
         </div>
     </div><!-- End: 1 Row 2 Columns -->
 
+    <!-- Start: Our Clients -->
+    <h1 style="text-align: center;font-size: 22.520000000000003px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">OUR CLIENTS</h1><!-- End: Our Clients -->
+    <!-- Start: Our Clients -->
+    <div class="row justify-content-center align-items-center" style="text-align: center;background: #e5e5e5;width: 100%;margin: 0px;">
+        <!-- Start: ClientsSlider -->
+        <div class="container text-center my-3" style="background: #e5e5e5;">
+            <div class="row mx-auto my-auto justify-content-center" style="background: #e5e5e5;">
+                <div id="recipeCarousel" class="carousel slide carousel1" data-bs-ride="carousel" style="background: #e5e5e5;">
+                    <div class="carousel-inner" role="listbox" style="background: #e5e5e5;">
+                        <?php
+                        $clients = getAllData('inc_client', 'cl_status');
+                        $active = true;
+                        foreach ($clients as $client) :
+                        ?>
+                            <?php if ($active) { ?>
+                                <!-- Start: Carousel-Item_active -->
+                                <div class="justify-content-center carousel-item active carousel-item1" style="background: #e5e5e5;">
+                                    <div class="col-md-3" style="background: #e5e5e5;">
+                                        <div class="card" style="background: #e5e5e5;">
+                                            <div class="card-img" style="background: #e5e5e5;"><img class="img-fluid" src="<?php echo $client['cl_logo']; ?>"></div>
+                                        </div>
+                                    </div>
+                                </div><!-- End: Carousel-Item_active -->
+                            <?php $active = false;
+                                continue;
+                            }
+                            ?>
+                            <!-- Start: carousel-item -->
+                            <div class="justify-content-center carousel-item carousel-item1" style="background: #e5e5e5;">
+                                <div class="col-md-3" style="background: #e5e5e5;">
+                                    <div class="card" style="background: #e5e5e5;">
+                                        <div class="card-img" style="background: #e5e5e5;"><img class="img-fluid" src="<?php echo $client['cl_logo']; ?>"></div>
+                                    </div>
+                                </div>
+                            </div><!-- End: carousel-item -->
+                        <?php endforeach; ?>
+                        ClientSliderActivate();
+                    </div>
+                    <a class="carousel-control-prev bg-transparent w-auto" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+                    <a class="carousel-control-next bg-transparent w-auto" href="#recipeCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div><!-- End: ClientsSlider -->
+    </div><!-- End: Our Clients -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
