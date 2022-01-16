@@ -16,15 +16,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
 
-<body >
+<body>
     <!-- Start: Footer Section -->
     <footer class="footer-dark" style="background: rgb(12,17,39);color: rgb(193,191,191);width: 100%;padding-top: 30px;">
         <div class="container">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-4">
+                <!-- <div class="row"> -->
                 <!-- Start: Contacts -->
-                <div class="col item">
+                <div class="col col-md-4 item">
                     <h3 class="text-start" style="color: rgb(224,223,223);">CONTACT US</h3>
-                    <p class="text-start" style="font-size: 20px;"><strong>INCPRIN LABELS AND PACKAGING SOLUTIONS PRIVATE LIMITED</strong></p>
+                    <p class="text-start" style="font-size: 18px;"><strong>INCPRIN LABELS AND PACKAGING <br>SOLUTIONS PRIVATE LIMITED</strong></p>
                     <div class="row">
                         <div class="col-auto text-start" style="padding-right: 5px;"><i class="fa fa-map-marker" style="color: #60a042;"></i></div>
                         <div class="col-auto text-start" style="padding-left: 0px;">
@@ -49,10 +50,10 @@
                     </div>
                 </div><!-- End: Contacts -->
                 <!-- Start: QuickLinks -->
-                <div class="col text-start item">
+                <div class="col col-md-2 text-start item">
                     <h3 class="text-nowrap text-uppercase" style="color: rgb(224,223,223);">Quick Links</h3>
                     <ul class="text-start">
-                        <li style="padding-top: 5px;"><a href="index.php" style="padding-top: 5px;">Home</a></li>
+                        <li style="padding-top: 5px;"><a href="index.php">Home</a></li>
                         <li style="padding-top: 5px;"><a href="market.php">Market</a></li>
                         <li style="padding-top: 5px;"><a href="technology.php">Technology</a></li>
                         <li style="padding-top: 5px;"><a href="sustainability.php">Sustainability</a></li>
@@ -60,9 +61,21 @@
                         <li style="padding-top: 5px;"><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div><!-- End: QuickLinks -->
+
+                <!-- Start: QuickLinks -->
+                <div class="col col-md-2 text-start item">
+                    <h3 class="text-nowrap text-uppercase" style="color: rgb(224,223,223);">Market</h3>
+                    <ul class="text-start">
+                        <?php
+                        $market = getAllData('inc_service', 'service_status');
+                        foreach ($market as $data) : ?>
+                            <li style="padding-top: 5px;"><a href="market-i1.php?s_id=<?php echo $data['service_id']; ?>"><?php echo $data['service_name']; ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div><!-- End: QuickLinks -->
                 <!-- Start: Location -->
-                <div class="col text-start item text">
-                    <h3 style="color: rgb(224,223,223);">LOCATION</h3><iframe allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8341074864657!2d80.15331041473628!3d13.046229316766413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261eed68c5a7b%3A0xac789ce8625b534a!2s133%2F2%2F95%2C%20Krishna%20Ind.%20Estate%2C%20Sunaresan%20Nagar%2C%20Porur%20Gardens%20Phase%20II%2C%20Mettukuppam%2C%20Vanagaram%2C%20Chennai%2C%20Tamil%20Nadu%20600095!5e0!3m2!1sen!2sin!4v1639815874682!5m2!1sen!2sin" width="100%" height="200"></iframe>
+                <div class="col col-md-4 text-start item text">
+                    <h3 style="color: rgb(224,223,223);">LOCATION</h3><iframe allowfullscreen="true" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8341074864657!2d80.15331041473628!3d13.046229316766413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261eed68c5a7b%3A0xac789ce8625b534a!2s133%2F2%2F95%2C%20Krishna%20Ind.%20Estate%2C%20Sunaresan%20Nagar%2C%20Porur%20Gardens%20Phase%20II%2C%20Mettukuppam%2C%20Vanagaram%2C%20Chennai%2C%20Tamil%20Nadu%20600095!5e0!3m2!1sen!2sin!4v1639815874682!5m2!1sen!2sin" width="100%" height="250px"></iframe>
                 </div><!-- End: Location -->
             </div>
         </div>
@@ -71,7 +84,7 @@
     <div class="row g-0 row-cols-1 text-center" style="background: #0074bd;height: 50px;width: 100%;margin-right: 0px;margin-left: 0px;">
         <div class="col" style="text-align: center;">
             <!-- Start: Copyright -->
-            <p class="text-center copyright" style="color: white;padding-top: 10px;margin-bottom: 0;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. Designed & Developed by <a style="color:yellow; text-decoration: none;" href="https://vedhan.com">Vedhan</a></p><!-- End: Copyright -->
+            <p class="text-center copyright" style="color: white;padding-top: 10px;margin-bottom: 0px;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. Designed & Developed by <a style="color:yellow; text-decoration: none;" href="https://vedhan.com">Vedhan</a></p><!-- End: Copyright -->
         </div>
     </div><!-- End: Copyrights -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

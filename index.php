@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css?h=ef9efa29ed5490562c2ff272112d2e97">
-    <link rel="stylesheet" href="assets/css/styles.min.css?h=74455aae2904cb41e263ed78a2efed83">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
@@ -62,43 +62,41 @@
     </div>
     <hr class="d-block d-md-none" style="margin: 0px;">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 justify-content-center align-items-center" style="width: 100%;margin-right: 0px;margin-left: 0px;">
-        <div class="col align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-            <div class="card" data-aos="fade" style="background: #60a042;color: rgb(255,255,255);text-align: center;">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fa fa-shopping-bag" style="font-size: 45.3753px;"></i></h4>
-                    <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Garments</h4>
-                    <p class="card-text" style="padding-bottom: 20px;"><br>Apparel Branding and Labelling Solutions</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
+        <?php
+        $market1 = getAllDataC1('inc_service', 'service_status', 'LIMIT 4');
+        $count_market = 0;
+        foreach ($market1 as $data) :
+            if ($count_market % 2 == 0) {
+        ?>
+                <div class="align-items-center col-auto align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
+                    <div class="card" data-aos="fade" style="min-height:250px; background: #60a042;color: rgb(255,255,255);text-align: center;">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fa fa-shopping-bag" style="font-size: 45px;"></i></h4>
+                            <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;"><?php echo $data['service_name']; ?></h4>
+                            <!-- <p class="card-text" style="padding-bottom: 20px;"><br>Apparel Branding and Labelling Solutions</p> -->
+                            <button onclick="window.open('market-i1.php?s_id=<?php echo $data['service_id']; ?>')" class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-            <div class="card" data-aos="fade" style="background: #0074bd;color: rgb(255,255,255);text-align: center;">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fa fa-tags" style="font-size: 45.3753px;"></i></h4>
-                    <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Packaging</h4>
-                    <p class="card-text" style="padding-bottom: 20px;"><br>Consumer Packaged Labelling Solutions</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
+            <?php } else {
+            ?>
+                <div class="align-items-center col-auto align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
+                    <div class="card" data-aos="fade" style="min-height:250px; background: #0074bd;color: rgb(255,255,255);text-align: center;">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fa fa-tags" style="font-size: 45px;"></i></h4>
+                            <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;"><?php echo $data['service_name']; ?></h4>
+                            <!-- <p class="card-text" style="padding-bottom: 20px;"><br>Consumer Packaged Labelling Solutions</p> -->
+                            <button onclick="window.open('market-i1.php?s_id=<?php echo $data['service_id']; ?>')" class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-            <div class="card" data-aos="fade" style="background: #60a042;color: rgb(255,255,255);text-align: center;">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fa fa-microchip" style="font-size: 45.3753px;"></i></h4>
-                    <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Electronics</h4>
-                    <p class="card-text" style="padding-bottom: 20px;">Electronics,Electricals,<br> Durable Goods & Equipments</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
-                </div>
-            </div>
-        </div>
-        <div class="col align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-            <div class="card" data-aos="fade" style="background: #0074bd;color: rgb(255,255,255);text-align: center;">
-                <div class="card-body">
-                    <h4 class="card-title"><i class="fa fa-medkit" style="font-size: 45px;"></i></h4>
-                    <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;">Pharma</h4>
-                    <p class="card-text" style="padding-bottom: 20px;"><br>Health Care</p><button class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
-                </div>
-            </div>
-        </div>
+        <?php
+            }
+            $count_market++;
+        endforeach;
+        ?>
     </div>
+    <br>
     <!-- Start: 1 Row 2 Columns -->
     <div class="container text-center" data-aos="fade" style="padding-top: 50px;padding-bottom: 50px;width: 100%;">
         <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
@@ -140,17 +138,21 @@
     </div><!-- End: 1 Row 2 Columns -->
 
     <!-- Start: 1 Row 2 Columns -->
-    <div class="container text-center" data-aos="fade" style="padding-top: 50px;padding-bottom: 50px;width: 100%;">
+    <div class="container text-justify" data-aos="fade" style="padding-top: 20px;padding-bottom: 50px;width: 100%;">
         <div class="d-flex align-items-center justify-content-center row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
             <div class="col">
-                <img style="height: 100%;width: 80%;" src="assets/img/SideImage1.jpg">
+                <img style="height: 100%;width: 80%;" src="assets/img/SideImage2.png">
             </div>
 
             <div class="col-auto d-none d-lg-inline">
+                <div class="col-auto text-center align-self-center"><i class="fas fa-cogs" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
+                <br>
                 <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">TECHNOLOGY</h1>
                 <p class="text-center" style="font-size: 16px;">We are using cutting edge technology and robust production process in manufacturing in wash care labels, heat transfer, self-adhesive labels, RF, RFID, mono cartons, rigid boxes, etc.</p>
                 <br>
                 <hr>
+                <br>
+                <div class="col-auto text-center align-self-center"><i class="fab fa-pagelines" style="font-size: 70px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                 <br>
                 <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">SUSTAINABILITY</h1>
                 <p class="text-center" style="font-size: 16px;">Our main strategy is the usage of sustainability based raw materials & base material in labels and packaging production which will help us to align to India / Global carbon reduction program and green earth policies.</p>
