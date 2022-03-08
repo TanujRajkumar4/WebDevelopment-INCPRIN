@@ -9,7 +9,7 @@ include('database.php');
 $qry = mysqli_query($dbConn, "select * from inc_page where pg_status='A' and pg_id=" . $_GET['page_id']);
 $sql = mysqli_fetch_array($qry);
 if (isset($_POST['Submit'])) {
-  $desc =$_POST['summernote'];
+  $desc = $_POST['summernote'];
   $up_ty = $_POST['up_typ'];
   $msg = addslashes($_POST['pg_title']);
   $logo = $_POST['file_upl_url'];
@@ -174,7 +174,43 @@ if (isset($_POST['Submit'])) {
       <script>
         $(function() {
           // Summernote
-          $('#summernote').summernote()
+          // onImageUpload callback
+          $('#summernote').summernote({
+            toolbar: [
+              ['style', ['style']],
+              ['font', ['bold', 'underline', 'clear']],
+              ['fontname', ['fontname']],
+              ['color', ['color']],
+              ['para', ['ul', 'ol', 'paragraph']],
+              ['table', ['table']],
+              ['insert', ['link', 'picture']],
+              ['view', ['fullscreen']],
+            ],
+            callbacks: {
+              onImageUpload: function(files) {
+                // upload image to server and create imgNode...
+                var form = new FormData();
+                form.append("file_upload", files[0], files[0].name);
+
+                var settings = {
+                  "url": "upload.php",
+                  "method": "POST",
+                  "timeout": 0,
+                  "processData": false,
+                  "mimeType": "multipart/form-data",
+                  "contentType": false,
+                  "data": form
+                };
+
+                $.ajax(settings).done(function(response) {
+                  response = JSON.parse(response);
+                  if (response.status == 200) {
+                    $('#summernote').summernote('insertImage', "../uploads/" + files[0].name, files[0].name);
+                  }
+                });
+              }
+            }
+          });
 
           // CodeMirror
           CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {

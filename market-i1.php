@@ -37,15 +37,15 @@
         <div class="container hero" style="margin-top: 0px;">
             <div class="row">
                 <!-- Start: Text -->
-                <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 align-self-center text-center">
-                    <h1><?php echo $s_Details['service_name']; ?></h1>
-                    <p><?php echo $s_Details['service_desc']; ?></p>
+                <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                    <h1 class="text-center"><?php echo $s_Details['service_name']; ?></h1>
+                    <p class="text-center" style="color: white; font-size: 15px;"><?php echo strip_tags($s_Details['service_desc']); ?></p>
                 </div><!-- End: Text -->
                 <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 text-center d-none d-lg-block align-self-center">
-                    <!-- Start: iPhone -->
+                    <!-- Start: Image -->
                     <div class="phone-mockup"><img class="" src="<?php echo $s_Details['service_img']; ?>" height="100%">
                         <div class="screen"></div>
-                    </div><!-- End: iPhone -->
+                    </div><!-- End: Image -->
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
                     <div class="col-md-12">
                         <h1 class="text-center" style="color: rgb(255,255,255)!important;"><br><strong><?php echo $p['product_title']; ?></strong><br><br></h1>
                     </div>
-                </div>s
+                </div>
                 <div class="row row-cols-1 row-cols-md-2 align-items-center">
                     <div class="col" data-bss-disabled-mobile="true" data-aos="slide-right" data-aos-once="true">
                         <?php if ($p['pr_ban_typ'] == 1) { ?>

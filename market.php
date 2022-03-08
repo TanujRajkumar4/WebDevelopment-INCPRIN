@@ -53,9 +53,9 @@
                                 <center>
                                     <h3><?php echo $market['service_name']; ?></h3>
                                 </center>
-                                    <p class="text-justify">
+                                    
                                         <?php echo strip_tags($market['service_desc']); ?>
-                                    </p>
+                                 
                                 <a href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
 
                             </div><!-- End: Text -->
@@ -74,9 +74,9 @@
                                 <center>
                                     <h3><?php echo $market['service_name']; ?></h3>
                                 </center>
-                                    <p class="text-justify">
+                                    
                                         <?php echo $market['service_desc']; ?>
-                                    </p>
+                                   
                                 <a href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
                             </div><!-- End: Text -->
                         </div><!-- End: Text -->
