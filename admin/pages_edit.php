@@ -173,6 +173,13 @@ if (isset($_POST['Submit'])) {
       ?>
       <script>
         $(function() {
+          // ---------------------------------------------------------------------------------------
+          // ---------------------------------------------------------------------------------------
+          // CHANGE THIS VARIABLE's VALUE BASED ON THE WORKING DIRECTORY
+          // const up_folder = "http://localhost/WebDevelopment/INCPRIN/WebDevelopment-INCPRIN-REPO/uploads/";
+          const up_folder = "https://jallikattu.org/IncDemo/uploads/";
+          // ---------------------------------------------------------------------------------------
+          // ---------------------------------------------------------------------------------------
           // Summernote
           // onImageUpload callback
           $('#summernote').summernote({
@@ -205,7 +212,7 @@ if (isset($_POST['Submit'])) {
                 $.ajax(settings).done(function(response) {
                   response = JSON.parse(response);
                   if (response.status == 200) {
-                    $('#summernote').summernote('insertImage', "../uploads/" + files[0].name, files[0].name);
+                    $('#summernote').summernote('insertImage', up_folder + files[0].name, files[0].name);
                   }
                 });
               }
