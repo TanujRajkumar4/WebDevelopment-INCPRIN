@@ -23,7 +23,7 @@
 
 <body>
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(https://unsplash.it/1800/900?image=1051);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
+    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url('assets/img/contact_us_banner.jpg');background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
     <hr><!-- Start: Map Clean -->
     <section class="text-center map-clean">
         <div class="container justify-content-xxl-end align-items-xxl-center">

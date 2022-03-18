@@ -48,7 +48,7 @@
             </p>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="client.php" class="nav-link">
             <i class="nav-icon fas fa-tree"></i>
             <p>
@@ -70,6 +70,12 @@
               </a>
             </li>
           </ul>
+        </li> -->
+        <li class="nav-item">
+          <a href="services.php" class="nav-link">
+            <i class="fas fa-tree nav-icon"></i>
+            <p>Market</p>
+          </a>
         </li>
         <li class="nav-item">
           <a href="features.php?p_ty=tech&p_id=3" class="nav-link">

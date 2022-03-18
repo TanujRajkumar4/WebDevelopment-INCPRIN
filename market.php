@@ -57,7 +57,7 @@
                                     <?php echo $market['service_desc']; ?>
                                 </div>
                                 <center>
-                                    <a class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
+                                    <a style="text-decoration: none; color:black; font-weight:bold" class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
                                 </center>
 
                             </div><!-- End: Text -->
@@ -80,7 +80,9 @@
                                     <?php echo $market['service_desc']; ?>
                                 </div>
                                 <center>
-                                    <a class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
+                                    <strong>
+                                        <a style="text-decoration: none; color:black; font-weight:bold" class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
+                                    </strong>
                                 </center>
                             </div><!-- End: Text -->
                         </div><!-- End: Text -->

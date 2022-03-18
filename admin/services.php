@@ -201,8 +201,9 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                             <td><?php echo $desc_text; ?>H.....</td>
                                             <td><img src="../<?php echo $sql['service_img']; ?>" height="100px" width="200px"></td>
                                             <td>
-                                                <a class="btn btn-info btn-sm" href="service_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="services.php?typ=del&id=<?php echo $sql['service_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
+                                                <a class="btn btn-info btn-sm mx-1 my-1" href="service_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                                <a class="btn btn-danger btn-sm mx-1 my-1" href="services.php?typ=del&id=<?php echo $sql['service_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
+                                                <a class="btn btn-success btn-sm mx-1 my-1" href="service_gallery.php?p_ty=produ&p_id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Add Gallery</a>
                                             </td>
                                         </tr>
                                     <?php $i = $i + 1;
