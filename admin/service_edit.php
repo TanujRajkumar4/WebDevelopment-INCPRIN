@@ -33,7 +33,7 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
                     echo "<script>window.location.href ='service_edit.php?id=" . $s_id . "';</script>";
                 } else {
                     $logo_old = $ServiceDetails['service_img'];
-                    if (unlink("../" . $logo_old)) {
+                    if (@unlink("../" . $logo_old)) {
                         $qry = "UPDATE `inc_service` SET `service_name`='$msg',`service_img`='$logo',`service_desc`='$desc' WHERE service_id = '$s_id'";
                         $sql = mysqli_query($dbConn, $qry);
                         // echo $qry;

@@ -37,26 +37,35 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 4');
                     </div><!-- End: Intro -->
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-10 col-lg-7 offset-md-1 offset-lg-0">
+            <?php
+            $qry = getAllDataC1('inc_gallery', 'photo_status', 'AND product_id = 4 and pg_typ=1');
+            if (mysqli_num_rows($qry) > 0) {
+            ?>
+                <div class="row">
+                    <div class="col-md-10 col-lg-7 offset-md-1 offset-lg-0">
+                        <!-- Start: Text -->
+                        <div class="text">
+                            <?php echo $pg_qry['pg_desc']; ?>
+                        </div><!-- End: Text -->
+                    </div>
+                    <div class="col text-center">
+                        <div class="card-group">
+                            <?php
+                            foreach ($qry as $sql) {
+                            ?>
+                                <div class="card" style="padding-top: 5px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;"><a href="<?php echo $sql['file_url']; ?>" target="_blank"><img class="card-img-top w-100 d-block" src="assets/img/reports/rp.jpg"></a>
+                                    <div class="card-body"><a href="<?php echo $sql['file_url']; ?>" target="_blank" class="btn btn-primary"><?php echo $sql['poto_desc']; ?></a></div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                <?php } else { ?>
                     <!-- Start: Text -->
                     <div class="text">
                         <?php echo $pg_qry['pg_desc']; ?>
                     </div><!-- End: Text -->
+                <?php } ?>
                 </div>
-                <div class="col text-center">
-                    <div class="card-group">
-                        <?php
-                        $qry = getAllDataC1('inc_gallery', 'photo_status', 'AND product_id =4 and pg_typ=1');
-                        foreach ($qry as $sql) {
-                        ?>
-                            <div class="card" style="padding-top: 5px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;"><a href="<?php echo $sql['file_url']; ?>" target="_blank"><img class="card-img-top w-100 d-block" src="assets/img/reports/rp.jpg"></a>
-                                <div class="card-body"><a href="<?php echo $sql['file_url']; ?>" target="_blank" class="btn btn-primary"><?php echo $sql['poto_desc']; ?></a></div>
-                            </div>
-                        <?php } ?>
-                    </div>
-                </div>
-            </div>
         </div>
     </section><!-- End: Article Dual Column -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

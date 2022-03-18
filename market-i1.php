@@ -32,24 +32,36 @@
         $p_Details = getAllDataC1('inc_product', 'product_status', 'AND service_id =' . $s_id);
     }
     ?>
-    <!-- Start: Header -->
+    <!-- Start: Header 
     <header class="header-blue" style="background: rgb(12,17,39);padding-bottom: 10px;padding-top: 10px;">
         <div class="container hero" style="margin-top: 0px;">
             <div class="row">
-                <!-- Start: Text -->
-                <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
-                    <h1 class="text-center"><?php echo $s_Details['service_name']; ?></h1>
-                    <p class="text-center" style="color: white; font-size: 15px;"><?php echo strip_tags($s_Details['service_desc']); ?></p>
-                </div><!-- End: Text -->
+                <div class="col-12 col-lg-6 col-xl-5">
+                    <h1 class="text-center"><?php // echo $s_Details['service_name']; 
+                                            ?></h1>
+                    <p class="text-center" style="color: white; font-size: 15px;"><?php // echo strip_tags($s_Details['service_desc']); 
+                                                                                    ?></p>
+                </div>
                 <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 text-center d-none d-lg-block align-self-center">
-                    <!-- Start: Image -->
-                    <div class="phone-mockup"><img class="" src="<?php echo $s_Details['service_img']; ?>" height="100%">
+                 
+                    <div class="phone-mockup">
                         <div class="screen"></div>
-                    </div><!-- End: Image -->
+                    </div>
                 </div>
             </div>
         </div>
-    </header><!-- End: Header -->
+    </header> End: Header -->
+    <br>
+    <div class="row align-items-center justify-content-center py-5" width="100%" style="background: rgb(12,17,39);min-height:500px">
+        <div class="col-md-6 col-12 px-5">
+            <h2 class="text-center text-white"><?php echo $s_Details['service_name']; ?></h2>
+            <p class="text-center" style="color: white; font-size: 15px;"><?php echo strip_tags($s_Details['service_desc']); ?></p>
+        </div>
+        <div class="col-lg-6 col-12 px-5">
+            <img class="img-fluid" src="<?php echo $s_Details['service_img']; ?>" width="100%" style="border: none; border-radius:10%">
+        </div>
+
+    </div>
     <?php
     $i = 1;
     foreach ($p_Details as $p) :
@@ -62,7 +74,7 @@
                     </div>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 align-items-center">
-                    <div class="col" data-bss-disabled-mobile="true" data-aos="slide-right" data-aos-once="true">
+                    <div class="col" data-bss-disabled-mobile="true" data-aos="" data-aos-once="true">
                         <?php if ($p['pr_ban_typ'] == 1) { ?>
                             <video width="100%" height="315" muted="" loop="" autoplay="" style="border-radius: 60px;border-width: 6px;border-color: rgba(33,37,41,0);border-top-color: rgb(33);border-right-color: 37;border-bottom-color: 41;border-left-color: 37;">
                                 <source src="<?php echo $p['product_img']; ?>" type="video/mp4">
@@ -72,7 +84,7 @@
                             <img width="100%" src="<?php echo $p['product_img']; ?>">
                         <?php } ?>
                     </div>
-                    <div class="col" data-bss-disabled-mobile="true" data-aos="slide-left" data-aos-once="true">
+                    <div class="col" data-bss-disabled-mobile="true" data-aos="" data-aos-once="true">
                         <p style="margin-bottom: 0px;"><br><?php echo $p['product_desc']; ?></p>
                         <a href="market-i2.php?p_id=<?php echo $p['product_id']; ?>">Read More</a>
                     </div>
@@ -87,18 +99,18 @@
                     </div>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 align-items-center">
-                    <div class="col" data-bss-disabled-mobile="true" data-aos="slide-right" data-aos-once="true">
+                    <div class="col" data-bss-disabled-mobile="true" data-aos="" data-aos-once="true">
                         <?php if ($p['pr_ban_typ'] == 1) { ?>
                             <video width="100%" height="315" muted="" loop="" autoplay="" style="border-radius: 60px;border-width: 6px;border-color: rgba(33,37,41,0);border-top-color: rgb(33);border-right-color: 37;border-bottom-color: 41;border-left-color: 37;">
                                 <source src="<?php echo $p['product_img']; ?>" type="video/mp4">
                             </video>
                         <?php } else {
                         ?>
-                            <img width="100%" src="<?php echo $p['product_img']; ?>">
+                            <img class="img-fluid" width="100%" src="<?php echo $p['product_img']; ?>">
                         <?php } ?>
 
                     </div>
-                    <div class="col" data-bss-disabled-mobile="true" data-aos="slide-left" data-aos-once="true">
+                    <div class="col" data-bss-disabled-mobile="true" data-aos="" data-aos-once="true">
                         <p style="color: rgb(255,255,255);"><br><?php echo $p['product_desc']; ?><br><br></p>
                         <a href="market-i2.php" style="color: rgb(255,255,255);">Read More</a>
                     </div>

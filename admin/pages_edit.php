@@ -177,7 +177,7 @@ if (isset($_POST['Submit'])) {
           // ---------------------------------------------------------------------------------------
           // CHANGE THIS VARIABLE's VALUE BASED ON THE WORKING DIRECTORY
           // const up_folder = "http://localhost/WebDevelopment/INCPRIN/WebDevelopment-INCPRIN-REPO/uploads/";
-          const up_folder = "https://jallikattu.org/IncDemo/uploads/";
+           const up_folder = "https://jallikattu.org/IncDemo/uploads/";
           // ---------------------------------------------------------------------------------------
           // ---------------------------------------------------------------------------------------
           // Summernote
@@ -213,6 +213,8 @@ if (isset($_POST['Submit'])) {
                   response = JSON.parse(response);
                   if (response.status == 200) {
                     $('#summernote').summernote('insertImage', up_folder + files[0].name, files[0].name);
+                  } else {
+                    alert(response.message);
                   }
                 });
               }

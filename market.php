@@ -53,10 +53,12 @@
                                 <center>
                                     <h3><?php echo $market['service_name']; ?></h3>
                                 </center>
-                                    
-                                        <?php echo strip_tags($market['service_desc']); ?>
-                                 
-                                <a href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
+                                <div>
+                                    <?php echo $market['service_desc']; ?>
+                                </div>
+                                <center>
+                                    <a class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
+                                </center>
 
                             </div><!-- End: Text -->
                         </div><!-- End: Text -->
@@ -74,10 +76,12 @@
                                 <center>
                                     <h3><?php echo $market['service_name']; ?></h3>
                                 </center>
-                                    
-                                        <?php echo $market['service_desc']; ?>
-                                   
-                                <a href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
+                                <div>
+                                    <?php echo $market['service_desc']; ?>
+                                </div>
+                                <center>
+                                    <a class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
+                                </center>
                             </div><!-- End: Text -->
                         </div><!-- End: Text -->
                         <!-- Start: Image -->
