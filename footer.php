@@ -81,7 +81,7 @@
         </div>
     </footer><!-- End: Footer Section -->
     <!-- Start: Copyrights -->
-    <div class="row g-0 row-cols-1 text-center" style="background: #0074bd;height: 50px;width: 100%;margin-right: 0px;margin-left: 0px;">
+    <div class="row g-0 row-cols-1 text-center" style="background: black;height: 50px;width: 100%;margin-right: 0px;margin-left: 0px;">
         <div class="col" style="text-align: center;">
             <!-- Start: Copyright -->
             <p class="text-center copyright" style="color: white;padding-top: 10px;margin-bottom: 0px;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. Designed & Developed by <a style="color:yellow; text-decoration: none;" href="https://vedhan.com">Vedhan</a></p><!-- End: Copyright -->

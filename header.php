@@ -22,7 +22,7 @@
 
 <body>
     <div class="row text-nowrap d-none d-md-flex align-items-start" style="text-align: left;width: 100%;margin: 0px;height: 50px;">
-        <div class="col-6" style="background: #0074bd;padding-left: 30px;">
+        <div class="col-6" style="background: black;padding-left: 30px;">
             <div class="row">
                 <div class="col">
                     <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[0]; ?>')">
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-6 d-sm-flex d-md-flex justify-content-end" style="background: #60a042;padding-top: 12px; height:100%">
+        <div class="col-6 d-sm-flex d-md-flex justify-content-end" style="background: black;padding-top: 12px; height:100%">
             <div class="row align-items-center">
                 <div class="col align-self-baseline">
                     <!-- Start: Nav1ContactInfo -->
