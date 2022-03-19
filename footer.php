@@ -44,7 +44,7 @@
                 <p class="mb-0" style="color: black;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. </p><!-- End: Copyright -->
             </strong>
         </div>
-        <div class="col-2" style="">
+        <div class="col-2">
             <strong>
                 <img class="img-fluid" id="Logo" src="assets/img/Logo_tran.png" loading="lazy">
             </strong>

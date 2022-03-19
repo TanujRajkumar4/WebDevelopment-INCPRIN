@@ -30,9 +30,7 @@
     ?>
     <!-- Start: Parallax Background -->
     <div data-bss-parallax-bg="true" style="height: 300px;background: url(<?php echo $page['pg_banner']; ?>) center / cover;"></div><!-- End: Parallax Background -->
-    <hr>
-    <h1 class="text-center" style="font-family:sans-serif;color: #56585b;">MARKETS</h1>
-    <hr><!-- Start: Market1 -->
+    <!-- Start: Market1 -->
     <section class="article-dual-column">
         <div class="container-md">
             <?php $i = 1;
@@ -56,9 +54,9 @@
                                 <div>
                                     <?php echo $market['service_desc']; ?>
                                 </div>
-                                <center>
+                                <!-- <center>
                                     <a style="text-decoration: none; color:black; font-weight:bold" class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
-                                </center>
+                                </center> -->
 
                             </div><!-- End: Text -->
                         </div><!-- End: Text -->
@@ -79,11 +77,11 @@
                                 <div>
                                     <?php echo $market['service_desc']; ?>
                                 </div>
-                                <center>
+                                <!-- <center>
                                     <strong>
                                         <a style="text-decoration: none; color:black; font-weight:bold" class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
                                     </strong>
-                                </center>
+                                </center> -->
                             </div><!-- End: Text -->
                         </div><!-- End: Text -->
                         <!-- Start: Image -->
