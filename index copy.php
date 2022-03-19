@@ -27,10 +27,58 @@
     $homeDetails = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1');
     ?>
 
-    <?php 
-    include('slider.php');
-    ?>
-    <!-- <hr class="d-block d-md-none" style="margin: 0px;"> -->
+    <div id="container">
+        <div id="video-top" style="width: 100%; overflow:hidden; height:530px ">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/home_slider/1.jpg" height='530px' class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/home_slider/2.jpg" height='530px' class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/home_slider/3.jpg" height='530px' class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Start: Large Screen -->
+        <div class="d-none d-md-block">
+            <div class="custom-shape-divider-bottom-1636207871">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div><!-- End: Large Screen -->
+        <!-- Start: Small Screen -->
+        <div class="d-md-none">
+            <div class="custom-shape-divider-bottom-1636520146">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </div><!-- End: Small Screen -->
+    </div>
+    <hr class="d-block d-md-none" style="margin: 0px;">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 justify-content-center align-items-center" style="width: 100%;margin-right: 0px;margin-left: 0px;">
         <?php
         $market1 = getAllDataC1('inc_service', 'service_status', 'LIMIT 4');
@@ -39,20 +87,24 @@
             if ($count_market % 2 == 0) {
         ?>
                 <div class="align-items-center col-auto align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-                    <div class="card" data-aos="fade" style="min-height:150px; background: #FFFFFF;color: black;text-align: center;">
+                    <div class="card" data-aos="fade" style="min-height:250px; background: #60a042;color: rgb(255,255,255);text-align: center;">
                         <div class="card-body">
                             <h4 class="card-title"><i class="fa fa-shopping-bag" style="font-size: 45px;"></i></h4>
                             <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;"><?php echo $data['service_name']; ?></h4>
+                            <!-- <p class="card-text" style="padding-bottom: 20px;"><br>Apparel Branding and Labelling Solutions</p> -->
+                            <button onclick="window.open('market-i1.php?s_id=<?php echo $data['service_id']; ?>')" class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
                         </div>
                     </div>
                 </div>
             <?php } else {
             ?>
                 <div class="align-items-center col-auto align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-                    <div class="card" data-aos="fade" style="min-height:150px; background:#c7c7c7;color: black;text-align: center;">
+                    <div class="card" data-aos="fade" style="min-height:250px; background: #0074bd;color: rgb(255,255,255);text-align: center;">
                         <div class="card-body">
                             <h4 class="card-title"><i class="fa fa-tags" style="font-size: 45px;"></i></h4>
                             <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;"><?php echo $data['service_name']; ?></h4>
+                            <!-- <p class="card-text" style="padding-bottom: 20px;"><br>Consumer Packaged Labelling Solutions</p> -->
+                            <button onclick="window.open('market-i1.php?s_id=<?php echo $data['service_id']; ?>')" class="btn btn-primary" type="button" style="background: rgba(13,110,253,0);font-weight: bold;padding-top: 2px;padding-bottom: 2px;padding-right: 8px;padding-left: 8px;border: 2.992806px dotted rgb(255,255,255);font-size: 12px;">READ MORE</button>
                         </div>
                     </div>
                 </div>
@@ -70,7 +122,7 @@
                 <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">ABOUT US</h1>
                 <p class="text-start" style="font-size: 16px;"><?php echo $homeDetails['pg_desc']; ?></p>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                    <div class="col-auto text-center align-self-center"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Robust Printing</h1>
                         <p>
@@ -81,7 +133,7 @@
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-box-open" style="font-size: 50px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                    <div class="col-auto text-center align-self-center"><i class="fas fa-box-open" style="font-size: 50px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Packaging</h1>
                         <p>
@@ -93,7 +145,7 @@
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-microchip" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                    <div class="col-auto text-center align-self-center"><i class="fas fa-microchip" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Industry Standard</h1>
                         <p>
@@ -104,7 +156,7 @@
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-globe-americas" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                    <div class="col-auto text-center align-self-center"><i class="fas fa-globe-americas" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
                         <p>
@@ -128,14 +180,14 @@
             </div>
 
             <div class="col-auto d-none d-lg-inline">
-                <div class="col-auto text-center align-self-center"><i class="fas fa-cogs" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                <div class="col-auto text-center align-self-center"><i class="fas fa-cogs" style="font-size: 64px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                 <br>
                 <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">TECHNOLOGY</h1>
                 <p class="text-center" style="font-size: 16px;">We are using cutting edge technology and robust production process in manufacturing in wash care labels, heat transfer, self-adhesive labels, RF, RFID, mono cartons, rigid boxes, etc.</p>
                 <br>
                 <hr>
                 <br>
-                <div class="col-auto text-center align-self-center"><i class="fab fa-pagelines" style="font-size: 70px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: #60a042;"></i></div>
+                <div class="col-auto text-center align-self-center"><i class="fab fa-pagelines" style="font-size: 70px;background: #60a042;border-radius: 50%;padding: 21px;text-align: center;color: rgb(255,255,255);"></i></div>
                 <br>
                 <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">SUSTAINABILITY</h1>
                 <p class="text-center" style="font-size: 16px;">Our main strategy is the usage of sustainability based raw materials & base material in labels and packaging production which will help us to align to India / Global carbon reduction program and green earth policies.</p>
@@ -145,7 +197,7 @@
     </div><!-- End: 1 Row 2 Columns -->
 
     <!-- Start: Our Clients -->
-    <h1 style="text-align: center;font-size: 22.5px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">CERTIFICATIONS</h1><!-- End: Our Clients -->
+    <h1 style="text-align: center;font-size: 22.5px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">OUR CLIENTS</h1><!-- End: Our Clients -->
     <!-- Start: Our Clients -->
     <div class="row justify-content-center align-items-center" style="text-align: center;background: #e5e5e5;width: 100%;margin: 0px;">
         <!-- Start: ClientsSlider -->

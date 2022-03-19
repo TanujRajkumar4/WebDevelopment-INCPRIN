@@ -495,6 +495,16 @@
 
 #media-icon{
   background: rgba(13, 110, 253, 0) !important;
+  font-size: 20px !important;
+  padding-left: 9px !important;
+  padding-right: 9px !important;
+  padding-bottom: 3px !important;
+  padding-top: 3px !important;
+  border: none;
+}
+
+/* #media-icon{
+  background: rgba(13, 110, 253, 0) !important;
   border-radius: 50% !important;
   font-size: 20px !important;
   padding-left: 9px !important;
@@ -504,4 +514,4 @@
   border-color: #60a042 !important;
   margin: 5px !important;
   padding-top: 3px !important;
-}
+} */
