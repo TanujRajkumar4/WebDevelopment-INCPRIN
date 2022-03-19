@@ -8,7 +8,7 @@ include('header.php');
 include('sidebar.php');
 include('database.php');
 
-//ADD New Service Block :START
+//ADD New Product Block :START
 if (isset($_GET['typ']) && $_GET['typ'] == "add") {
     if (isset($_POST['add_service'])) {
         $desc = $_POST['summernote'];
@@ -21,41 +21,41 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
             $ext = explode('.', $_FILES['file_upl']['name']);
             $ext = end($ext);
             $check = strtolower($ext);
-            $logo = "assets/img/services/" . uniqid("") . '.' . $ext;
+            $logo = "assets/img/prod/" . uniqid("") . '.' . $ext;
             if ($check == "png" || $check == "jpeg" || $check == "jpg" || $check == "png") {
                 if (!move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
                     echo "<script>alert('File upload error');</script>";
-                    echo "<script>window.location.href ='services.php';</script>";
+                    echo "<script>window.location.href ='prod.php';</script>";
                 } else {
-                    $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_type`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','1','A')";
+                    $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_type`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','2','A')";
                     $sql = mysqli_query($dbConn, $qry);
                     // echo $qry;
                     if ($sql) {
-                        echo "<script>alert('Inserted Successfully.'); window.location.href = 'services.php';</script>";
+                        echo "<script>alert('Inserted Successfully.'); window.location.href = 'prod.php';</script>";
                     } else {
-                        echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'services.php';</script>";
+                        echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'prod.php';</script>";
                     }
                 }
             } else {
                 echo "<script>alert('Upload only mp4,jpeg,jpg and png files');</script>";
-                echo "<script>window.location.href ='services.php';</script>";
+                echo "<script>window.location.href ='prod.php';</script>";
                 exit();
             }
         } else {
-            $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_type`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','1','A')";
+            $qry = "INSERT INTO `inc_service`(`service_id`, `service_name`, `service_img`, `service_desc`, `service_type`, `service_status`) VALUES (NULL,'$msg','$logo','$desc','2','A')";
             $sql = mysqli_query($dbConn, $qry);
             // echo $qry;
             if ($sql) {
-                echo "<script>alert('Inserted Successfully. NO IMAGE'); window.location.href = 'services.php';</script>";
+                echo "<script>alert('Inserted Successfully. NO IMAGE'); window.location.href = 'prod.php';</script>";
             } else {
-                echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'services.php';</script>";
+                echo "<script>alert('Not Inserted. Retry!'); window.location.href = 'prod.php';</script>";
             }
         }
     }
 }
-//ADD New Service Block :END
+//ADD New Product Block :END
 
-//DELETE Service Block :START
+//DELETE Product Block :START
 elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
 
     $qry = mysqli_query($dbConn, "SELECT service_img from inc_service where service_id = " . $_GET['id']);
@@ -65,21 +65,21 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
         $qry = "DELETE FROM `inc_service` where `service_id`=" . $_GET['id'];
         $sql = mysqli_query($dbConn, $qry);
         if ($sql) {
-            echo "<script>alert('Deleted Successfully.'); window.location.href = 'services.php';</script>";
+            echo "<script>alert('Deleted Successfully.'); window.location.href = 'prod.php';</script>";
         } else {
-            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'services.php';</script>";
+            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'prod.php';</script>";
         }
     } else {
         $qry = "DELETE FROM `inc_service` where `service_id`=" . $_GET['id'];
         $sql = mysqli_query($dbConn, $qry);
         if ($sql) {
-            echo "<script>alert('Deleted Successfully.'); window.location.href = 'services.php';</script>";
+            echo "<script>alert('Deleted Successfully.'); window.location.href = 'prod.php';</script>";
         } else {
-            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'services.php';</script>";
+            echo "<script>alert('Not Deleted. Retry!'); window.location.href = 'prod.php';</script>";
         }
     }
 }
-//DELETE Service Block :END
+//DELETE Product Block :END
 ?>
 
 <!-- Content Wrapper. Contains page content -->
@@ -89,7 +89,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Services Page</h1>
+                    <h1>Products Page</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -109,15 +109,15 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Add Services</h3>
+                            <h3 class="card-title">Add Products</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form method="POST" action="?typ=add" enctype="multipart/form-data">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Service Title</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="service_title" placeholder="Service Heading">
+                                    <label for="exampleInputEmail1">Product Title</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="service_title" placeholder="Product Heading">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputDescription">Description</label>
@@ -155,7 +155,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title" id="SL">Service List</h3>
+                            <h3 class="card-title" id="SL">Product List</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -163,7 +163,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                 <thead>
                                     <tr>
                                         <th style="width: 10px">#</th>
-                                        <th>Service Title</th>
+                                        <th>Product Title</th>
                                         <th>Description</th>
                                         <th>Image</th>
                                         <th>Action</th>
@@ -184,7 +184,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                     $res_per_pg = 5;
                                     $pge_first_res = ($page - 1) * $res_per_pg;
                                     $i = 1;
-                                    $sql_sel = "SELECT * FROM inc_service WHERE service_type = 1 AND service_status ='A'";
+                                    $sql_sel = "SELECT * FROM inc_service WHERE service_type = 2 AND service_status ='A'";
                                     $qry = (mysqli_query($dbConn, $sql_sel));
                                     $nu_res = mysqli_num_rows($qry);
                                     $num_pg = ceil($nu_res / $res_per_pg);
@@ -201,9 +201,9 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                             <td><?php echo $desc_text; ?>H.....</td>
                                             <td><img src="../<?php echo $sql['service_img']; ?>" height="100px" width="200px"></td>
                                             <td>
-                                                <a class="btn btn-info btn-sm mx-1 my-1" href="service_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm mx-1 my-1" href="services.php?typ=del&id=<?php echo $sql['service_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
-                                                <!-- <a class="btn btn-success btn-sm mx-1 my-1" href="service_gallery.php?p_ty=produ&p_id=<?php // echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Add Gallery</a> -->
+                                                <a class="btn btn-info btn-sm mx-1 my-1" href="prod_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                                <a class="btn btn-danger btn-sm mx-1 my-1" href="prod.php?typ=del&id=<?php echo $sql['service_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
+                                                <!-- <a class="btn btn-success btn-sm mx-1 my-1" href="service_gallery.php?p_ty=produ&p_id=<?php //echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Add Gallery</a> -->
                                             </td>
                                         </tr>
                                     <?php $i = $i + 1;
@@ -217,7 +217,7 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                 <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
                                 <?php
                                 for ($page = 1; $page <= $num_pg; $page++) {
-                                    echo '<li class="page-item"><a class="page-link" href = "services.php?page=' . $page . '">' . $page . ' </a>';
+                                    echo '<li class="page-item"><a class="page-link" href = "prod.php?page=' . $page . '">' . $page . ' </a>';
                                 }
                                 ?>
                                 <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>

@@ -22,11 +22,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
 </head>
 
-<body>
+<body style="min-height: 500px;">
     <?php
-    $markets = getAllDataC1('inc_service', 'service_status', 'AND `service_type` = 1');
     // $markets = getAllData('inc_service', 'service_status');
-    $page = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 2 ');
+    $markets = getAllDataC1('inc_service', 'service_status', 'AND `service_type` = 2');
+
+    $page = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 6');
 
     ?>
     <!-- Start: Parallax Background -->
@@ -103,6 +104,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
     <script src="assets/js/script.min.js?h=2bf886d83119376f4bad144253b6de8f"></script>
 </body>
-<?php include('footer.php'); ?>
 
 </html>
+<?php include('footer.php'); ?>

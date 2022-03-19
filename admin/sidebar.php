@@ -78,11 +78,23 @@
           </a>
         </li>
         <li class="nav-item">
+          <a href="prod.php" class="nav-link">
+            <i class="fas fa-tree nav-icon"></i>
+            <p>Products</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="tech.php" class="nav-link">
+            <i class="fas fa-tree nav-icon"></i>
+            <p>Technology</p>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
           <a href="features.php?p_ty=tech&p_id=3" class="nav-link">
             <i class="fas fa-layer-group nav-icon"></i>
             <p>Technology Features</p>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a href="file_up.php?p_ty=sus&p_id=4" class="nav-link">
             <i class="nav-icon far fa-image"></i>

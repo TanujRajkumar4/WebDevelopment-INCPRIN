@@ -34,7 +34,8 @@
                 <ul class="navbar-nav ms-auto pulse animated">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="market.php">Market</a></li>
-                    <li class="nav-item"><a class="nav-link" href="technology.php">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tech.php">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.php">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="sustainability.php">Sustainability</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
