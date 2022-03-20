@@ -35,7 +35,7 @@ if (!isset($_GET['p_id'])) {
 }
 ?>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Parallax Background -->
     <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $page['pg_banner']; ?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
     <hr><!-- Start: Entire Page -->
@@ -66,7 +66,7 @@ if (!isset($_GET['p_id'])) {
                                 <li class="breadcrumb-item active" aria-current="page"><?php echo $p_Details['product_title']; ?></li>
                             </ol>
                         </nav>
-                        <h1 style="font-family: sans-serif, serif;"><?php echo $p_Details['product_title']; ?></h1>
+                        <h1 style="font-family: Work Sans, Arial, Tahoma, sans-serif;"><?php echo $p_Details['product_title']; ?></h1>
                         <p><br><?php echo $p_Details['product_desc']; ?><br><br></p>
 
                     </div><!-- End: Content -->

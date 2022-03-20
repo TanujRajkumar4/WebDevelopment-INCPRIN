@@ -20,7 +20,7 @@
     ?>
 </head>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
     <div class="row text-nowrap d-none d-md-flex align-items-start" style="text-align: left;width: 100%;margin: 0px;height: 50px;">
         <div class="col-6" style="background: black;padding-left: 30px;">
             <div class="row">

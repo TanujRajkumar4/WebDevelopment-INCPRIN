@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
     <?php
     if (!isset($_GET['s_id'])) {
         echo "<script>

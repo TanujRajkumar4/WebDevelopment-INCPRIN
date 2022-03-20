@@ -21,23 +21,26 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Parallax Background -->
     <div data-bss-parallax-bg="true" style="height: 300px;background-image: url('assets/img/contact_us_banner.jpg');background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
     <hr><!-- Start: Map Clean -->
     <section class="text-center map-clean">
         <div class="container justify-content-xxl-end align-items-xxl-center">
             <!-- Start: Intro -->
-            <div class="intro">
-                <h1 class="text-center" style="font-family: sans-serif, serif;color: #212529;">Location </h1>
-            </div><!-- End: Intro -->
-        </div><iframe allowfullscreen="" frameborder="0" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8341074864657!2d80.15331041473628!3d13.046229316766413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261eed68c5a7b%3A0xac789ce8625b534a!2s133%2F2%2F95%2C%20Krishna%20Ind.%20Estate%2C%20Sunaresan%20Nagar%2C%20Porur%20Gardens%20Phase%20II%2C%20Mettukuppam%2C%20Vanagaram%2C%20Chennai%2C%20Tamil%20Nadu%20600095!5e0!3m2!1sen!2sin!4v1639815874682!5m2!1sen!2sin" width="80%" height="450"></iframe>
-    </section><!-- End: Map Clean -->
-    <hr><!-- Start: 1 Row 2 Columns -->
+            <!-- <div class="intro"> -->
+                <!-- <h1 class="text-center" style="font-family: 'Work Sans', sans-serif;color: #212529;">Location </h1> -->
+            <!-- </div>End: Intro -->
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8341896349366!2d80.15331041455279!3d13.046224090806987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261104a687575%3A0xc938a4fbfa1a9e63!2sINCPRIN%20LABELS%20AND%20PACKAGING%20SOLUTIONS%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1647744880358!5m2!1sen!2sin" width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    <!-- End: Map Clean -->
+    <hr>
+    <!-- Start: 1 Row 2 Columns -->
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col">
-                <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;font-weight: bold;font-family: sans-serif, serif;color: #212529;">Contact Us</h1>
+                <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;font-weight: bold;font-family: Work Sans, Arial, Tahoma, sans-serif;color: #212529;">Contact Us</h1>
                 <div class="row" style="padding-top: 10px;">
                     <p class="text-start" style="font-size: 20px;"><strong>INCPRIN LABELS AND PACKAGING SOLUTIONS PRIVATE LIMITED</strong></p>
                     <div class="col-auto text-start" style="padding-right: 5px;"><i class="fa fa-map-marker" style="color: #60a042;font-size: 30px;padding-right: 26px;"></i></div>

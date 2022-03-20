@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>INCPRIN</title>
     <?php include('header.php'); ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700&amp;display=swap">
@@ -23,7 +26,7 @@
 $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 5');
 ?>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Parallax Background -->
     <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $pg_qry['pg_banner']; ?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
     <hr><!-- Start: Article List -->
@@ -31,7 +34,7 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 5');
         <div class="container">
             <!-- Start: Intro -->
             <div class="intro">
-                <h1 class="text-center" style="font-family: sans-serif, serif;color: #56585b;"> <?php echo $pg_qry['pg_title']; ?></h1>
+                <h1 class="text-center" style="font-family: Work Sans, Arial, Tahoma, sans-serif;color: #56585b;"> <?php echo $pg_qry['pg_title']; ?></h1>
                 <p class="text-center"> <?php echo $pg_qry['pg_desc']; ?></p>
             </div><!-- End: Intro -->
         </div>

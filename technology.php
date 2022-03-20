@@ -23,7 +23,7 @@
 $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 3');
 ?>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
     <center>
         <!-- Start: Parallax Background -->
         <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $pg_qry['pg_banner']; ?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
@@ -32,7 +32,7 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 3');
             <div class="container" style="width: 100%;">
                 <!-- Start: Intro -->
                 <div class="intro">
-                    <h1 class="text-uppercase text-center" style="font-family: sans-serif, serif; padding: 0px;color: rgb(86, 88, 91);"><?php echo $pg_qry['pg_title']; ?></h1>
+                    <h1 class="text-uppercase text-center" style="font-family: Work Sans, Arial, Tahoma, sans-serif; padding: 0px;color: rgb(86, 88, 91);"><?php echo $pg_qry['pg_title']; ?></h1>
                     <p class="text-center"> <?php echo $pg_qry['pg_desc']; ?></p>
                 </div><!-- End: Intro -->
                 <!-- Start: Articles -->

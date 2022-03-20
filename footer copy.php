@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Footer Section -->
     <footer class="footer-dark" style="background: rgb(12,17,39);color: rgb(193,191,191);width: 100%;padding-top: 30px;">
         <div class="container">

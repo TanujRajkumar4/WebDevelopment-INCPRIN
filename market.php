@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=sans-serif">
 </head>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
     <?php
     $markets = getAllDataC1('inc_service', 'service_status', 'AND `service_type` = 1');
     // $markets = getAllData('inc_service', 'service_status');

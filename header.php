@@ -7,6 +7,9 @@
     <title>INCPRIN</title>
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <?php
     require('./admin/database.php');
     require('functions.php');
@@ -20,7 +23,7 @@
     ?>
 </head>
 
-<body>
+<body style="font-family: 'Work Sans', sans-serif;">
 
     <!-- Start: Nav Bar -->
     <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean" style="width: 100%;">
@@ -28,7 +31,7 @@
                 <span class="visually-hidden">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span></button>
             <a class="navbar-brand" href="index.php">
-                <img class="img-fluid" id="Logo" src="assets/img/Logo.jpg?h=3c2207f664b0bcc0ace0c4b27272697d" loading="lazy">
+                <img class="img-fluid" id="Logo" src="assets/img/Logo.jpg" loading="lazy">
             </a>
             <div class="collapse navbar-collapse" id="navcol-1" style="font-weight: bold;">
                 <ul class="navbar-nav ms-auto pulse animated">
