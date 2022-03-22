@@ -34,7 +34,7 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 5');
         <div class="container">
             <!-- Start: Intro -->
             <div class="intro">
-                <h1 class="text-center" style="font-family: Work Sans, Arial, Tahoma, sans-serif;color: #56585b;"> <?php echo $pg_qry['pg_title']; ?></h1>
+                <h1 class="text-center" style="font-family: Work Sans, sans-serif;color: #56585b;"> <?php echo $pg_qry['pg_title']; ?></h1>
                 <p class="text-center"> <?php echo $pg_qry['pg_desc']; ?></p>
             </div><!-- End: Intro -->
         </div>

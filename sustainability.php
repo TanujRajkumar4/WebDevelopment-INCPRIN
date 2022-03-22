@@ -33,7 +33,7 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 4');
                 <div class="col-md-10 offset-md-1">
                     <!-- Start: Intro -->
                     <div class="intro">
-                        <!-- <h1 class="text-uppercase text-center" style="font-family: Work Sans, Arial, Tahoma, sans-serif; padding: 0px;color: rgb(86, 88, 91);"><?php //echo $pg_qry['pg_title']; ?></h1> -->
+                        <!-- <h1 class="text-uppercase text-center" style="font-family: Work Sans, sans-serif; padding: 0px;color: rgb(86, 88, 91);"><?php //echo $pg_qry['pg_title']; ?></h1> -->
                     </div><!-- End: Intro -->
                 </div>
             </div>

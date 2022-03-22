@@ -40,7 +40,7 @@
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col">
-                <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;font-weight: bold;font-family: Work Sans, Arial, Tahoma, sans-serif;color: #212529;">Contact Us</h1>
+                <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;font-weight: bold;font-family: Work Sans, sans-serif;color: #212529;">Contact Us</h1>
                 <div class="row" style="padding-top: 10px;">
                     <p class="text-start" style="font-size: 20px;"><strong>INCPRIN LABELS AND PACKAGING SOLUTIONS PRIVATE LIMITED</strong></p>
                     <div class="col-auto text-start" style="padding-right: 5px;"><i class="fa fa-map-marker" style="color: #60a042;font-size: 30px;padding-right: 26px;"></i></div>
