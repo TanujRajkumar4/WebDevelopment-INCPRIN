@@ -41,8 +41,8 @@
                 <div class="col-sm-12 col-md-6 col-lg-3 align-items-center align-self-center home-service" style=" padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
                     <div class="card" data-aos="fade" style="min-height:150px; background: #FFFFFF;color: black;text-align: center;">
                         <div class="card-body">
-                            <h4 class="card-title"><i class="fa fa-shopping-bag" style="font-size: 45px;"></i></h4>
-                            <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;"><?php echo $data['service_name']; ?></h4>
+                            <h4 class="card-title"><i class="fa fa-shopping-bag" style="font-size: 40px;"></i></h4>
+                            <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px; text-transform:uppercase;"><?php echo $data['service_name']; ?></h4>
                         </div>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
                 <div class="col-sm-12 col-md-6 col-lg-3 align-items-center align-self-center home-service" style=" padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
                     <div class="card" data-aos="fade" style="min-height:150px; background:#c7c7c7;color: black;text-align: center;">
                         <div class="card-body">
-                            <h4 class="card-title"><i class="fa fa-tags" style="font-size: 45px;"></i></h4>
-                            <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;"><?php echo $data['service_name']; ?></h4>
+                            <h4 class="card-title"><i class="fa fa-tags" style="font-size: 40px;"></i></h4>
+                            <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px;text-transform:uppercase;"><?php echo $data['service_name']; ?></h4>
                         </div>
                     </div>
                 </div>
@@ -67,12 +67,12 @@
     <div class="container text-center" data-aos="fade" style="padding-top: 50px;padding-bottom: 50px;width: 100%;">
         <div class="row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
             <div class="col">
-                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">ABOUT US</h1>
+                <h1 style="text-align: center;font-size: 24px;padding-bottom: 15px;">ABOUT US</h1>
                 <p class="text-start" style="font-size: 16px;"><?php echo $homeDetails['pg_desc']; ?></p>
                 <div class="row" style="padding-bottom: 15px;">
                     <div class="col-auto text-center align-self-center d-none d-lg-inline"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                     <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Robust Printing</h1>
+                        <h1 style="font-size: 20px; text-transform:uppercase;">Robust Printing</h1>
                         <p>
                         <ul>
                             <li>Robust Printing and Finishing Infrastructure with ample capacity for mass production.</li>
@@ -83,7 +83,7 @@
                 <div class="row" style="padding-bottom: 15px;">
                     <div class="col-auto text-center align-self-center d-none d-lg-inline"><i class="fas fa-box-open" style="font-size: 50px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                     <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Packaging</h1>
+                        <h1 style="font-size: 20px; text-transform:uppercase;">Packaging</h1>
                         <p>
                         <ul>
                             <li>Capability to produce all kinds of labels and packaging items catering to Apparel, FMCG, Electronics, Automotive, Pharma and Education industry.
@@ -95,7 +95,7 @@
                 <div class="row" style="padding-bottom: 15px;">
                     <div class="col-auto text-center align-self-center d-none d-lg-inline"><i class="fas fa-microchip" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                     <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Industry Standard</h1>
+                        <h1 style="font-size: 20px;text-transform:uppercase;">Industry Standard</h1>
                         <p>
                         <ul>
                             <li>Industry Standards Workflows & Automation Softwares in the entire production process.</li>
@@ -106,7 +106,7 @@
                 <div class="row" style="padding-bottom: 15px;">
                     <div class="col-auto text-center align-self-center d-none d-lg-inline"><i class="fas fa-globe-americas" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                     <div class="col" style="text-align: left;">
-                        <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
+                        <h1 style="font-size: 20px;text-transform:uppercase;">Global Service</h1>
                         <p>
                         <ul>
                             <li>We are providing Pan India service.</li>
@@ -132,14 +132,14 @@
             <div class="col-auto">
                 <div class="col-auto text-center align-self-center"><i class="fas fa-cogs" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                 <br>
-                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">TECHNOLOGY</h1>
+                <h1 style="text-align: center;font-size: 24px;text-transform:uppercase;padding-bottom: 15px;">TECHNOLOGY</h1>
                 <p class="text-center" style="font-size: 16px;">We are using cutting edge technology and robust production process in manufacturing in wash care labels, heat transfer, self-adhesive labels, RF, RFID, mono cartons, rigid boxes, etc.</p>
                 <br>
                 <hr>
                 <br>
                 <div class="col-auto text-center align-self-center"><i class="fab fa-pagelines" style="font-size: 70px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: #60a042;"></i></div>
                 <br>
-                <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">SUSTAINABILITY</h1>
+                <h1 style="text-align: center;font-size: 24px;text-transform:uppercase;padding-bottom: 15px;">SUSTAINABILITY</h1>
                 <p class="text-center" style="font-size: 16px;">Our main strategy is the usage of sustainability based raw materials & base material in labels and packaging production which will help us to align to India / Global carbon reduction program and green earth policies.</p>
 
             </div>
@@ -147,7 +147,7 @@
     </div><!-- End: 1 Row 2 Columns -->
 
     <!-- Start: Our Clients -->
-    <h1 style="text-align: center;font-size: 22.5px;font-weight: bold;padding-bottom: 15px;padding-top: 15px;">CERTIFICATIONS</h1><!-- End: Our Clients -->
+    <h1 style="text-align: center;font-size: 24px;text-transform:uppercase;padding-bottom: 15px;padding-top: 15px;">CERTIFICATIONS</h1><!-- End: Our Clients -->
     <!-- Start: Our Clients -->
     <div class="row justify-content-center align-items-center" style="text-align: center;background: #e5e5e5;width: 100%;margin: 0px;">
         <!-- Start: ClientsSlider -->

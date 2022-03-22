@@ -44,7 +44,7 @@
                     <div class="row row-cols-1 row-cols-md-2 justify-content-center align-items-center justify-content-sm-center justify-content-md-start" style="width: 100%;padding: 15px;">
                         <!-- Start: Image -->
                         <div class="col">
-                            <div class="toc"><img src="<?php echo $market['service_img']; ?>" width="100%"></div>
+                            <div class="toc"><img src="<?php echo $market['service_img']; ?>" style="max-height:400px" width="100%"></div>
                         </div><!-- End: Image -->
                         <!-- Start: Text -->
                         <div class="col">
@@ -88,7 +88,7 @@
                         </div><!-- End: Text -->
                         <!-- Start: Image -->
                         <div class="col">
-                            <div class="toc"><img src="<?php echo $market['service_img']; ?>" width="100%"></div>
+                            <div class="toc"><img src="<?php echo $market['service_img']; ?>" style="max-height:400px" width="100%"></div>
                         </div><!-- End: Image -->
                     </div>
                     <hr>

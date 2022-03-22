@@ -4,14 +4,14 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
+    <div class="carousel-inner" >
+        <div class="carousel-item active" style="overflow: hidden;">
             <img src="assets/img/home_slider/1.jpg" style="min-height: 20%; max-height: 20%;" class="d-block w-100">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" style="overflow: hidden;">
             <img src="assets/img/home_slider/2.jpg" style="min-height: 20%; max-height: 20%;" class="d-block w-100">
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" style="overflow: hidden;">
             <img src="assets/img/home_slider/3.jpg" style="min-height: 20%; max-height: 20%;" class="d-block w-100">
         </div>
     </div>

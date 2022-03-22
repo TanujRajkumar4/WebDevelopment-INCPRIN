@@ -40,9 +40,9 @@
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col">
-                <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;font-weight: bold;font-family: Work Sans, sans-serif;color: #212529;">Contact Us</h1>
+                <p class="text-center" style="padding-bottom: 30px;padding-top: 50px;font-family: Work Sans, sans-serif;color: #212529; font-size:35px">CONTACT US</p>
                 <div class="row" style="padding-top: 10px;">
-                    <p class="text-start" style="font-size: 20px;"><strong>INCPRIN LABELS AND PACKAGING SOLUTIONS PRIVATE LIMITED</strong></p>
+                    <p class="text-start" style="font-size: 22px;">INCPRIN LABELS AND PACKAGING SOLUTIONS PRIVATE LIMITED</p>
                     <div class="col-auto text-start" style="padding-right: 5px;"><i class="fa fa-map-marker" style="color: #60a042;font-size: 30px;padding-right: 26px;"></i></div>
                     <div class="col-auto text-start" style="padding-left: 0px;">
                         <p class="text-start" style="font-size: 18px;">133/2, Krishna Industrial Estate,<br>
@@ -69,7 +69,7 @@
                 <!-- Start: Contact Form -->
                 <section class="contact-clean" style="background: rgb(255,255,255);padding-top: 0px;" id="c">
                     <form method="POST" action="mailer.php" name="sendmail">
-                        <h2 class="text-center" style="color: rgb(12,17,39);">Contact us</h2>
+                        <p class="text-center" style="font-size:30px">Leave us a Message</p>
                         <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="Name" required></div>
                         <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email" style="background: rgb(255,255,255);" required></div>
                         <div class="mb-3"><input class="form-control" type="tel" name="phone" placeholder="Phone" style="background: rgb(255,255,255);" required></div>

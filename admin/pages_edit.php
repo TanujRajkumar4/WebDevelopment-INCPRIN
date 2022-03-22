@@ -177,7 +177,7 @@ if (isset($_POST['Submit'])) {
           // ---------------------------------------------------------------------------------------
           // CHANGE THIS VARIABLE's VALUE BASED ON THE WORKING DIRECTORY
           // const up_folder = "http://localhost/WebDevelopment/INCPRIN/WebDevelopment-INCPRIN-REPO/uploads/";
-           const up_folder = "https://jallikattu.org/IncDemo/uploads/";
+          const up_folder = "https://jallikattu.org/IncDemo/uploads/";
           // ---------------------------------------------------------------------------------------
           // ---------------------------------------------------------------------------------------
           // Summernote
@@ -193,6 +193,10 @@ if (isset($_POST['Submit'])) {
               ['insert', ['link', 'picture']],
               ['view', ['fullscreen']],
             ],
+            fontNames: ['Work Sans'],
+            fontNamesIgnoreCheck: ['Work Sans'],
+            addDefaultFonts: false,
+
             callbacks: {
               onImageUpload: function(files) {
                 // upload image to server and create imgNode...

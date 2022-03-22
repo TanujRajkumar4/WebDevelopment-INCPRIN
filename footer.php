@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
     <script src="assets/js/script.min.js"></script>
 
-    <div class="row align-items-center justify-content-between" width="100%" style="background: #c7c7c7 ;min-height: 50px;margin-right: 0px;margin-left: 0px;">
+    <div class="row align-items-center justify-content-between" width="100%" style="background: #d9d9d9 ;min-height: 50px;margin-right: 0px;margin-left: 0px;">
         <div class="col-xs-12 col-lg-4">
             <center>
 
@@ -41,16 +41,14 @@
                 </button>
             </center>
         </div>
-        <div class="col-xs-12 col-lg-6">
-            <strong>
-                <p class="mb-0 text-center" style="color: black;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. </p><!-- End: Copyright -->
-            </strong>
+        <div class="col-xs-12 col-lg-8">
+                <p class="mb-0 text-center" style="color: black;float:right;">© <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. </p><!-- End: Copyright -->
         </div>
-        <div class="col-xs-12 col-lg-2">
+        <!-- <div class="col-xs-12 col-lg-2">
             <strong>
                 <center>
                     <img class="mx-auto img-fluid" id="Logo" src="assets/img/Logo_tran.png" loading="lazy">
                 </center>
             </strong>
-        </div>
+        </div> -->
     </div>
