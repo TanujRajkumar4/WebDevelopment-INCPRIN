@@ -519,3 +519,6 @@
 .nav-item{
   text-transform: uppercase;
 }
+h1{
+  text-transform: uppercase !important;
+}
