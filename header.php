@@ -33,9 +33,9 @@
             <a class="navbar-brand" href="index.php">
                 <img class="img-fluid" id="Logo" src="assets/img/Logo.jpg" loading="lazy">
             </a>
-            <div class="collapse navbar-collapse" id="navcol-1" style="font-weight: bold;">
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto pulse animated">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item "><a class="nav-link" href="index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="market.php">Market</a></li>
                     <li class="nav-item"><a class="nav-link" href="tech.php">Technology</a></li>
                     <li class="nav-item"><a class="nav-link" href="product.php">Products</a></li>
