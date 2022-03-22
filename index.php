@@ -27,18 +27,18 @@
     $homeDetails = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1');
     ?>
 
-    <?php 
+    <?php
     include('slider.php');
     ?>
     <!-- <hr class="d-block d-md-none" style="margin: 0px;"> -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 justify-content-center align-items-center" style="width: 100%;margin-right: 0px;margin-left: 0px;">
+    <div class="row justify-content-center align-items-center" style="width: 100%;margin-right: 0px;margin-left: 0px;">
         <?php
         $market1 = getAllDataC1('inc_service', 'service_status', 'LIMIT 4');
         $count_market = 0;
         foreach ($market1 as $data) :
             if ($count_market % 2 == 0) {
         ?>
-                <div class="align-items-center col-auto align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
+                <div class="col-sm-12 col-md-6 col-lg-3 align-items-center align-self-center home-service" style=" padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
                     <div class="card" data-aos="fade" style="min-height:150px; background: #FFFFFF;color: black;text-align: center;">
                         <div class="card-body">
                             <h4 class="card-title"><i class="fa fa-shopping-bag" style="font-size: 45px;"></i></h4>
@@ -48,7 +48,7 @@
                 </div>
             <?php } else {
             ?>
-                <div class="align-items-center col-auto align-self-center" style="padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
+                <div class="col-sm-12 col-md-6 col-lg-3 align-items-center align-self-center home-service" style=" padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
                     <div class="card" data-aos="fade" style="min-height:150px; background:#c7c7c7;color: black;text-align: center;">
                         <div class="card-body">
                             <h4 class="card-title"><i class="fa fa-tags" style="font-size: 45px;"></i></h4>
@@ -70,7 +70,7 @@
                 <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">ABOUT US</h1>
                 <p class="text-start" style="font-size: 16px;"><?php echo $homeDetails['pg_desc']; ?></p>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                    <div class="col-auto text-center align-self-center d-none d-lg-inline"><i class="fa fa-shopping-bag" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Robust Printing</h1>
                         <p>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-box-open" style="font-size: 50px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                    <div class="col-auto text-center align-self-center d-none d-lg-inline"><i class="fas fa-box-open" style="font-size: 50px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Packaging</h1>
                         <p>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-microchip" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                    <div class="col-auto text-center align-self-center d-none d-lg-inline"><i class="fas fa-microchip" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Industry Standard</h1>
                         <p>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="row" style="padding-bottom: 15px;">
-                    <div class="col-auto text-center align-self-center"><i class="fas fa-globe-americas" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
+                    <div class="col-auto text-center align-self-center d-none d-lg-inline"><i class="fas fa-globe-americas" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                     <div class="col" style="text-align: left;">
                         <h1 style="font-size: 18px;font-weight: bold;">Global Service</h1>
                         <p>
@@ -116,18 +116,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-auto d-none d-lg-inline"><img style="height: 100%;width: 80%;" src="assets/img/SideImage1.jpg"></div>
+            <div class="col-auto d-none d-lg-inline">
+                <img style="height: 100%;width: 80%;" src="assets/img/SideImage1.jpg">
+            </div>
         </div>
     </div><!-- End: 1 Row 2 Columns -->
 
     <!-- Start: 1 Row 2 Columns -->
     <div class="container text-justify" data-aos="fade" style="padding-top: 20px;padding-bottom: 50px;width: 100%;">
         <div class="d-flex align-items-center justify-content-center row row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2">
-            <div class="col">
+            <div class="col-auto d-none d-lg-inline">
                 <img style="height: 100%;width: 80%;" src="assets/img/SideImage2.png">
             </div>
 
-            <div class="col-auto d-none d-lg-inline">
+            <div class="col-auto">
                 <div class="col-auto text-center align-self-center"><i class="fas fa-cogs" style="font-size: 64px;background: #FFFFFF;border-radius: 50%;padding: 21px;text-align: center;color: black;"></i></div>
                 <br>
                 <h1 style="text-align: center;font-size: 22px;font-weight: bold;padding-bottom: 15px;">TECHNOLOGY</h1>

@@ -1,7 +1,7 @@
 .article-dual-column {
   color: #56585b;
   background-color: #fff;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 14px;
 }
 .article-dual-column .intro {
@@ -193,8 +193,7 @@
   background: linear-gradient(135deg, #172a74, #21a9af);
   background-color: #184e8e;
   padding-bottom: 80px;
-  font-family: 'Work Sans', sans-serif;
-
+  font-family: "Work Sans", sans-serif;
 }
 .header-blue .action-button,
 .header-blue .action-button:not(.disabled):active {
@@ -488,13 +487,13 @@
   position: relative;
 }
 * {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 #text-start {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
-#media-icon{
+#media-icon {
   background: rgba(13, 110, 253, 0) !important;
   font-size: 20px !important;
   padding-left: 9px !important;

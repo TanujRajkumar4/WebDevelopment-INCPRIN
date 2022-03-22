@@ -16,37 +16,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
     <script src="assets/js/script.min.js"></script>
 
-    <div class="row align-items-center justify-content-between" width="100%" style="background: #c7c7c7 ;height: 50px;margin-right: 0px;margin-left: 0px;">
-        <div class="col-4">
-            <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[0]; ?>')">
-                <i class="fa fa-facebook" style="color: black;"></i>
-            </button>
+    <div class="row align-items-center justify-content-between" width="100%" style="background: #c7c7c7 ;min-height: 50px;margin-right: 0px;margin-left: 0px;">
+        <div class="col-xs-12 col-lg-4">
+            <center>
 
-            <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[1]; ?>')">
-                <i class="fa fa-twitter" style="color: black;"></i>
-            </button>
+                <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[0]; ?>')">
+                    <i class="fa fa-facebook" style="color: black;"></i>
+                </button>
 
-            <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[2]; ?>')">
-                <i class="fa fa-instagram" style="color: black;"></i>
-            </button>
+                <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[1]; ?>')">
+                    <i class="fa fa-twitter" style="color: black;"></i>
+                </button>
 
-            <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[3]; ?>')">
-                <i class="fa fa-linkedin" style="color: black;"></i>
-            </button>
+                <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[2]; ?>')">
+                    <i class="fa fa-instagram" style="color: black;"></i>
+                </button>
 
-            <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[4]; ?>')">
-                <i class="fa fa-youtube-play" style="color: black;"></i>
-            </button>
+                <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[3]; ?>')">
+                    <i class="fa fa-linkedin" style="color: black;"></i>
+                </button>
 
+                <button class="btn btn-primary" type="button" id="media-icon" onclick="window.open('<?php echo $media_urls[4]; ?>')">
+                    <i class="fa fa-youtube-play" style="color: black;"></i>
+                </button>
+            </center>
         </div>
-        <div class="col-6">
+        <div class="col-xs-12 col-lg-6">
             <strong>
-                <p class="mb-0" style="color: black;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. </p><!-- End: Copyright -->
+                <p class="mb-0 text-center" style="color: black;">Copyright © <?php echo date('Y'); ?> INCPRIN, All Rights Reserved. </p><!-- End: Copyright -->
             </strong>
         </div>
-        <div class="col-2">
+        <div class="col-xs-12 col-lg-2">
             <strong>
-                <img class="img-fluid" id="Logo" src="assets/img/Logo_tran.png" loading="lazy">
+                <center>
+                    <img class="mx-auto img-fluid" id="Logo" src="assets/img/Logo_tran.png" loading="lazy">
+                </center>
             </strong>
         </div>
     </div>
