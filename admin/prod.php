@@ -21,7 +21,7 @@ if (isset($_GET['typ']) && $_GET['typ'] == "add") {
             $ext = explode('.', $_FILES['file_upl']['name']);
             $ext = end($ext);
             $check = strtolower($ext);
-            $logo = "assets/img/prod/" . uniqid("") . '.' . $ext;
+            $logo = "assets/img/products/" . uniqid("") . '.' . $ext;
             if ($check == "png" || $check == "jpeg" || $check == "jpg" || $check == "png") {
                 if (!move_uploaded_file($_FILES['file_upl']['tmp_name'], "../" . $logo)) {
                     echo "<script>alert('File upload error');</script>";
@@ -235,7 +235,48 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
     <script>
         $(function() {
             // Summernote
-            $('#summernote').summernote()
+            $('#summernote').summernote({
+            toolbar: [
+              ['style', ['style']],
+              ['font', ['bold', 'underline', 'clear']],
+              ['fontname', ['fontname']],
+              ['color', ['color']],
+              ['para', ['ul', 'ol', 'paragraph']],
+              ['table', ['table']],
+              ['insert', ['link', 'picture']],
+              ['view', ['fullscreen']],
+            ],
+            fontNames: ['Work Sans'],
+            fontNamesIgnoreCheck: ['Work Sans'],
+            addDefaultFonts: false,
+
+            callbacks: {
+              onImageUpload: function(files) {
+                // upload image to server and create imgNode...
+                var form = new FormData();
+                form.append("file_upload", files[0], files[0].name);
+
+                var settings = {
+                  "url": "upload.php",
+                  "method": "POST",
+                  "timeout": 0,
+                  "processData": false,
+                  "mimeType": "multipart/form-data",
+                  "contentType": false,
+                  "data": form
+                };
+
+                $.ajax(settings).done(function(response) {
+                  response = JSON.parse(response);
+                  if (response.status == 200) {
+                    $('#summernote').summernote('insertImage', up_folder + files[0].name, files[0].name);
+                  } else {
+                    alert(response.message);
+                  }
+                });
+              }
+            }
+          })
 
             // CodeMirror
             CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
