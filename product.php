@@ -42,7 +42,7 @@
                 ?>
 
                     <!-- MARKET ROW1 - START -->
-                    <div class="col-12 col-md-2 col-lg-4 px-3 py-3">
+                    <div class="col-12 col-md-6 col-lg-4 px-3 py-3">
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
