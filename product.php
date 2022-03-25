@@ -30,72 +30,38 @@
     $page = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 6');
 
     ?>
+
     <!-- Start: Parallax Background -->
     <div data-bss-parallax-bg="true" style="height: 300px;background: url(<?php echo $page['pg_banner']; ?>) center / cover;"></div><!-- End: Parallax Background -->
     <!-- Start: Market1 -->
-    <section class="article-dual-column">
+    <section class="article-dual-column" width="100%">
         <div class="container-md">
-            <?php $i = 1;
-            foreach ($markets as $market) :
-                if ($i % 2 != 0) {
-            ?>
+            <div class="row justify-content-center align-items-center" style="width: 100%;padding: 15px;">
+                <?php $i = 1;
+                foreach ($markets as $market) :
+                ?>
 
                     <!-- MARKET ROW1 - START -->
-                    <div class="row row-cols-1 row-cols-md-2 justify-content-center align-items-center justify-content-sm-center justify-content-md-start" style="width: 100%;padding: 15px;">
-                        <!-- Start: Image -->
-                        <div class="col">
-                            <div class="toc"><img src="<?php echo $market['service_img']; ?>" style="max-height:400px" width="100%"></div>
-                        </div><!-- End: Image -->
-                        <!-- Start: Text -->
-                        <div class="col">
-                            <!-- Start: Text -->
-                            <div class="text-justify">
-                                <center>
-                                    <h3><?php echo $market['service_name']; ?></h3>
-                                </center>
-                                <div>
-                                    <?php echo $market['service_desc']; ?>
+                    <div class="col-12 col-md-2 col-lg-4 px-3 py-3">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="<?php echo $market['service_img']; ?>" width="300px" height="200px">
                                 </div>
-                                <!-- <center>
-                                    <a style="text-decoration: none; color:black; font-weight:bold" class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
-                                </center> -->
-
-                            </div><!-- End: Text -->
-                        </div><!-- End: Text -->
+                                <div class="flip-card-back" style="overflow:hidden;">
+                                    <p style="font-size: 18px; overflow:hidden"><?php echo $market['service_name']; ?></p>
+                                    <p><?php echo $market['service_desc']; ?></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <hr>
                     <!-- MARKET ROW1 - END -->
-                <?php } else { ?>
 
-                    <!-- MARKET ROW2 - START -->
-                    <div class="row row-cols-1 row-cols-md-2 flex-row-reverse justify-content-center align-items-center justify-content-sm-center flex-md-row justify-content-md-start" style="width: 100%;padding: 15px;font-family:sans-serif;">
-                        <!-- Start: Text -->
-                        <div class="col">
-                            <!-- Start: Text -->
-                            <div class="text-justify">
-                                <center>
-                                    <h3><?php echo $market['service_name']; ?></h3>
-                                </center>
-                                <div>
-                                    <?php echo $market['service_desc']; ?>
-                                </div>
-                                <!-- <center>
-                                    <strong>
-                                        <a style="text-decoration: none; color:black; font-weight:bold" class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
-                                    </strong>
-                                </center> -->
-                            </div><!-- End: Text -->
-                        </div><!-- End: Text -->
-                        <!-- Start: Image -->
-                        <div class="col">
-                            <div class="toc"><img src="<?php echo $market['service_img']; ?>" style="max-height:400px" width="100%"></div>
-                        </div><!-- End: Image -->
-                    </div>
-                    <hr>
-                    <!-- MARKET ROW2 - END -->
-            <?php }
-                $i = $i + 1;
-            endforeach; ?>
+
+
+                <?php
+                endforeach; ?>
+            </div>
         </div>
     </section><!-- End: Market1 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
