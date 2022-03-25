@@ -1,0 +1,50 @@
+[20-Dec-2021 15:37:15 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/jallikattu999/public_html/IncDemo/admin/database.php on line 6
+[20-Dec-2021 15:37:15 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, bool given in /home/jallikattu999/public_html/IncDemo/admin/database.php on line 6
+[20-Dec-2021 15:39:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/header.php on line 16
+[20-Dec-2021 15:39:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/jallikattu999/public_html/IncDemo/functions.php:15
+Stack trace:
+#0 /home/jallikattu999/public_html/IncDemo/index.php(27): getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1')
+#1 {main}
+  thrown in /home/jallikattu999/public_html/IncDemo/functions.php on line 15
+[20-Dec-2021 15:49:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/market.php on line 39
+[20-Dec-2021 15:49:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/technology.php on line 41
+[20-Dec-2021 15:49:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/sustainability.php on line 51
+[17-Jan-2022 09:36:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/market-i2.php on line 48
+[17-Jan-2022 09:36:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/market-i2.php on line 87
+[17-Jan-2022 09:36:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/market-i2.php on line 103
+[18-Mar-2022 12:49:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/header.php on line 16
+[18-Mar-2022 12:49:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/jallikattu999/public_html/IncDemo/functions.php:15
+Stack trace:
+#0 /home/jallikattu999/public_html/IncDemo/index.php(27): getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1')
+#1 {main}
+  thrown in /home/jallikattu999/public_html/IncDemo/functions.php on line 15
+[18-Mar-2022 12:49:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/header.php on line 16
+[18-Mar-2022 12:49:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/jallikattu999/public_html/IncDemo/functions.php:15
+Stack trace:
+#0 /home/jallikattu999/public_html/IncDemo/index.php(27): getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1')
+#1 {main}
+  thrown in /home/jallikattu999/public_html/IncDemo/functions.php on line 15
+[18-Mar-2022 12:49:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/header.php on line 16
+[18-Mar-2022 12:49:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/jallikattu999/public_html/IncDemo/functions.php:15
+Stack trace:
+#0 /home/jallikattu999/public_html/IncDemo/index.php(27): getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1')
+#1 {main}
+  thrown in /home/jallikattu999/public_html/IncDemo/functions.php on line 15
+[18-Mar-2022 12:49:43 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/header.php on line 16
+[18-Mar-2022 12:49:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/jallikattu999/public_html/IncDemo/functions.php:15
+Stack trace:
+#0 /home/jallikattu999/public_html/IncDemo/index.php(27): getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1')
+#1 {main}
+  thrown in /home/jallikattu999/public_html/IncDemo/functions.php on line 15
+[18-Mar-2022 12:49:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/header.php on line 16
+[18-Mar-2022 12:49:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/jallikattu999/public_html/IncDemo/functions.php:15
+Stack trace:
+#0 /home/jallikattu999/public_html/IncDemo/index.php(27): getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1')
+#1 {main}
+  thrown in /home/jallikattu999/public_html/IncDemo/functions.php on line 15
+[18-Mar-2022 12:49:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/jallikattu999/public_html/IncDemo/header.php on line 16
+[18-Mar-2022 12:49:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/jallikattu999/public_html/IncDemo/functions.php:15
+Stack trace:
+#0 /home/jallikattu999/public_html/IncDemo/index.php(27): getAllDataC('inc_page', 'pg_status', 'AND pg_id = 1')
+#1 {main}
+  thrown in /home/jallikattu999/public_html/IncDemo/functions.php on line 15
