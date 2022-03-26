@@ -32,9 +32,7 @@
     ?>
 
     <!-- Start: Parallax Background -->
-    <div>
-        <img src="<?php echo $page['pg_banner']; ?>" height="300px" width="100%">
-    </div>
+    <div class="banner-fixed banner-dyn" style="background-image: url('<?php echo $page['pg_banner']; ?>');"></div>
     <!-- End: Parallax Background -->
     <!-- Start: Market1 -->
     <section class="article-dual-column" width="100%">
@@ -53,7 +51,7 @@
                                 </div>
                                 <div class="flip-card-back px-2 py-2" style="overflow:hidden;">
                                     <p style="font-size: 18px; overflow:hidden"><?php echo $market['service_name']; ?></p>
-                                    <p class="text-center"><?php echo $market['service_desc']; ?></p>
+                                    <p class="text-center text-white"><?php echo $market['service_desc']; ?></p>
                                 </div>
                             </div>
                         </div>

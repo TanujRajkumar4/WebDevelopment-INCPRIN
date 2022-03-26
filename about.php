@@ -23,21 +23,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
 <?php
-$pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 5');
+$page = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 5');
 ?>
 
 <body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Parallax Background -->
-    <div>
-        <img src="<?php echo $pg_qry['pg_banner']; ?>" height="300px" width="100%">
-    </div>
+    <div class="banner-fixed banner-dyn" style="background-image: url('<?php echo $page['pg_banner']; ?>');"></div>
+    
     <hr><!-- Start: Article List -->
     <section>
         <div class="container">
             <!-- Start: Intro -->
             <div class="intro">
-                <h1 class="text-center" style="font-family: Work Sans, sans-serif;color: #56585b;"> <?php echo $pg_qry['pg_title']; ?></h1>
-                <p class="text-center"> <?php echo $pg_qry['pg_desc']; ?></p>
+                <h1 class="text-center" style="font-family: Work Sans, sans-serif;color: #56585b;"> <?php echo $page['pg_title']; ?></h1>
+                <p class="text-center"> <?php echo $page['pg_desc']; ?></p>
             </div><!-- End: Intro -->
         </div>
     </section><!-- End: Article List -->

@@ -30,9 +30,7 @@
 
     ?>
     <!-- Start: Parallax Background -->
-    <div>
-        <img src="<?php echo $page['pg_banner']; ?>" height="300px" width="100%">
-    </div>
+    <div class="banner-fixed banner-dyn" style="background-image: url('<?php echo $page['pg_banner']; ?>');"></div>
     <!-- End: Parallax Background -->
     <!-- Start: Market1 -->
     <section class="article-dual-column">

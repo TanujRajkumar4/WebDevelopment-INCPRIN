@@ -20,14 +20,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
 </head>
 <?php
-$pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 4');
+$page = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 4');
 ?>
 
 <body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Parallax Background -->
-    <div>
-        <img src="<?php echo $pg_qry['pg_banner']; ?>" height="300px" width="100%">
-    </div>
+    <div class="banner-fixed banner-dyn" style="background-image: url('<?php echo $page['pg_banner']; ?>');"></div>
+
     <hr><!-- Start: Article Dual Column -->
     <section class="article-dual-column">
         <div class="container">
@@ -35,7 +34,7 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 4');
                 <div class="col-md-10 offset-md-1">
                     <!-- Start: Intro -->
                     <div class="intro">
-                        <!-- <h1 class="text-uppercase text-center" style="font-family: Work Sans, sans-serif; padding: 0px;color: rgb(86, 88, 91);"><?php //echo $pg_qry['pg_title']; ?></h1> -->
+                        <!-- <h1 class="text-uppercase text-center" style="font-family: Work Sans, sans-serif; padding: 0px;color: rgb(86, 88, 91);"><?php //echo $page['pg_title']; ?></h1> -->
                     </div><!-- End: Intro -->
                 </div>
             </div>
@@ -47,7 +46,7 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 4');
                     <div class="col-md-10 col-lg-7 offset-md-1 offset-lg-0">
                         <!-- Start: Text -->
                         <div class="text">
-                            <?php echo $pg_qry['pg_desc']; ?>
+                            <?php echo $page['pg_desc']; ?>
                         </div><!-- End: Text -->
                     </div>
                     <div class="col text-center">
@@ -64,7 +63,7 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 4');
                 <?php } else { ?>
                     <!-- Start: Text -->
                     <div class="text">
-                        <?php echo $pg_qry['pg_desc']; ?>
+                        <?php echo $page['pg_desc']; ?>
                     </div><!-- End: Text -->
                 <?php } ?>
                 </div>

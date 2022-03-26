@@ -23,9 +23,8 @@
 
 <body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Parallax Background -->
-    <div>
-        <img src="assets/img/contact_us_banner.jpg" height="300px" width="100%">
-    </div>
+    <div class="banner-fixed banner-dyn" style="background-image: url('assets/img/contact_us_banner.jpg');"></div>
+   
     <hr><!-- Start: Map Clean -->
     <section class="text-center map-clean">
         <div class="container justify-content-xxl-end align-items-xxl-center">
