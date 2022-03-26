@@ -30,7 +30,10 @@
 
     ?>
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background: url(<?php echo $page['pg_banner']; ?>) center / cover;"></div><!-- End: Parallax Background -->
+    <div>
+        <img src="<?php echo $page['pg_banner']; ?>" height="300px" width="100%">
+    </div>
+    <!-- End: Parallax Background -->
     <!-- Start: Market1 -->
     <section class="article-dual-column">
         <div class="container-md">

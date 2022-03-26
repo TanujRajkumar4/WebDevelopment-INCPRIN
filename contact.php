@@ -23,7 +23,9 @@
 
 <body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url('assets/img/contact_us_banner.jpg');background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
+    <div>
+        <img src="assets/img/contact_us_banner.jpg" height="300px" width="100%">
+    </div>
     <hr><!-- Start: Map Clean -->
     <section class="text-center map-clean">
         <div class="container justify-content-xxl-end align-items-xxl-center">

@@ -32,7 +32,10 @@
     ?>
 
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background: url(<?php echo $page['pg_banner']; ?>) center / cover;"></div><!-- End: Parallax Background -->
+    <div>
+        <img src="<?php echo $page['pg_banner']; ?>" height="300px" width="100%">
+    </div>
+    <!-- End: Parallax Background -->
     <!-- Start: Market1 -->
     <section class="article-dual-column" width="100%">
         <div class="container-md">
@@ -48,9 +51,9 @@
                                 <div class="flip-card-front">
                                     <img src="<?php echo $market['service_img']; ?>" width="300px" height="200px">
                                 </div>
-                                <div class="flip-card-back" style="overflow:hidden;">
+                                <div class="flip-card-back px-2 py-2" style="overflow:hidden;">
                                     <p style="font-size: 18px; overflow:hidden"><?php echo $market['service_name']; ?></p>
-                                    <p><?php echo $market['service_desc']; ?></p>
+                                    <p class="text-center"><?php echo $market['service_desc']; ?></p>
                                 </div>
                             </div>
                         </div>

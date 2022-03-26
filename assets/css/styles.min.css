@@ -558,7 +558,7 @@ h1{
 }
 
 .flip-card-back {
-  background-color: #d9d9d9;
-  color: rgb(0, 0, 0);
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   transform: rotateY(180deg);
 }

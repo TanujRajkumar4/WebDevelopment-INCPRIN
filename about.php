@@ -28,7 +28,9 @@ $pg_qry = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 5');
 
 <body style="font-family: 'Work Sans', sans-serif;">
     <!-- Start: Parallax Background -->
-    <div data-bss-parallax-bg="true" style="height: 300px;background-image: url(<?php echo $pg_qry['pg_banner']; ?>);background-position: center;background-size: cover;"></div><!-- End: Parallax Background -->
+    <div>
+        <img src="<?php echo $pg_qry['pg_banner']; ?>" height="300px" width="100%">
+    </div>
     <hr><!-- Start: Article List -->
     <section>
         <div class="container">
