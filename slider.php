@@ -7,9 +7,6 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="assets/img/home_slider/4.jpg" class="slider-img" width="100%" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
             <img src="assets/img/home_slider/1.jpg" class="slider-img" width="100%" class="d-block w-100">
         </div>
         <div class="carousel-item">
@@ -17,6 +14,9 @@
         </div>
         <div class="carousel-item">
             <img src="assets/img/home_slider/3.jpg" class="slider-img" width="100%" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img/home_slider/4.jpg" class="slider-img" width="100%" class="d-block w-100">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#homeSlider" data-bs-slide="prev">
