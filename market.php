@@ -37,63 +37,25 @@
         <div class="container-md">
             <?php $i = 1;
             foreach ($markets as $market) :
-                if ($i % 2 != 0) {
             ?>
-
-                    <!-- MARKET ROW1 - START -->
-                    <div class="row row-cols-1 row-cols-md-2 justify-content-center align-items-center justify-content-sm-center justify-content-md-start" style="width: 100%;padding: 15px;">
-                        <!-- Start: Image -->
-                        <div class="col">
-                            <div class="toc"><img src="<?php echo $market['service_img']; ?>" width="100%"></div>
-                        </div><!-- End: Image -->
-                        <!-- Start: Text -->
-                        <div class="col">
-                            <!-- Start: Text -->
-                            <div class="text-justify">
-                                <center>
-                                    <h3><?php echo $market['service_name']; ?></h3>
-                                </center>
-                                <div>
-                                    <?php echo $market['service_desc']; ?>
-                                </div>
-                                <!-- <center>
-                                    <a style="text-decoration: none; color:black; font-weight:bold" class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
-                                </center> -->
-
-                            </div><!-- End: Text -->
-                        </div><!-- End: Text -->
+                <div class="row align-items-center justify-content-center my-2 py-2 d-flex <?php if ($i % 2 == 0) {
+                                                                                                                echo "flex-md-row-reverse";
+                                                                                                            } ?>">
+                    <div class="col-12 col-md-6">
+                        <div class="toc"><img src="<?php echo $market['service_img']; ?>" width="100%"></div>
                     </div>
-                    <hr>
-                    <!-- MARKET ROW1 - END -->
-                <?php } else { ?>
-
-                    <!-- MARKET ROW2 - START -->
-                    <div class="row row-cols-1 row-cols-md-2 flex-row-reverse justify-content-center align-items-center justify-content-sm-center flex-md-row justify-content-md-start" style="width: 100%;padding: 15px;font-family:sans-serif;">
-                        <!-- Start: Text -->
-                        <div class="col">
-                            <!-- Start: Text -->
-                            <div class="text-justify">
-                                <center>
-                                    <h3><?php echo $market['service_name']; ?></h3>
-                                </center>
-                                <div>
-                                    <?php echo $market['service_desc']; ?>
-                                </div>
-                                <!-- <center>
-                                    <strong>
-                                        <a style="text-decoration: none; color:black; font-weight:bold" class="mx-auto" href="market-i1.php?s_id=<?php echo $market['service_id']; ?>">Read More</a>
-                                    </strong>
-                                </center> -->
-                            </div><!-- End: Text -->
-                        </div><!-- End: Text -->
-                        <!-- Start: Image -->
-                        <div class="col">
-                            <div class="toc"><img src="<?php echo $market['service_img']; ?>" width="100%"></div>
-                        </div><!-- End: Image -->
+                    <div class="col-12 col-md-6">
+                        <div class="text-justify">
+                            <center>
+                                <h3><?php echo $market['service_name']; ?></h3>
+                            </center>
+                            <div>
+                                <?php echo $market['service_desc']; ?>
+                            </div>
+                        </div>
                     </div>
-                    <hr>
-                    <!-- MARKET ROW2 - END -->
-            <?php }
+                </div>
+            <?php
                 $i = $i + 1;
             endforeach; ?>
         </div>
