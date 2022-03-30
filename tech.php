@@ -42,7 +42,7 @@
                                                                                                 echo "flex-md-row-reverse";
                                                                                             } ?>">
                     <div class="col-12 col-md-6">
-                        <div class="toc"><img src="<?php echo $market['service_img']; ?>" width="100%"></div>
+                        <div class=""><img src="<?php echo $market['service_img']; ?>" width="100%"></div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="text-justify">
