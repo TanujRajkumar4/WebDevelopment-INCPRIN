@@ -37,29 +37,31 @@
     <!-- Start: Market1 -->
     <section class="article-dual-column" width="100%">
         <div class="container-md">
-            <div class="row justify-content-center align-items-center" style="width: 100%;padding: 15px;">
+            <div class="row justify-content-center align-items-center w-100" style="width: 100%;padding: 15px;">
                 <?php $i = 1;
                 foreach ($markets as $market) :
                 ?>
-
                     <!-- MARKET ROW1 - START -->
-                    <div class="col-12 col-md-6 col-lg-4 px-3 py-3">
+                    <div class="col-12 col-md-6 col-lg-4 px-3 py-3 w-100" >
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                     <img src="<?php echo $market['service_img']; ?>" width="300px" height="200px">
                                 </div>
-                                <div class="flip-card-back px-2 py-2" style="overflow:hidden;">
-                                    <p style="font-size: 18px; overflow:hidden"><?php echo $market['service_name']; ?></p>
-                                    <p class="text-center text-white"><?php echo $market['service_desc']; ?></p>
+                                <div class="flip-card-back px-2 py-2">
+                                    <div class="row align-items-center justify-content-center">
+                                        <div class="col-12 align-self-center">
+                                            <p style="font-size: 18px;"><?php echo trim(strip_tags($market['service_name'])); ?></p>
+                                        </div>
+                                        <div class="col-12 align-self-center">
+                                            <p class="text-center text-white"><?php echo substr(trim(strip_tags($market['service_desc'])), 0, 150); ?></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- MARKET ROW1 - END -->
-
-
-
                 <?php
                 endforeach; ?>
             </div>
