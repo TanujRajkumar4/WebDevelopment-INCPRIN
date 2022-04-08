@@ -39,7 +39,7 @@
             if ($count_market % 2 == 0) {
         ?>
                 <div class="col-sm-12 col-md-6 col-lg-3 align-items-center align-self-center home-service" style=" padding-right: 0px;padding-left: 0px;padding-top: 5px;padding-bottom: 5px;">
-                    <div class="card"style="min-height:150px; background: #FFFFFF;color: black;text-align: center;">
+                    <div class="card" style="min-height:150px; background: #FFFFFF;color: black;text-align: center;">
                         <div class="card-body">
                             <h4 class="card-title"><i class="fa fa-shopping-bag" style="font-size: 40px;"></i></h4>
                             <h4 class="card-title" style="padding-top: 20px;padding-bottom: 20px; text-transform:uppercase;"><?php echo $data['service_name']; ?></h4>
@@ -110,7 +110,7 @@
                         <p>
                         <ul>
                             <li>We are providing Pan India service.</li>
-                            <li> Global service through our Global partner G-Locs</li>.
+                            <li>Global service through our Global partners present in Europe, America’s and African continents.</li>
                         </ul>
                         </p>
                     </div>
