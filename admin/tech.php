@@ -203,7 +203,8 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
                                             <td>
                                                 <a class="btn btn-info btn-sm mx-1 my-1" href="tech_edit.php?id=<?php echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Edit</a>
                                                 <a class="btn btn-danger btn-sm mx-1 my-1" href="tech.php?typ=del&id=<?php echo $sql['service_id']; ?>"><i class="fas fa-trash"></i>Delete</a>
-                                                <!-- <a class="btn btn-success btn-sm mx-1 my-1" href="service_gallery.php?p_ty=produ&p_id=<?php //echo $sql['service_id']; ?>"><i class="fas fa-pencil-alt"></i>Add Gallery</a> -->
+                                                <!-- <a class="btn btn-success btn-sm mx-1 my-1" href="service_gallery.php?p_ty=produ&p_id=<?php //echo $sql['service_id']; 
+                                                                                                                                            ?>"><i class="fas fa-pencil-alt"></i>Add Gallery</a> -->
                                             </td>
                                         </tr>
                                     <?php $i = $i + 1;
@@ -233,50 +234,51 @@ elseif (isset($_GET['typ']) && $_GET['typ'] == "del") {
     include('footer.php');
     ?>
     <script>
+        var up_folder = "https://incprin.com/demo/uploads/";
         $(function() {
             // Summernote
             $('#summernote').summernote({
-            toolbar: [
-              ['style', ['style']],
-              ['font', ['bold', 'underline', 'clear']],
-              ['fontname', ['fontname']],
-              ['color', ['color']],
-              ['para', ['ul', 'ol', 'paragraph']],
-              ['table', ['table']],
-              ['insert', ['link', 'picture']],
-              ['view', ['fullscreen']],
-            ],
-            fontNames: ['Work Sans'],
-            fontNamesIgnoreCheck: ['Work Sans'],
-            addDefaultFonts: false,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['fontname', ['fontname']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture']],
+                    ['view', ['fullscreen']],
+                ],
+                fontNames: ['Work Sans'],
+                fontNamesIgnoreCheck: ['Work Sans'],
+                addDefaultFonts: false,
 
-            callbacks: {
-              onImageUpload: function(files) {
-                // upload image to server and create imgNode...
-                var form = new FormData();
-                form.append("file_upload", files[0], files[0].name);
+                callbacks: {
+                    onImageUpload: function(files) {
+                        // upload image to server and create imgNode...
+                        var form = new FormData();
+                        form.append("file_upload", files[0], files[0].name);
 
-                var settings = {
-                  "url": "upload.php",
-                  "method": "POST",
-                  "timeout": 0,
-                  "processData": false,
-                  "mimeType": "multipart/form-data",
-                  "contentType": false,
-                  "data": form
-                };
+                        var settings = {
+                            "url": "upload.php",
+                            "method": "POST",
+                            "timeout": 0,
+                            "processData": false,
+                            "mimeType": "multipart/form-data",
+                            "contentType": false,
+                            "data": form
+                        };
 
-                $.ajax(settings).done(function(response) {
-                  response = JSON.parse(response);
-                  if (response.status == 200) {
-                    $('#summernote').summernote('insertImage', up_folder + files[0].name, files[0].name);
-                  } else {
-                    alert(response.message);
-                  }
-                });
-              }
-            }
-          })
+                        $.ajax(settings).done(function(response) {
+                            response = JSON.parse(response);
+                            if (response.status == 200) {
+                                $('#summernote').summernote('insertImage', up_folder + files[0].name, files[0].name);
+                            } else {
+                                alert(response.message);
+                            }
+                        });
+                    }
+                }
+            })
 
             // CodeMirror
             CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {

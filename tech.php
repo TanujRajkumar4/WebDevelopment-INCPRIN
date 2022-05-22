@@ -26,16 +26,17 @@
     <?php
     // $markets = getAllData('inc_service', 'service_status');
     $markets = getAllDataC1('inc_service', 'service_status', 'AND `service_type` = 3');
-    $page = getAllDataC('inc_page', 'pg_status', 'AND pg_id = 3');
-
+    $page = getAllDataC('inc_page', 'pg_status', 'AND `pg_id` = 3');
+    
     ?>
     <!-- Start: Parallax Background -->
     <div class="banner-fixed banner-dyn" style="background-image: url('<?php echo $page['pg_banner']; ?>');"></div>
-
+    
     <!-- Start: Market1 -->
     <section class="article-dual-column">
         <div class="container-md">
             <?php $i = 1;
+            echo "<script>alert('" . var_dump($markets) . "');</script>";
             foreach ($markets as $market) :
             ?>
                 <div class="row align-items-center justify-content-center my-2 py-2 d-flex <?php if ($i % 2 == 0) {
